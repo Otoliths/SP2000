@@ -17,21 +17,23 @@ if(!"remotes" %in% installed.packages()[,"Package"]) install.packages("remotes")
 if(!"sp2000" %in% installed.packages()[,"Package"]) remotes::install_github("Otoliths/sp2000")
 ```
 
-
+```{r , eval=F}
 # Load the sp2000 package
 library(sp2000)
-
+```
 
 
 # examples
-
-## download taxon IDs via familyID ,scientificName and commonName
+```{r , eval=F}
+#download taxon IDs via familyID ,scientificName and commonName
 taxonID(query="鳗鲡",name="commonName",apiKey="")
 query <- c("鳗鲡","裂腹鱼")
 taxonIDs <- lapply(query,taxonID,name='commonName')
 (taxonIDs <- purrr::transpose(taxonIDs))
+```
 
-## download detailed lists via species or infraspecies ID
+```{r , eval=F}
+# download detailed lists via species or infraspecies ID
 x1 <- sp2000(query="025397f9-9891-40a7-b90b-5a61f9c7b597",apiKey=" ")
 query <- c("025397f9-9891-40a7-b90b-5a61f9c7b597","04c59ee8-4b48-4095-be0d-663485463f21",
            "4c539380-8d0a-4cbf-b612-1e6df5850295","522c1cfd-0d2c-490f-b8f8-0c7459f6dba5",
@@ -41,7 +43,9 @@ query <- c("025397f9-9891-40a7-b90b-5a61f9c7b597","04c59ee8-4b48-4095-be0d-66348
            "d5938c75-e51a-4737-aaef-4f342fa8b364","f95f766f-7b96-464a-bff5-43b1adafcf50",
            "faaf346f-49f4-400a-947b-edb6b0f6bd5e")
 x2 <- sp2000(query=query,apiKey=" ")
+```
 
-## lists convert data frame
+```{r , eval=F}
+# lists convert data frame
 x3 <- listdf(x2)
-
+```
