@@ -1,5 +1,5 @@
 # sp2000
-Species 2000 China node is a regional node of the international species 2000 project, proposed by the international species 2000 Secretariat in October 20, 2006, was officially launched in February 7, 2006.Chinese Academy of Sciences, biological diversity Committee (BC-CAS), together with its partners, to support and manage the construction of species 2000 China node. The main task of the species 2000 China node, according to the species 2000 standard data format, the classification information of the distribution in China of all species to finish and check, the establishment and maintenance of Chinese biological species list, to provide free services to users around the world.(http://col.especies.cn)
+Species 2000 China node is a regional node of the international species 2000 project, proposed by the international species 2000 Secretariat in October 20, 2006, was officially launched in February 7, 2006.Chinese Academy of Sciences, biological diversity Committee (BC-CAS), together with its partners, to support and manage the construction of species 2000 China node. The main task of the species 2000 China node, according to the species 2000 standard data format, the classification information of the distribution in China of all species to finish and check, the establishment and maintenance of Chinese biological species list, to provide free services to users around the world.(http://col.especies.cn).note:firstly,You need to apply for the apiKey from http://col.especies.cn/api/document
 
 
 # Install sp2000 package
@@ -29,7 +29,6 @@ library(sp2000)
 # Examples
 ```{r , eval=F}
 #download taxon IDs via familyID ,scientificName and commonName
-#firstly,You need to apply for the apiKey from http://col.especies.cn/api/document
 taxonID(query="鳗鲡",name="commonName",apiKey="")
 
 query <- c("鳗鲡","裂腹鱼")
