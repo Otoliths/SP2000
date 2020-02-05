@@ -3,6 +3,7 @@ Species 2000 China node is a regional node of the international species 2000 pro
 
 
 # Install dependence packages
+```{r , eval=F}
 packages <- c("jsonlite", "tibble","parallel","purrr","rlist")
 package.check <- lapply(packages, FUN = function(x) {
   if (!require(x, character.only = TRUE)) {
@@ -14,7 +15,7 @@ package.check <- lapply(packages, FUN = function(x) {
 if(!"remotes" %in% installed.packages()[,"Package"]) install.packages("remotes")
 # Install rasterSp from Github if not previously installed
 if(!"sp2000" %in% installed.packages()[,"Package"]) remotes::install_github("Otoliths/sp2000")
-
+```
 
 
 # Load the sp2000 package
