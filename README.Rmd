@@ -3,7 +3,7 @@ title: "sp2000 - R Package to download online database of the Chinese known spec
 output: github_document
 ---
 
-### Install rasterSp package
+### Install sp2000 package
 
 To *use* the package, you first have to install it from GitHub using the `remotes` package. 
 
