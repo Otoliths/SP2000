@@ -29,6 +29,7 @@ library(sp2000)
 # Examples
 ```{r , eval=F}
 #download taxon IDs via familyID ,scientificName and commonName
+#firstly,You need to apply for the apiKey from \url{http://col.especies.cn/api/document}
 taxonID(query="鳗鲡",name="commonName",apiKey="")
 
 query <- c("鳗鲡","裂腹鱼")
