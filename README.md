@@ -26,7 +26,7 @@ library(sp2000)
 ```
 
 
-# examples
+# Examples
 ```{r , eval=F}
 #download taxon IDs via familyID ,scientificName and commonName
 taxonID(query="鳗鲡",name="commonName",apiKey="")
