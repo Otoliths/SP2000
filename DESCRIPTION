@@ -1,0 +1,18 @@
+Package: sp2000
+Title: Catalogue of Life China toolkit for R 
+Version: 0.0.5
+Authors@R: person("Liuyong", "Ding", email = "ly_dingu@126.com", role = c("aut", "cre"))
+Description: Downloading online database of the Chinese known species of animals, plants, fungi and micro-organisms
+Depends: R (>= 3.5.0)
+Imports: 
+  jsonlite,
+  tibble,
+  parallel,
+  purrr,
+  rlist
+Suggests:
+  utils
+License: Artistic-2.0
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.0.2
