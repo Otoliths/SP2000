@@ -1,6 +1,6 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# sp2000 <img src="man/figures/logo.png" align="right" width="120" />
+# sp2000 <img src="man/figures/logo.png" align="right" width="200" />
 
 ## Overview
 
