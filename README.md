@@ -20,7 +20,7 @@ package.check <- lapply(packages, FUN = function(x) {
   }
 })
 
-# Install remotes if not previously installed
+# Install devtools if not previously installed
 if(!"devtools" %in% installed.packages()[,"Package"]) install.packages("devtools")
 
 # Install sp2000 from Github if not previously installed
