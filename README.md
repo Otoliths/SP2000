@@ -15,10 +15,10 @@ package.check <- lapply(packages, FUN = function(x) {
 })
 
 # Install remotes if not previously installed
-if(!"remotes" %in% installed.packages()[,"Package"]) install.packages("remotes")
+if(!"devtools" %in% installed.packages()[,"Package"]) install.packages("devtools")
 
-# Install rasterSp from Github if not previously installed
-if(!"sp2000" %in% installed.packages()[,"Package"]) remotes::install_github("Otoliths/sp2000")
+# Install sp2000 from Github if not previously installed
+if(!"sp2000" %in% installed.packages()[,"Package"]) devtools::install_github("Otoliths/sp2000")
 ```
 
 ```{r , eval=F}
