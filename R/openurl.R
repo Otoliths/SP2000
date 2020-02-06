@@ -10,7 +10,7 @@
 ##' @details Visit the website \url{http://col.especies.cn/pageservices/document} for more details
 ##' @examples
 ##'\dontrun{
-##' open(query="Ailuropoda melanoleuca")
+##' openurl(query="Ailuropoda melanoleuca")
 ##' }
 ##' @export
 openurl <- function(query=NULL,name="accceptedName",language='en') {
