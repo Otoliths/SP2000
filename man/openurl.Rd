@@ -21,7 +21,7 @@ Visit the website \url{http://col.especies.cn/pageservices/document} for more de
 }
 \examples{
 \dontrun{
-open(query="Ailuropoda melanoleuca")
+openurl(query="Ailuropoda melanoleuca")
 }
 }
 \author{
