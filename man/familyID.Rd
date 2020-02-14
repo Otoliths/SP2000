@@ -25,7 +25,7 @@ Visit the website \url{http://col.especies.cn/api/document} for more details
 familyID(query="鳗鲡",apiKey="")
 
 query <- c("鳗鲡","鲤")
-fids <- lapply(query,familyID)
+fids <- lapply(query,familyID,apiKey="")
 (fids <- purrr::transpose(fids))
 }
 }
