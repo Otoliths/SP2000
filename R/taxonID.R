@@ -20,14 +20,14 @@
 ##' taxonID(query="鳗鲡",name="commonName",apiKey="")
 ##'
 ##' query <- c("鳗鲡","裂腹鱼")
-##' taxonIDs <- lapply(query,taxonID,name='commonName')
+##' taxonIDs <- lapply(query,taxonID,name='commonName',apiKey="")
 ##' (taxonIDs <- purrr::transpose(taxonIDs))
 ##' }
 ##' @export
 
 taxonID <- function(query=NULL,name='scientificName',apiKey=NULL) {
   start_time <- Sys.time()
-  url <- paste0('http://www.sp2000.org.cn/api/taxon/', mame ,'/taxonID/', query, '/', apiKey)
+  url <- paste0('http://www.sp2000.org.cn/api/taxon/', name ,'/taxonID/', query, '/', apiKey)
   if (name=='scientificName') {
     utils::browseURL(url)
     invisible(url)
