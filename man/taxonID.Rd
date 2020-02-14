@@ -31,7 +31,7 @@ Visit the website \url{http://col.especies.cn/api/document} for more details
 taxonID(query="鳗鲡",name="commonName",apiKey="")
 
 query <- c("鳗鲡","裂腹鱼")
-taxonIDs <- lapply(query,taxonID,name='commonName')
+taxonIDs <- lapply(query,taxonID,name='commonName',apiKey="")
 (taxonIDs <- purrr::transpose(taxonIDs))
 }
 }
