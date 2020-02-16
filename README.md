@@ -1,6 +1,6 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# sp2000 <img src="man/figures/logo.png" align="right" width="150" />
+# sp2000 <img src="man/figures/logo.png" align="right" width="120" />
 
 [![codecov](https://badge.fury.io/gh/Otoliths%2Fsp2000.svg)](https://badge.fury.io/for/gh/Otoliths/sp2000)
 [![codecov](https://codecov.io/gh/Otoliths/sp2000/branch/master/graph/badge.svg)](https://codecov.io/gh/Otoliths/sp2000)
