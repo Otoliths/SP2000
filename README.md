@@ -4,7 +4,8 @@
 
 [![codecov](https://badge.fury.io/gh/Otoliths%2Fsp2000.svg)](https://badge.fury.io/for/gh/Otoliths/sp2000)
 [![codecov](https://codecov.io/gh/Otoliths/sp2000/branch/master/graph/badge.svg)](https://codecov.io/gh/Otoliths/sp2000)
-
+[![CRAN](http://www.r-pkg.org/badges/version/sp2000)](https://cran.r-project.org/package=sp2000)
+[![downloads](http://cranlogs.r-pkg.org/badges/sp2000)](https://cran.r-project.org/package=sp2000)
 ## Overview
 
 Species 2000 (http://col.especies.cn) China node is a regional node of the international species 2000 project, proposed by the international species 2000 Secretariat in October 20, 2006, was officially launched in February 7, 2006. Chinese Academy of Sciences, biological diversity Committee (BC-CAS), together with its partners, to support and manage the construction of species 2000 China node. The main task of the species 2000 China node, according to the species 2000 standard data format, the classification information of the distribution in China of all species to finish and check, the establishment and maintenance of Chinese biological species list, to provide free services to users around the world. Note:firstly,You need to apply for the apiKey from http://col.especies.cn/api/document to run these functions of this package.
