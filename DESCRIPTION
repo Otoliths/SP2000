@@ -9,12 +9,10 @@ Imports:
   tibble,
   parallel,
   purrr,
-  rlist,
-  pkg-name-of-repo
+  rlist
 Suggests:
   utils
 License: Artistic-2.0
-Remotes: user/repo
 URL: https://github.com/Otoliths/sp2000
 BugReports: https://github.com/Otoliths/sp2000/issues
 Encoding: UTF-8
