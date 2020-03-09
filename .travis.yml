@@ -1,2 +1,2 @@
 language: r
-r_github_packages: jeroen/jsonlite
+warnings_are_errors: true
