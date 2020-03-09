@@ -18,3 +18,4 @@ BugReports: https://github.com/Otoliths/sp2000/issues
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.0.2
+Remotes: jeroen/jsonlite
