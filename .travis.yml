@@ -1,11 +1,2 @@
 language: r
-fortran: false
-latex: false
-
-matrix:
-  include:
-    - r: oldrel
-    - r: release
-    - r: devel
-    - os: osx
-      brew_packages: yajl # only to test for conflicts
+r_github_packages: jeroen/jsonlite
