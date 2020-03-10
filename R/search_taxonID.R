@@ -9,7 +9,7 @@
 ##' @importFrom jsonlite fromJSON
 ##' @importFrom rlist list.stack
 ##' @importFrom tibble tibble
-##' @importFrom pbmcapply pbmcmapply
+##' @importFrom pbmcapply pbmclapply
 ##' @format query:
 ##' \describe{
 ##' \item{taxonIDs}{an array of species' ids}
@@ -52,17 +52,17 @@ search_taxonID <- function(query = NULL,name = 'scientificName',mc.cores = 2,api
     }
   } else {
     if(name == 'familyID'){
-      x <- pbmcmapply(taxonID,query,name,apiKey,mc.cores = mc.cores)
+      x <- pbmclapply(query,taxonID,name,apiKey,mc.cores = mc.cores)
       x <- tibble(familyID = query,taxonIDs = x)
       x$download.date <- as.Date(Sys.time())
     }
     if(name == 'scientificName'){
-      x <- pbmcmapply(taxonID,query,name,apiKey,mc.cores = mc.cores)
+      x <- pbmclapply(query,taxonID,name,apiKey,mc.cores = mc.cores)
       x <- tibble(scientificName = query,taxonIDs = x)
       x$download.date <- as.Date(Sys.time())
     }
     if(name == 'commonName'){
-      x <- pbmcmapply(taxonID,query,name,apiKey,mc.cores = mc.cores)
+      x <- pbmclapply(query,taxonID,name,apiKey,mc.cores = mc.cores)
       x <- tibble(commonName = query,taxonIDs = x)
       x$download.date <- as.Date(Sys.time())
     }
