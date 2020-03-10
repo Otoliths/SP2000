@@ -25,7 +25,7 @@ search_checklist <- function(query = NULL,mc.cores = 2,apiKey = NULL){
   if(length(query) == 1){
     x <- species(query,apiKey)
   } else {
-    x <- pbmcmapply(query,species,apiKey,mc.cores = mc.cores)
+    x <- pbmcmapply(species,query,apiKey,mc.cores = mc.cores)
   }
   return(x)
 }
