@@ -8,7 +8,7 @@
 ##' @return lists
 ##' @author Liuyong Ding
 ##' @details Visit the website \url{http://col.especies.cn/api/document} for more details
-##' @importFrom pbmcapply pbmcmapply
+##' @importFrom pbmcapply pbmclapply
 ##' @importFrom jsonlite fromJSON
 ##' @examples
 ##' \dontrun{
@@ -25,7 +25,7 @@ search_checklist <- function(query = NULL,mc.cores = 2,apiKey = NULL){
   if(length(query) == 1){
     x <- species(query,apiKey)
   } else {
-    x <- pbmcmapply(species,query,apiKey,mc.cores = mc.cores)
+    x <- pbmclapply(query,species,apiKey,mc.cores = mc.cores)
   }
   return(x)
 }
