@@ -18,7 +18,7 @@ Species 2000 (http://col.especies.cn) China node is a regional node of the inter
 
 ```{r , eval=F}
 # Install dependence packages
-packages <- c("jsonlite", "tibble","parallel","purrr","rlist")
+packages <- c("jsonlite", "tibble","pbmcapply","purrr","rlist")
 package.check <- lapply(packages, FUN = function(x) {
   if (!require(x, character.only = TRUE)) {
     install.packages(x, dependencies = TRUE, repos = "http://cran.us.r-project.org")
