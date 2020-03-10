@@ -10,7 +10,7 @@
 ##' @importFrom jsonlite fromJSON
 ##' @importFrom rlist list.stack
 ##' @importFrom tibble tibble
-##' @importFrom pbmcapply pbmcmapply
+##' @importFrom pbmcapply pbmclapply
 ##' @details Visit the website \url{http://col.especies.cn/api/document} for more details
 ##' @examples
 #' \dontrun{
@@ -28,7 +28,7 @@ search_familyID <- function(query = NULL,mc.cores = 2,apiKey=NULL) {
     x$download.date <- as.Date(Sys.time())
 
   } else {
-    x <- pbmcmapply(familyID,query,apiKey)
+    x <- pbmclapply(query,familyID,apiKey)
     x <- tibble(family = query,familyIDs = x,mc.cores = mc.cores)
     x$download.date <- as.Date(Sys.time())
   }
