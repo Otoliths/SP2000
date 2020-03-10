@@ -9,7 +9,7 @@ search_familyID(query = NULL, mc.cores = 2, apiKey = NULL)
 \arguments{
 \item{query}{\code{character} Family name, or part of family name, supports Latin and Chinese names}
 
-\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores.\link{mcmapply}}
+\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores. See \link{mcmapply}}
 
 \item{apiKey}{\code{string} You need to apply for the apiKey from \url{http://col.especies.cn/api/document} to run this function}
 }
