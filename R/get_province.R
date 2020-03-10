@@ -12,7 +12,6 @@
 #' head(x)
 #' }
 #' @export
-
 get_province <- function() {
   url <- 'http://col.especies.cn/statistics/show_in_map_all'
   map_all <- fromJSON(url)
@@ -21,7 +20,3 @@ get_province <- function() {
   map_all$date <- as.Date(Sys.time())
   return(map_all)
 }
-
-
-
-
