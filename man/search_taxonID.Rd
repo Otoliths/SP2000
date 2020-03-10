@@ -23,7 +23,7 @@ search_taxonID(
 
 \item{name}{\code{character} name=c("familyID","scientificName","commonName"),the default value is "scientificName"}
 
-\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores.\link{mcmapply}}
+\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores. See \link{mcmapply}}
 
 \item{apiKey}{\code{string} You need to apply for the apiKey from \url{http://col.especies.cn/api/document} to run this function}
 }
