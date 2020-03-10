@@ -22,8 +22,3 @@ get_top20 <- function() {
   top20$date <- as.Date(Sys.time())
   return(top20)
 }
-
-
-
-
-
