@@ -39,33 +39,39 @@ library(sp2000)
 ```
 
 
-## Examples
+## Usage
 
 ```{r , eval=F}
-#download taxon IDs via familyID ,scientificName and commonName
+#Search family IDs via family name, supports Latin and Chinese names
 apiKey <- "your apiKey"
-search_checklist(query="025397f9-9891-40a7-b90b-5a61f9c7b597",apiKey = apiKey)
+search_familyID(query = "Cyprinidae",apiKey = apiKey)
+queries <- c("Rosaceae","Cyprinidae")
+search_familyID(query = queries,apiKey = apiKey)
+```
 
-queries <- c("025397f9-9891-40a7-b90b-5a61f9c7b597","04c59ee8-4b48-4095-be0d-663485463f21")
-search_checklist(query = queries,apiKey = apiKey)
+```{r , eval=F}
+#Search taxon IDs via familyID ,scientificName and commonName
+apiKey <- "your apiKey"
+search_taxonID(query = "Uncia uncia",name = "scientificName",apiKey = apiKey)
+queries <- c("Anguilla marmorata","Uncia uncia")
+search_taxonID(query = queries,name = "scientificName",apiKey = apiKey)
+search_taxonID(query = "bf72e220caf04592a68c025fc5c2bfb7",name = "familyID",apiKey = apiKey)
 ```
 
 ```{r , eval=F}
 # download detailed lists via species or infraspecies ID
-x1 <- sp2000(query="025397f9-9891-40a7-b90b-5a61f9c7b597",apiKey=" ")
-
-query <- c("025397f9-9891-40a7-b90b-5a61f9c7b597","04c59ee8-4b48-4095-be0d-663485463f21",
+apiKey <- "your apiKey"
+queries <- c("025397f9-9891-40a7-b90b-5a61f9c7b597","04c59ee8-4b48-4095-be0d-663485463f21",
            "4c539380-8d0a-4cbf-b612-1e6df5850295","522c1cfd-0d2c-490f-b8f8-0c7459f6dba5",
            "6d04dcf5-f390-472d-b674-4f09e43713ed","89c29448-a48f-46cb-a573-ee51dd47e7b0",
            "a3452c0c-6d75-465b-b110-537e4ac15f80","a69df232-07e4-4f06-9651-a4e52796f01a",
            "b8c6a086-3d28-4876-8e8a-ca96e667768d","c1dbe9f7-e02f-4f05-a1ca-1487a41075bd",
            "d5938c75-e51a-4737-aaef-4f342fa8b364","f95f766f-7b96-464a-bff5-43b1adafcf50",
-           "faaf346f-49f4-400a-947b-edb6b0f6bd5e")
-           
-x2 <- sp2000(query=query,apiKey=" ")
+           "faaf346f-49f4-400a-947b-edb6b0f6bd5e")           
+x2 <- search_checklist(query = queries,apiKey = apiKey)
 ```
 
 ```{r , eval=F}
-# lists convert data frame
-x3 <- listdf(x2)
+# checklist lists convert data frame
+x3 <- lis_tdf(x2)
 ```
