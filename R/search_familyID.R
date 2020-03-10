@@ -28,7 +28,7 @@ search_familyID <- function(query = NULL,mc.cores = 2,apiKey=NULL) {
     x$download.date <- as.Date(Sys.time())
 
   } else {
-    x <- pbmcmapply(query,familyID,apiKey)
+    x <- pbmcmapply(familyID,query,apiKey)
     x <- tibble(family = query,familyIDs = x,mc.cores = mc.cores)
     x$download.date <- as.Date(Sys.time())
   }
