@@ -80,7 +80,28 @@ x2 <- search_checklist(query = queries,apiKey = apiKey)
 x3 <- list_df(x2)
 ```
 
-##### How to cite this work (http://sp2000.org.cn/info/info_how_to_cite)
+#### How to cite this package
+```{r , eval=F}
+citation("SP2000")
+
+To cite package ‘SP2000’ in publications use:
+
+  Liuyong Ding (2020). SP2000: Catalogue of Life China Toolkit for R. R package version 0.0.5.
+  https://github.com/Otoliths/sp2000
+
+A BibTeX entry for LaTeX users is
+
+  @Manual{,
+    title = {SP2000: Catalogue of Life China Toolkit for R},
+    author = {Liuyong Ding},
+    year = {2020},
+    note = {R package version 0.0.5},
+    url = {https://github.com/Otoliths/sp2000},
+  }
+
+```
+
+#### How to cite this work (http://sp2000.org.cn/info/info_how_to_cite)
 
 ```{r , eval=F}
 Catalogue of Life China: 
