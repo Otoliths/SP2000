@@ -98,7 +98,6 @@ A BibTeX entry for LaTeX users is
     note = {R package version 0.0.5},
     url = {https://github.com/Otoliths/sp2000},
   }
-
 ```
 
 #### How to cite this work (http://sp2000.org.cn/info/info_how_to_cite)
