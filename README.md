@@ -8,7 +8,7 @@
 [![R build status](https://github.com/Otoliths/sp2000/workflows/R-CMD-check/badge.svg)](https://github.com/Otoliths/sp2000/actions)
 [![downloads](http://cranlogs.r-pkg.org/badges/sp2000)](https://cran.r-project.org/package=sp2000)
 
-Download catalogue of the Chinese known species of animals, plants, fungi and micro-organisms.The development of this package was supported by Yunnan University's Research Innovation Fund for Graduate Students.
+This package programatically download catalogue of the Chinese known species of animals, plants, fungi and micro-organisms.The development of this package was supported by Yunnan University's Research Innovation Fund for Graduate Students.
 
 
 ## Overview
