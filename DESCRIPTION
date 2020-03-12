@@ -1,4 +1,4 @@
-Package: sp2000
+Package: SP2000
 Title: Catalogue of Life China Toolkit for R
 Version: 0.0.5
 Authors@R: c(person(given = "Liuyong",     family = "Ding",   email = "ly_ding@126.com",              role = c("aut", "cre")),
