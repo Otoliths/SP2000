@@ -14,7 +14,7 @@ Species 2000 (http://sp2000.org.cn) China node is a regional node of the interna
 
 
 
-## Install sp2000 package
+## Install SP2000 package
 
 ```{r , eval=F}
 # Install dependence packages
@@ -30,12 +30,12 @@ package.check <- lapply(packages, FUN = function(x) {
 if(!"devtools" %in% installed.packages()[,"Package"]) install.packages("devtools")
 
 # Install sp2000 from Github if not previously installed
-if(!"sp2000" %in% installed.packages()[,"Package"]) devtools::install_github("Otoliths/sp2000")
+if(!"sp2000" %in% installed.packages()[,"Package"]) devtools::install_github("Otoliths/SP2000")
 ```
 
 ```{r , eval=F}
-# Load the sp2000 package
-library(sp2000)
+# Load the SP2000 package
+library(SP2000)
 ```
 
 
