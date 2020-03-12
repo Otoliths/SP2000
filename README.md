@@ -30,7 +30,7 @@ package.check <- lapply(packages, FUN = function(x) {
 if(!"devtools" %in% installed.packages()[,"Package"]) install.packages("devtools")
 
 # Install SP2000 from Github if not previously installed
-if(!"SP2000" %in% installed.packages()[,"Package"]) devtools::install_github("Otoliths/SP2000")
+if(!"SP2000" %in% installed.packages()[,"Package"]) devtools::install_github("Otoliths/sp2000")
 ```
 
 ```{r , eval=F}
