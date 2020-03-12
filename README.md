@@ -6,6 +6,7 @@
 [![codecov](https://badge.fury.io/gh/Otoliths%2Fsp2000.svg)](https://badge.fury.io/for/gh/Otoliths/sp2000)
 [![CRAN](http://www.r-pkg.org/badges/version/sp2000)](https://cran.r-project.org/package=sp2000)
 [![downloads](http://cranlogs.r-pkg.org/badges/sp2000)](https://cran.r-project.org/package=sp2000)
+[![](https://img.shields.io/hexpm/l/SP2000?style=plastic)]
 
 
 ## Overview
