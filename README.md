@@ -4,8 +4,8 @@
 
 [![Build Status](https://travis-ci.org/Otoliths/sp2000.svg?branch=master)](https://travis-ci.org/easystats/sp2000)
 [![codecov](https://badge.fury.io/gh/Otoliths%2Fsp2000.svg)](https://badge.fury.io/for/gh/Otoliths/sp2000)
-[![CRAN](http://www.r-pkg.org/badges/version/sp2000)](https://cran.r-project.org/package=sp2000)
 [![R build status](https://github.com/Otoliths/sp2000/workflows/R-CMD-check/badge.svg)](https://github.com/Otoliths/sp2000/actions)
+[![CRAN](http://www.r-pkg.org/badges/version/sp2000)](https://cran.r-project.org/package=sp2000)
 [![downloads](http://cranlogs.r-pkg.org/badges/sp2000)](https://cran.r-project.org/package=sp2000)
 
 This package programatically download catalogue of the Chinese known species of animals, plants, fungi and micro-organisms.The development of this package was supported by Yunnan University's Research Innovation Fund for Graduate Students.
