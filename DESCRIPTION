@@ -1,6 +1,7 @@
 Package: SP2000
 Title: Catalogue of Life China Toolkit for R
 Version: 0.0.5
+Date: 2020-03-12
 Authors@R: c(person(given = "Liuyong",     family = "Ding",   email = "ly_ding@126.com",              role = c("aut", "cre")),
              person(given = "Minrui",      family = "Huang",  email = "minrui-huang@mail.ynu.edu.cn", role = "ctb"),
              person(given = "Ke",          family = "Yang",   email = "ydyangke@163.com",             role = "ctb"),
