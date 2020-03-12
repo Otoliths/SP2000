@@ -76,7 +76,7 @@ x2 <- search_checklist(query = queries,apiKey = apiKey)
 x3 <- list_df(x2)
 ```
 
-##### How to cite this work(http://sp2000.org.cn/info/info_how_to_cite)
+##### How to cite this work (http://sp2000.org.cn/info/info_how_to_cite)
 
 ```{r , eval=F}
 Catalogue of Life China: 
