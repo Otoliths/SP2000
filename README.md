@@ -75,3 +75,26 @@ x2 <- search_checklist(query = queries,apiKey = apiKey)
 # checklist lists convert data frame
 x3 <- lis_tdf(x2)
 ```
+
+## How to cite this work
+
+```{r , eval=F}
+Catalogue of Life China: 
+The Biodiversity Committee of Chinese Academy of Sciences, 2019, Catalogue of Life China: 2019 Annual Checklist, Beijing, China
+
+How to cite individual databases included in this work, for example:
+
+Animal: 
+JI Liqiang, et al, 2019, China Checklist of Animals, In the Biodiversity Committee of Chinese Academy of Sciences ed., Catalogue of Life China: 2019 Annual Checklist, Beijing, China
+
+Plant: 
+QIN Haining, et al, 2019, China Checklist of Higher Plants, In the Biodiversity Committee of Chinese Academy of Sciences ed., Catalogue of Life China: 2019 Annual Checklist, Beijing, China
+
+Fungi: 
+YAO Yijian, et al, 2019, China Checklist of Fungi, In the Biodiversity Committee of Chinese Academy of Sciences ed., Catalogue of Life China: 2019 Annual Checklist, Beijing, China
+
+How to cite taxon included in this work, for example:
+
+Aix galericulata: 
+LEI Fumin, et al, 2019. Aix galericulata in Catalogue of Life China: 2019 Annual Checklist, Beijing, China. http://sp2000.org.cn/species/show_species_details/f3bc32a7-50ec-41cc-91ee-a990b9196838
+```
