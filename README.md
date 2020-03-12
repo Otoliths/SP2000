@@ -39,7 +39,7 @@ library(SP2000)
 ```
 
 
-## Usage
+### Usage
 
 ```{r , eval=F}
 #Search family IDs via family name, supports Latin and Chinese names
