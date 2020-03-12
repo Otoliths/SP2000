@@ -3,7 +3,6 @@
 # SP2000 <img src="inst/figures/logo.png" align="right" width="150" />
 
 [![Build Status](https://travis-ci.org/Otoliths/sp2000.svg?branch=master)](https://travis-ci.org/easystats/sp2000)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/Otoliths/sp2000?branch=master&svg=true)](https://ci.appveyor.com/project/Otoliths/sp2000)
 [![codecov](https://badge.fury.io/gh/Otoliths%2Fsp2000.svg)](https://badge.fury.io/for/gh/Otoliths/sp2000)
 [![CRAN](http://www.r-pkg.org/badges/version/sp2000)](https://cran.r-project.org/package=sp2000)
 [![downloads](http://cranlogs.r-pkg.org/badges/sp2000)](https://cran.r-project.org/package=sp2000)
