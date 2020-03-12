@@ -9,7 +9,7 @@ Authors@R: c(person(given = "Liuyong",     family = "Ding",   email = "ly_ding@1
              person(given = "Chengzhi",    family = "Ding",   email = "chzhding@ynu.edu.cn",          role = "ctb"),
              person(given = "Daming",      family = "He",     email = "dmheg@ynu.edu.cn",             role = "ctb")
              )
-Description: Programmatically download catalogue of the Chinese known species of animals, plants, fungi and micro-organisms.The development of this package was supported by Yunnan University's Research Innovation Fund for Graduate Students.
+Description: Download catalogue of the Chinese known species of animals, plants, fungi and micro-organisms.The development of this package was supported by Yunnan University's Research Innovation Fund for Graduate Students.
 Imports: 
   jsonlite,
   tibble,
