@@ -50,8 +50,21 @@ library(SP2000)
 #Search family IDs via family name, supports Latin and Chinese names
 apiKey <- "your apiKey"
 search_familyID(query = "Cyprinidae",apiKey = apiKey)
+# last Update: 2020-03-17
+# # A tibble: 1 x 3
+#   family     familyIDs                        download.date
+#   <chr>      <chr>                            <date>       
+# 1 Cyprinidae bf72e220caf04592a68c025fc5c2bfb7 2020-03-17   
+
 queries <- c("Rosaceae","Cyprinidae")
 search_familyID(query = queries,apiKey = apiKey)
+# last Update: 2020-03-17
+# |======================================================================================| 100%, Elapsed 00:00
+# # A tibble: 2 x 4
+#   family     familyIDs                        mc.cores download.date
+#   <chr>      <chr>                               <dbl> <date>       
+# 1 Rosaceae   F20171000000279                         2 2020-03-17   
+# 2 Cyprinidae bf72e220caf04592a68c025fc5c2bfb7        2 2020-03-17   
 ```
 
 ```{r , eval=F}
