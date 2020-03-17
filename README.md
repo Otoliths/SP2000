@@ -66,7 +66,6 @@ search_familyID(query = queries,apiKey = apiKey)
 #   <chr>      <chr>                               <dbl> <date>       
 # 1 Rosaceae   F20171000000279                         2 2020-03-17   
 # 2 Cyprinidae bf72e220caf04592a68c025fc5c2bfb7        2 2020-03-17   
-
 ```
 
 ```{r , eval=F}
@@ -107,7 +106,6 @@ search_taxonID(query = "bf72e220caf04592a68c025fc5c2bfb7",name = "familyID",apiK
 # 9 bf72e220caf04592a68c025fc5c2bfb7 0323c94f48134445a7bd3c44c0b40227 2020-03-17   
 # 10 bf72e220caf04592a68c025fc5c2bfb7 032523c4852d406f8cd93fd8621b4676 2020-03-17   
 # # … with 689 more rows
-
 ```
 
 ```{r , eval=F}
@@ -123,7 +121,6 @@ queries <- c("025397f9-9891-40a7-b90b-5a61f9c7b597","04c59ee8-4b48-4095-be0d-663
 x2 <- search_checklist(query = queries,apiKey = apiKey)
 # last Update: 2020-03-17
 # |======================================================================================| 100%, Elapsed 00:02
-
 ```
 
 ```{r , eval=F}
@@ -142,7 +139,6 @@ head(x3)
 # # … with 10 more variables: Genus[,1] <chr>, Species[,1] <chr>, Infraspecies[,1] <chr>,
 # #   Distribution[,1] <chr>, Name[,1] <chr>, Email[,1] <chr>, Address[,1] <chr>, Institution[,1] <chr>,
 # #   References <list>, Downloaddate <date>
-
 ```
 
 #### How to cite this package
