@@ -46,7 +46,7 @@ library(SP2000)
 
 ### Usage
 
-```{r , eval=F}
+```{r}
 #Search family IDs via family name, supports Latin and Chinese names
 apiKey <- "your apiKey"
 search_familyID(query = "Cyprinidae",apiKey = apiKey)
