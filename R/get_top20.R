@@ -1,13 +1,13 @@
 #' @title Download the top20 species
-#' @description Download the most visited top20 species from \url{http://sp2000.org.cn}
+#' @description Download the most visited top20 species from \url{http://sp2000.org.cn} for more details.
 #' @rdname  get_top20
 #' @name get_top20
 #' @return top20 species
 #' @author Liuyong Ding
-#' @details Visit the website \url{http://sp2000.org.cn} for more details
+#' @details Visit the website \url{http://sp2000.org.cn} for more details.
 #' @importFrom jsonlite fromJSON
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' x <- get_top20()
 #' head(x)
 #' }
