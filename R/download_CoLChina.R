@@ -5,25 +5,27 @@
 #' @param version \code{integer} Release version of annual checklist,the default value is 2019
 #' @param format \code{character} Release version of format,the default value is zip
 #' @param download \code{logic} TRUE or FALSE,the default value is FALSE
+#' @param dir a non-empty character vector giving the directory name by user,the default value is dir = tempdir(),see [tempdir()] for details
 #' @return URL
 #' @author Liuyong Ding
 #' @details Visit the website \url{http://sp2000.org.cn/download} for more details
 #' @importFrom utils download.file
 #' @importFrom utils browseURL
 #' @examples
-#' \dontrun{
-#' download_CoLChina(version = "2019",format = "zip",download = TRUE)
+#' \donttest{
+#' dir <- tempdir()
+#' download_CoLChina(version = "2019",format = "zip",download = TRUE,dir = dir)
 #' }
 #' @export
-download_CoLChina <- function(version = "2019", format = "zip" ,download = FALSE) {
-  cat(sprintf("last Update: %s",Sys.Date()),sep = "\n")
+download_CoLChina <- function(version = "2019", format = "zip" ,download = FALSE,dir = tempdir()) {
+  cat(sprintf("Download the date: %s",Sys.Date()),sep = "\n")
   version <- match.arg(version, 2018:2019)
   format <- match.arg(format, c("zip", "iso"))
   url <- paste0('http://sp2000.org.cn/CoL/CoLChina',version, '.',format)
   if (download) {
     outfile <- sub(".*/", "", url)
-    download.file(url, destfile = outfile)
-    cat(sprintf("Save the path: %s",getwd()),sep = "\n")
+    download.file(url, file.path(dir,outfile))
+    cat(sprintf("Download path: %s",getwd()),sep = "\n")
   }
   browseURL("http://sp2000.org.cn/download")
   invisible(url)
