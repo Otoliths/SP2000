@@ -1,13 +1,13 @@
 ##' @title Search checklist
-##' @description Get checklist via species or infraspecies ID
+##' @description Get checklist via species or infraspecies ID.
 ##' @rdname search_checklist
 ##' @name search_checklist
-##' @param query \code{string} single or more query
-##' @param mc.cores The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores.
-##' @param apiKey \code{string} You need to apply for the apiKey from \url{http://sp2000.org.cn/api/document} to run this function
+##' @param query \code{string} single or more query,see [search_familyID] and [search_taxonID] for more details.
+##' @param mc.cores The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see [mclapply] for details.
+##' @param apiKey \code{string} You need to apply for the apiKey from \url{http://sp2000.org.cn/api/document} to run this function.
 ##' @return lists
 ##' @author Liuyong Ding
-##' @details Visit the website \url{http://sp2000.org.cn/api/document} for more details
+##' @details Visit the website \url{http://sp2000.org.cn/api/document} for more details.
 ##' @importFrom pbmcapply pbmclapply
 ##' @importFrom jsonlite fromJSON
 ##' @examples
@@ -39,4 +39,3 @@ species <- function(query = NULL,apiKey = NULL) {
   x$downloadDate <- as.Date(Sys.time())
   return(x)
 }
-
