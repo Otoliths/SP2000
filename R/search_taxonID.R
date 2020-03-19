@@ -1,11 +1,11 @@
 ##' @title Search taxon IDs
-##' @description Search taxon IDs via familyID ,scientificName and commonName
+##' @description Search taxon IDs via familyID ,scientificName and commonName.
 ##' @rdname search_taxonID
 ##' @name search_taxonID
-##' @param query \code{string} familyID ,scientificName or commonName
-##' @param name \code{character} name=c("familyID","scientificName","commonName"),the default value is "scientificName"
-##' @param mc.cores The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores.
-##' @param apiKey \code{string} You need to apply for the apiKey from \url{http://sp2000.org.cn/api/document} to run this function
+##' @param query \code{string} familyID ,scientificName or commonName.
+##' @param name \code{character} name=c("familyID","scientificName","commonName"),the default value is "scientificName".
+##' @param mc.cores The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see [mclapply] for details.
+##' @param apiKey \code{string} You need to apply for the apiKey from \url{http://sp2000.org.cn/api/document} to run this function.
 ##' @importFrom jsonlite fromJSON
 ##' @importFrom rlist list.rbind
 ##' @importFrom tibble tibble
@@ -19,7 +19,7 @@
 ##' }
 ##' @return dataframe
 ##' @author Liuyong Ding
-##' @details Visit the website \url{http://sp2000.org.cn/api/document} for more details
+##' @details Visit the website \url{http://sp2000.org.cn/api/document} for more details.
 ##' @examples
 #' \dontrun{
 #' apiKey <- "your apiKey"
