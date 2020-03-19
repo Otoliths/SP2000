@@ -7,20 +7,20 @@
 search_familyID(query = NULL, mc.cores = 2, apiKey = NULL)
 }
 \arguments{
-\item{query}{\code{character} Family name, or part of family name, supports Latin and Chinese names}
+\item{query}{\code{character} Family name, or part of family name, supports Latin and Chinese names.}
 
-\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores.}
+\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see \link{mclapply} for details.}
 
-\item{apiKey}{\code{string} You need to apply for the apiKey from \url{http://sp2000.org.cn/api/document} to run this function}
+\item{apiKey}{\code{string} You need to apply for the apiKey from \url{http://sp2000.org.cn/api/document} to run this function.}
 }
 \value{
 dataframe
 }
 \description{
-Search family IDs via family name, supports Latin and Chinese names
+Search family IDs via family name, supports Latin and Chinese names.
 }
 \details{
-Visit the website \url{http://sp2000.org.cn/api/document} for more details
+Visit the website \url{http://sp2000.org.cn/api/document} for more details.
 }
 \examples{
 \dontrun{
