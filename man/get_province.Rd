@@ -10,7 +10,7 @@ get_province()
 Statistics on species or infraspecies by province.
 }
 \description{
-Download the statistics datasets on species/infraspecies by province at \url{http://sp2000.org.cn/statistics/statistics_map}for more details.
+Download the statistics datasets on species/infraspecies by province at \url{http://sp2000.org.cn/statistics/statistics_map} for more details.
 }
 \details{
 Visit the website \url{http://sp2000.org.cn/statistics/statistics_map} for more details.
