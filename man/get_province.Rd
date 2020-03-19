@@ -7,16 +7,16 @@
 get_province()
 }
 \value{
-Statistics on species or infraspecies by province
+Statistics on species or infraspecies by province.
 }
 \description{
-Download the statistics datasets on species/infraspecies by province at \url{http://sp2000.org.cn/statistics/statistics_map}
+Download the statistics datasets on species/infraspecies by province at \url{http://sp2000.org.cn/statistics/statistics_map}for more details.
 }
 \details{
-Visit the website \url{http://sp2000.org.cn/statistics/statistics_map} for more details
+Visit the website \url{http://sp2000.org.cn/statistics/statistics_map} for more details.
 }
 \examples{
-\dontrun{
+\donttest{
 x <- get_province()
 head(x)
 }
