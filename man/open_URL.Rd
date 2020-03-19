@@ -7,20 +7,20 @@
 open_URL(query = NULL, name = "accceptedName", language = "en")
 }
 \arguments{
-\item{query}{\code{string} the accceptedName,scientificName,chineseName or commonName}
+\item{query}{\code{string} the accceptedName,scientificName,chineseName or commonName.}
 
-\item{name}{\code{string} name=c("accceptedName","scientificName","chineseName","commonName"),the default value is "accceptedName"}
+\item{name}{\code{string} name=c("accceptedName","scientificName","chineseName","commonName"),the default value is "accceptedName".}
 
-\item{language}{string currently only two languages are supported: Chinese and English,language=c("en","zh"), the default value is "en"}
+\item{language}{string currently only two languages are supported: Chinese and English,language=c("en","zh"), the default value is "en".}
 }
 \description{
-Query with the accceptedName,scientificName,chineseName and commonName", returning the webpage that meets the criteria
+Query with the accceptedName,scientificName,chineseName and commonName", returning the webpage that meets the criteria.
 }
 \details{
-Visit the website \url{http://sp2000.org.cn/pageservices/document} for more details
+Visit the website \url{http://sp2000.org.cn/pageservices/document} for more details.
 }
 \examples{
-\dontrun{
+\donttest{
 open_URL(query = "Anguilla marmorata",name = "scientificName",language = 'en')
 open_URL(query = "Anguilla marmorata",name = "scientificName",language = 'zh')
 }
