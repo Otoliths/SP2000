@@ -1,5 +1,5 @@
-#' @title Download Catalogue of Life China: Annual Checklist
-#' @description Organized by the Biodiversity Committee of Chinese Academy of Sciences, catalogue of Life China 2019 Annual Checklist edition has been compiled by Species 2000 China Node. It is funded by the Strategic Priority Research Program of the Chinese Academy of Sciences (Grant No. XDA19050202). It is released at Beijing on May, 2019.
+#' @title Download 'Catalogue of Life China': Annual Checklist
+#' @description Organized by the Biodiversity Committee of Chinese Academy of Sciences, 'Catalogue of Life China' 2019 Annual Checklist edition has been compiled by 'Species 2000' China Node. It is funded by the Strategic Priority Research Program of the Chinese Academy of Sciences (Grant No. XDA19050202). It is released at Beijing on May, 2019.
 #' @rdname download_CoLChina
 #' @name download_CoLChina
 #' @param version \code{integer} Release version of annual checklist,the default value is 2019
