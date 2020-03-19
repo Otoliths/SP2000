@@ -22,8 +22,3 @@ open_URL <- function(query = NULL,name = "accceptedName",language = 'en') {
   invisible(url)
   print(url)
 }
-
-
-
-
-
