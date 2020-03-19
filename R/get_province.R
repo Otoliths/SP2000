@@ -1,13 +1,13 @@
 #' @title Statistics on Species or Infraspecies by Province
-#' @description Download the statistics datasets on species/infraspecies by province at \url{http://sp2000.org.cn/statistics/statistics_map}
+#' @description Download the statistics datasets on species/infraspecies by province at \url{http://sp2000.org.cn/statistics/statistics_map}for more details.
 #' @rdname  get_province
 #' @name get_province
-#' @return Statistics on species or infraspecies by province
+#' @return Statistics on species or infraspecies by province.
 #' @author Liuyong Ding
-#' @details Visit the website \url{http://sp2000.org.cn/statistics/statistics_map} for more details
+#' @details Visit the website \url{http://sp2000.org.cn/statistics/statistics_map} for more details.
 #' @importFrom jsonlite fromJSON
 #' @examples
-#' \dontrun{
+#' \donttest{
 #' x <- get_province()
 #' head(x)
 #' }
