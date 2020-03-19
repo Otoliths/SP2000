@@ -7,20 +7,20 @@
 search_checklist(query = NULL, mc.cores = 2, apiKey = NULL)
 }
 \arguments{
-\item{query}{\code{string} single or more query}
+\item{query}{\code{string} single or more query,see \link{search_familyID} and \link{search_taxonID} for more details.}
 
-\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores.}
+\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see \link{mclapply} for details.}
 
-\item{apiKey}{\code{string} You need to apply for the apiKey from \url{http://sp2000.org.cn/api/document} to run this function}
+\item{apiKey}{\code{string} You need to apply for the apiKey from \url{http://sp2000.org.cn/api/document} to run this function.}
 }
 \value{
 lists
 }
 \description{
-Get checklist via species or infraspecies ID
+Get checklist via species or infraspecies ID.
 }
 \details{
-Visit the website \url{http://sp2000.org.cn/api/document} for more details
+Visit the website \url{http://sp2000.org.cn/api/document} for more details.
 }
 \examples{
 \dontrun{
