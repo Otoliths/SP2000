@@ -26,16 +26,16 @@
 \item{Download}{Download date}
 }}
 \source{
-Visit the website \url{http://sp2000.org.cn/api/document} for more details
+Visit the website \url{http://sp2000.org.cn/api/document} for more details.
 }
 \usage{
 list_df(x)
 }
 \arguments{
-\item{x}{\code{list} object See \code{\link[=search_checklist]{search_checklist()}}}
+\item{x}{\code{list} object, See \link{search_checklist} for more details.}
 }
 \description{
-Checklist lists convert data frame
+Checklist lists convert data frame.
 }
 \examples{
 \dontrun{
