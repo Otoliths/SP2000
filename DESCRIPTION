@@ -1,8 +1,8 @@
 Package: SP2000
 Type: Package
-Title: Catalogue of Life China Toolkit
+Title: 'Catalogue of Life China' Toolkit
 Version: 0.0.5
-Date: 2020-03-12
+Date: 2020-03-19
 Authors@R: c(person(given = "Liuyong",     family = "Ding",   email = "ly_ding@126.com",              role = c("aut", "cre")),
              person(given = "Minrui",      family = "Huang",  email = "minrui-huang@mail.ynu.edu.cn", role = "ctb"),
              person(given = "Ke",          family = "Yang",   email = "ydyangke@163.com",             role = "ctb"),
@@ -11,7 +11,9 @@ Authors@R: c(person(given = "Liuyong",     family = "Ding",   email = "ly_ding@1
              person(given = "Chengzhi",    family = "Ding",   email = "chzhding@ynu.edu.cn",          role = "ctb"),
              person(given = "Daming",      family = "He",     email = "dmhe@ynu.edu.cn",             role = "ctb")
              )
-Description: Download catalogue of the Chinese known species of animals, plants, fungi and micro-organisms.The development of this package was supported by Yunnan University's Research Innovation Fund for Graduate Students.
+Maintainer: Liuyong Ding <ly_ding@126.com>
+Description: A programmatic interface to <http://sp2000.org.cn>,re-written based on an accompanying 'Species 2000' API. Access tables describing catalogue of the Chinese known species of animals,plants,fungi,micro-organisms,and more.The development of 'SP2000' package was supported by Yunnan University's Research Innovation Fund for Graduate Students.
+Depends: R (>= 3.0.0)
 Imports: 
   jsonlite,
   tibble,
