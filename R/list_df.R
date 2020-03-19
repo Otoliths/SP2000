@@ -1,8 +1,8 @@
 ##' @title Lists convert data frame
-##' @description Checklist lists convert data frame
+##' @description Checklist lists convert data frame.
 ##' @rdname list_df
 ##' @name list_df
-##' @param x \code{list} object See [search_checklist()]
+##' @param x \code{list} object,See [search_checklist] for more details.
 ##' @importFrom tibble tibble
 ##' @importFrom rlist list.rbind
 ##' @importFrom rlist list.stack
@@ -30,7 +30,7 @@
 ##' \item{Download}{Download date}
 ##' }
 ##' @author Liuyong Ding
-##' @source Visit the website \url{http://sp2000.org.cn/api/document} for more details
+##' @source Visit the website \url{http://sp2000.org.cn/api/document} for more details.
 ##' @examples
 ##' \dontrun{
 ##' apiKey <- "your apiKey"
