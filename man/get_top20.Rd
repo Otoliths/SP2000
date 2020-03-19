@@ -10,13 +10,13 @@ get_top20()
 top20 species
 }
 \description{
-Download the most visited top20 species from \url{http://sp2000.org.cn}
+Download the most visited top20 species from \url{http://sp2000.org.cn} for more details.
 }
 \details{
-Visit the website \url{http://sp2000.org.cn} for more details
+Visit the website \url{http://sp2000.org.cn} for more details.
 }
 \examples{
-\dontrun{
+\donttest{
 x <- get_top20()
 head(x)
 }
