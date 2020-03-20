@@ -40,13 +40,12 @@ devtools::install_github("Otoliths/sp2000")
 
 ## Usage
 
+Load the SP2000 package
 ```{r , eval=F}
-# Load the SP2000 package
 library(SP2000)
 ```
-
+Search family IDs via family name, supports Latin and Chinese names
 ```{r, eval=F}
-#Search family IDs via family name, supports Latin and Chinese names
 apiKey <- "your apiKey"
 search_familyID(query = "Cyprinidae",apiKey = apiKey)
 ```
@@ -70,9 +69,8 @@ search_familyID(query = queries,apiKey = apiKey)
  1 Rosaceae   F20171000000279                         2 2020-03-17   
  2 Cyprinidae bf72e220caf04592a68c025fc5c2bfb7        2 2020-03-17   
 ```
-
+Search taxon IDs via familyID ,scientificName and commonName
 ```{r , eval=F}
-#Search taxon IDs via familyID ,scientificName and commonName
 apiKey <- "your apiKey"
 search_taxonID(query = "Uncia uncia",name = "scientificName",apiKey = apiKey)
 ```
@@ -116,9 +114,8 @@ last Update: 2020-03-17
 10 bf72e220caf04592a68c025fc5c2bfb7 032523c4852d406f8cd93fd8621b4676 2020-03-17   
  … with 689 more rows
 ```
-
+Download detailed lists via species or infraspecies ID
 ```{r , eval=F}
-# download detailed lists via species or infraspecies ID
 apiKey <- "your apiKey"
 queries <- c("025397f9-9891-40a7-b90b-5a61f9c7b597","04c59ee8-4b48-4095-be0d-663485463f21",
            "4c539380-8d0a-4cbf-b612-1e6df5850295","522c1cfd-0d2c-490f-b8f8-0c7459f6dba5",
@@ -133,9 +130,8 @@ x2 <- search_checklist(query = queries,apiKey = apiKey)
 last Update: 2020-03-17
 |======================================================================================| 100%, Elapsed 00:02
 ```
-
+Checklist lists convert data frame
 ```{r , eval=F}
-# checklist lists convert data frame
 x3 <- list_df(x2)
 head(x3)
 ```
@@ -154,7 +150,7 @@ head(x3)
    References <list>, Downloaddate <date>
 ```
 
-#### How to cite this package
+### How to cite this package
 ```{r , eval=F}
 citation("SP2000")
 
@@ -174,7 +170,7 @@ A BibTeX entry for LaTeX users is
   }
 ```
 
-#### How to cite this work (http://sp2000.org.cn/info/info_how_to_cite)
+### How to cite this work (http://sp2000.org.cn/info/info_how_to_cite)
 
 ```{r , eval=F}
 Catalogue of Life China: 
