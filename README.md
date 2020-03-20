@@ -24,29 +24,26 @@ Species 2000 (http://sp2000.org.cn) China node is a regional node of the interna
 
 ## Install
 
-```{r , eval=F}
-# Install dependence packages
-packages <- c("jsonlite", "tibble","pbmcapply","purrr","rlist")
-package.check <- lapply(packages, FUN = function(x) {
-  if (!require(x, character.only = TRUE)) {
-    install.packages(x, dependencies = TRUE, repos = "http://cran.us.r-project.org")
-    library(x, character.only = TRUE)
-  }
-})
-
-# Install devtools if not previously installed
-if(!"devtools" %in% installed.packages()[,"Package"]) install.packages("devtools")
-
-# Install SP2000 from Github if not previously installed
-if(!"SP2000" %in% installed.packages()[,"Package"]) devtools::install_github("Otoliths/sp2000")
+### Current official [![CRAN Version](http://www.r-pkg.org/badges/version/SP2000)](https://cran.r-project.org/package=SP2000) release:
+```r
+install.packages("SP2000")
 ```
+
+### Current beta / GitHub release:
+
+Installation using R package
+[**devtools**](https://cran.r-project.org/package=devtools):
+```r
+install.packages("devtools")
+devtools::install_github("Otoliths/sp2000")
+```
+
+## Usage
 
 ```{r , eval=F}
 # Load the SP2000 package
 library(SP2000)
 ```
-
-### Usage
 
 ```{r, eval=F}
 #Search family IDs via family name, supports Latin and Chinese names
