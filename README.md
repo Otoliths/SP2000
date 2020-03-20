@@ -19,7 +19,7 @@ This 'SP2000' package programatically download catalogue of the Chinese known sp
 [![](https://img.shields.io/badge/Contact%20us%20on-WeChat-blue.svg)](https://gitee.com/LiuyongDing/latest_literature/raw/master/bad.png)
 [![](https://img.shields.io/badge/Follow%20me%20on-WeChat-green.svg)](https://gitee.com/LiuyongDing/latest_literature/raw/master/img.png)
 
-Species 2000 (http://sp2000.org.cn) China node is a regional node of the international species 2000 project, proposed by the international species 2000 Secretariat in October 20, 2006, was officially launched in February 7, 2006. Chinese Academy of Sciences, biological diversity Committee (BC-CAS), together with its partners, to support and manage the construction of species 2000 China node. The main task of the species 2000 China node, according to the species 2000 standard data format, the classification information of the distribution in China of all species to finish and check, the establishment and maintenance of Chinese biological species list, to provide free services to users around the world. Note: firstly,You need to apply for the apiKey from http://sp2000.org.cn/api/document to run these functions of this package.
+Species 2000 (http://sp2000.org.cn) China node is a regional node of the international species 2000 project, proposed by the international species 2000 Secretariat in October 20, 2006, was officially launched in February 7, 2006. Chinese Academy of Sciences, biological diversity Committee (BC-CAS), together with its partners, to support and manage the construction of species 2000 China node. The main task of the species 2000 China node, according to the species 2000 standard data format, the classification information of the distribution in China of all species to finish and check, the establishment and maintenance of Chinese biological species list, to provide free services to users around the world.
 
 
 ## Install
@@ -39,6 +39,8 @@ devtools::install_github("Otoliths/sp2000")
 ```
 
 ## Usage
+
+### Note: You need to apply for the apiKey from http://sp2000.org.cn/api/document to run search_* functions of this package.
 
 Load the SP2000 package
 ```{r , eval=F}
