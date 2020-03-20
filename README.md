@@ -24,7 +24,7 @@ Species 2000 (http://sp2000.org.cn) China node is a regional node of the interna
 
 ## Install
 
-### Current official [![CRAN Version](http://www.r-pkg.org/badges/version/SP2000)](https://cran.r-project.org/package=SP2000) release:
+### Current official release:
 ```r
 install.packages("SP2000")
 ```
