@@ -52,15 +52,19 @@ library(SP2000)
 #Search family IDs via family name, supports Latin and Chinese names
 apiKey <- "your apiKey"
 search_familyID(query = "Cyprinidae",apiKey = apiKey)
+```
+```{r, eval=F}
 # last Update: 2020-03-17
 # # A tibble: 1 x 3
 #   family     familyIDs                        download.date
 #   <chr>      <chr>                            <date>       
 # 1 Cyprinidae bf72e220caf04592a68c025fc5c2bfb7 2020-03-17   
-
-
+```
+```{r, eval=F}
 queries <- c("Rosaceae","Cyprinidae")
 search_familyID(query = queries,apiKey = apiKey)
+```
+```{r, eval=F}
 # last Update: 2020-03-17
 # |======================================================================================| 100%, Elapsed 00:00
 # # A tibble: 2 x 4
@@ -74,15 +78,19 @@ search_familyID(query = queries,apiKey = apiKey)
 #Search taxon IDs via familyID ,scientificName and commonName
 apiKey <- "your apiKey"
 search_taxonID(query = "Uncia uncia",name = "scientificName",apiKey = apiKey)
+```
+```{r , eval=F}
 # last Update: 2020-03-17
 # # A tibble: 1 x 3
 #    scientificName taxonIDs                             download.date
 #     <chr>          <chr>                                <date>       
 #   1 Uncia uncia    b8c6a086-3d28-4876-8e8a-ca96e667768d 2020-03-17  
-
-
+```
+```{r , eval=F}
 queries <- c("Anguilla marmorata","Uncia uncia")
 search_taxonID(query = queries,name = "scientificName",apiKey = apiKey)
+```
+```{r , eval=F}
 # last Update: 2020-03-17
 # |======================================================================================| 100%, Elapsed 00:01
 # # A tibble: 2 x 3
@@ -90,9 +98,11 @@ search_taxonID(query = queries,name = "scientificName",apiKey = apiKey)
 #   <chr>              <chr>                                <date>       
 # 1 Anguilla marmorata e192fbc15df24049bcd0fd01d307affa     2020-03-17   
 # 2 Uncia uncia        b8c6a086-3d28-4876-8e8a-ca96e667768d 2020-03-17  
-
-
+```
+```{r , eval=F}
 search_taxonID(query = "bf72e220caf04592a68c025fc5c2bfb7",name = "familyID",apiKey = apiKey)
+```
+```{r , eval=F}
 # last Update: 2020-03-17
 # # A tibble: 699 x 3
 #   familyID                         taxonIDs                         download.date
@@ -121,6 +131,8 @@ queries <- c("025397f9-9891-40a7-b90b-5a61f9c7b597","04c59ee8-4b48-4095-be0d-663
            "d5938c75-e51a-4737-aaef-4f342fa8b364","f95f766f-7b96-464a-bff5-43b1adafcf50",
            "faaf346f-49f4-400a-947b-edb6b0f6bd5e")           
 x2 <- search_checklist(query = queries,apiKey = apiKey)
+```
+```{r , eval=F}
 # last Update: 2020-03-17
 # |======================================================================================| 100%, Elapsed 00:02
 ```
@@ -129,6 +141,8 @@ x2 <- search_checklist(query = queries,apiKey = apiKey)
 # checklist lists convert data frame
 x3 <- list_df(x2)
 head(x3)
+```
+```{r , eval=F}
 # # A tibble: 6 x 19
 #   ScientificName[… Synonyms chineseName[,1] CommonNames Kingdom[,1] Phylum[,1] Class[,1] Order[,1] Family[,1]
 #   <chr>            <list>   <chr>           <list>      <chr>       <chr>      <chr>     <chr>     <chr>     
