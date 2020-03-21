@@ -25,7 +25,7 @@ This 'SP2000' package programatically download catalogue of the Chinese known sp
 Species 2000 (http://sp2000.org.cn) China node is a regional node of the international species 2000 project, proposed by the international species 2000 Secretariat in October 20, 2006, was officially launched in February 7, 2006. Chinese Academy of Sciences, biological diversity Committee (BC-CAS), together with its partners, to support and manage the construction of species 2000 China node. The main task of the species 2000 China node, according to the species 2000 standard data format, the classification information of the distribution in China of all species to finish and check, the establishment and maintenance of Chinese biological species list, to provide free services to users around the world.
 
 
-## Install
+## Installation
 
 ### Current official release:
 ```r
@@ -197,3 +197,8 @@ How to cite taxon included in this work, for example:
 Aix galericulata: 
 LEI Fumin, et al, 2019. Aix galericulata in Catalogue of Life China: 2019 Annual Checklist, Beijing, China. http://sp2000.org.cn/species/show_species_details/f3bc32a7-50ec-41cc-91ee-a990b9196838
 ```
+## Contributing
+
+We welcome any contributions\! By participating in this project you
+agree to bide by the terms outlined in the [Contributor Code of
+Conduct](CONDUCT.md).
