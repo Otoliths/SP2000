@@ -3,8 +3,8 @@
 ## SP2000 <img src="inst/figures/logo.png" align="right" width="140" />
 
 [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/SP2000?color=green)](https://cran.r-project.org/package=SP2000)
-[![Build Status](https://travis-ci.org/Otoliths/sp2000.svg?branch=master)](https://travis-ci.org/easystats/sp2000)
 [![codecov](https://badge.fury.io/gh/Otoliths%2Fsp2000.svg)](https://badge.fury.io/for/gh/Otoliths/sp2000)
+[![Build Status](https://travis-ci.org/Otoliths/sp2000.svg?branch=master)](https://travis-ci.org/easystats/sp2000)
 [![R build status](https://github.com/Otoliths/sp2000/workflows/R-CMD-check/badge.svg)](https://github.com/Otoliths/sp2000/actions)
 [![CI](https://github.com/Otoliths/sp2000/workflows/CI/badge.svg)](https://github.com/Otoliths/sp2000/actions?query=workflow%3ACI)
 
