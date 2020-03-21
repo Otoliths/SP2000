@@ -5,6 +5,7 @@
 [![Build Status](https://travis-ci.org/Otoliths/sp2000.svg?branch=master)](https://travis-ci.org/easystats/sp2000)
 [![codecov](https://badge.fury.io/gh/Otoliths%2Fsp2000.svg)](https://badge.fury.io/for/gh/Otoliths/sp2000)
 [![R build status](https://github.com/Otoliths/sp2000/workflows/R-CMD-check/badge.svg)](https://github.com/Otoliths/sp2000/actions)
+[![CI](https://github.com/Otoliths/sp2000/workflows/CI/badge.svg)](https://github.com/Otoliths/sp2000/actions?query=workflow%3ACI)
 
 <!-- r badge_devel("Otoliths/sp2000", "blue") -->
 [![](https://cranlogs.r-pkg.org/badges/grand-total/SP2000?color=bluen)](https://cran.r-project.org/package=SP2000)
