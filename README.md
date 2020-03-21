@@ -197,8 +197,3 @@ How to cite taxon included in this work, for example:
 Aix galericulata: 
 LEI Fumin, et al, 2019. Aix galericulata in Catalogue of Life China: 2019 Annual Checklist, Beijing, China. http://sp2000.org.cn/species/show_species_details/f3bc32a7-50ec-41cc-91ee-a990b9196838
 ```
-## Contributing
-
-We welcome any contributions\! By participating in this project you
-agree to bide by the terms outlined in the [Contributor Code of
-Conduct](CONDUCT.md).
