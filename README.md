@@ -155,6 +155,12 @@ head(x3)
    Distribution[,1] <chr>, Name[,1] <chr>, Email[,1] <chr>, Address[,1] <chr>, Institution[,1] <chr>,
    References <list>, Downloaddate <date>
 ```
+## Contribution
+
+Contributions to this package are welcome. 
+The preferred method of contribution is through a GitHub pull request. 
+Feel also free to contact us by creating [an issue](https://github.com/Otoliths/sp2000/issues).
+
 
 ### How to cite this package
 ```{r , eval=F}
