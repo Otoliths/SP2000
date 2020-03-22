@@ -14,7 +14,7 @@
 [![](https://cranlogs.r-pkg.org/badges/last-week/SP2000?color=orange)](https://cranlogs.r-pkg.org/downloads/total/last-week/SP2000)
 
 
-This [*'SP2000'*](https://cran.r-project.org/package=SP2000) package programatically download catalogue of the Chinese known species of animals, plants, fungi and micro-organisms.The development of this package was supported by Yunnan University's Research Innovation Fund for Graduate Students.
+This [**SP2000**](https://cran.r-project.org/package=SP2000) package programatically download catalogue of the Chinese known species of animals, plants, fungi and micro-organisms.The development of this package was supported by Yunnan University's Research Innovation Fund for Graduate Students.
 
 
 
@@ -160,6 +160,10 @@ head(x3)
 Contributions to this package are welcome. 
 The preferred method of contribution is through a GitHub pull request. 
 Feel also free to contact us by creating [an issue](https://github.com/Otoliths/sp2000/issues).
+
+## Acknowledgment
+
+The development of this [**SP2000**](https://cran.r-project.org/package=SP2000) package was supported by Yunnan University's Research Innovation Fund for Graduate Students.
 
 
 ### How to cite this package
