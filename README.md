@@ -14,7 +14,7 @@
 [![](https://cranlogs.r-pkg.org/badges/last-week/SP2000?color=orange)](https://cranlogs.r-pkg.org/downloads/total/last-week/SP2000)
 
 
-This [**SP2000**](https://cran.r-project.org/package=SP2000) package programatically download catalogue of the Chinese known species of animals, plants, fungi and micro-organisms. There are 106509 species & infraspecific taxa in [2019 Annual Checklist of Catalogue of Life China](http://sp2000.org.cn/2019), including __94260__ species and __12249__ infraspecific taxa.
+This [**SP2000**](https://cran.r-project.org/package=SP2000) package programatically download catalogue of the Chinese known species of animals, plants, fungi and micro-organisms. There are __106509__ species & infraspecific taxa in [2019 Annual Checklist of Catalogue of Life China](http://sp2000.org.cn/2019), including __94260__ species and __12249__ infraspecific taxa.
 
 
 
