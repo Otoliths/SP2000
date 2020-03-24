@@ -46,7 +46,7 @@ devtools::install_github("Otoliths/sp2000")
 
 ##### Note: You need to apply for the [*apiKey*](http://sp2000.org.cn/api/document) to run search_* functions of this package.
 
-Load the [*SP2000*] package
+Load the **SP2000** package
 ```{r , eval=F}
 library(SP2000)
 ```
