@@ -159,7 +159,7 @@ head(x3)
 
 Contributions to this package are welcome. 
 The preferred method of contribution is through a GitHub pull request. 
-Feel also free to contact us by creating [__an issue__](https://github.com/Otoliths/sp2000/issues).
+Feel also free to contact us by creating [*an issue*](https://github.com/Otoliths/sp2000/issues).
 
 ## Acknowledgment
 
