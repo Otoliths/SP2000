@@ -39,7 +39,8 @@ install.packages("SP2000")
 Installation using R package
 [**devtools**](https://cran.r-project.org/package=devtools):
 ```r
-install.packages("devtools")
+if (!requireNamespace("devtools", quietly=TRUE))
+    install.packages("devtools")
 devtools::install_github("Otoliths/sp2000")
 #or
 devtools::install_gitlab("Otoliths/sp2000")
