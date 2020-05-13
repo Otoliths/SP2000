@@ -126,7 +126,6 @@ search_taxonID(query = "bf72e220caf04592a68c025fc5c2bfb7",name = "familyID")
 ```
 ###### Download detailed lists via species or infraspecies ID
 ```r
-apiKey <- "your apiKey"
 queries <- c("025397f9-9891-40a7-b90b-5a61f9c7b597","04c59ee8-4b48-4095-be0d-663485463f21",
            "4c539380-8d0a-4cbf-b612-1e6df5850295","522c1cfd-0d2c-490f-b8f8-0c7459f6dba5",
            "6d04dcf5-f390-472d-b674-4f09e43713ed","89c29448-a48f-46cb-a573-ee51dd47e7b0",
