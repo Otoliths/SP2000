@@ -43,10 +43,7 @@ if (!requireNamespace("devtools", quietly=TRUE))
     install.packages("devtools")
     
 devtools::install_github("Otoliths/sp2000")
-#or
-devtools::install_gitlab("Otoliths/sp2000")
-#or
-remotes::install_bitbucket("Otoliths/sp2000")
+
 ```
 
 ## Usage
