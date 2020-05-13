@@ -1,0 +1,13 @@
+0.0.6
+ - Update DESCRIPTION
+ - Update search_checklist function
+ - Update search_familyID function
+ - Update search_taxonID function
+ - Added set_search_key function
+ - Added get_CoLGlobal function
+ - Added get_CoLTaiwan function
+ - Added get_RedlistChina function
+ - Added find_Synonyms function
+
+0.0.5
+ - Initial release
