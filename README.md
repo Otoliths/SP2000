@@ -159,6 +159,22 @@ head(x3)
 #   Distribution[,1] <chr>, Name[,1] <chr>, Email[,1] <chr>, Address[,1] <chr>, Institution[,1] <chr>,
 #   References <list>, Downloaddate <date>
 ```
+
+Query Redlist of China’s Biodiversity of Vertebrate, Higher Plants and Macrofungi.
+```r
+get_RedlistChina(query = "Anguilla", option = "Scientific Names")
+```
+```r
+last Update: 2020-05-13
+# A tibble: 4 x 11
+  `Chinese Family… Family `Chinese Names` ScientificNames Status `Assessment Cri… Endemic Taxon `Chinese Taxon`
+  <chr>            <chr>  <chr>           <chr>           <chr>  <chr>            <chr>   <chr> <chr>          
+1 鳗鲡科           Angui… 日本鳗鲡        Anguilla japon… EN     A2bcd            NA      Inla… 内陆鱼类       
+2 鳗鲡科           Angui… 花鳗鲡          Anguilla marmo… EN     A2bcd            NA      Inla… 内陆鱼类       
+3 鳗鲡科           Angui… 双色鳗鲡        Anguilla bicol… NT     NA               NA      Inla… 内陆鱼类       
+4 鳗鲡科           Angui… 云纹鳗鲡        Anguilla nebul… NT     NA               NA      Inla… 内陆鱼类       
+# … with 2 more variables: Group <chr>, `Chinese Group` <chr>
+```
 ## Contribution
 
 Contributions to this package are welcome. 
