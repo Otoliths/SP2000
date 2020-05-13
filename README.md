@@ -160,7 +160,7 @@ head(x3)
 #   References <list>, Downloaddate <date>
 ```
 
-Query Redlist of China’s Biodiversity of Vertebrate, Higher Plants and Macrofungi.
+Query Redlist of China’s Biodiversity of Vertebrate, Higher Plants and Macrofungi
 ```r
 get_RedlistChina(query = "Anguilla", option = "Scientific Names")
 ```
@@ -174,6 +174,64 @@ last Update: 2020-05-13
 3 鳗鲡科           Angui… 双色鳗鲡        Anguilla bicol… NT     NA               NA      Inla… 内陆鱼类       
 4 鳗鲡科           Angui… 云纹鳗鲡        Anguilla nebul… NT     NA               NA      Inla… 内陆鱼类       
 # … with 2 more variables: Group <chr>, `Chinese Group` <chr>
+```
+
+Get Catalogue of Life Global checklist via species name and id
+```r
+dbentry1 <- get_CoLGlobal(query = "4fdb38d6220462049eab9e3f285144e0", option = "id")
+str(dbentry1)
+```
+```r
+List of 9
+ $ id                        : chr "4fdb38d6220462049eab9e3f285144e0"
+ $ name                      : chr ""
+ $ total_number_of_results   : int 1
+ $ number_of_results_returned: int 1
+ $ start                     : int 0
+ $ error_message             : chr ""
+ $ version                   : chr "1.9 rev 2126ab0"
+ $ rank                      : chr ""
+ $ results                   :'data.frame':	1 obs. of  12 variables:
+  ..$ id                    : chr "4fdb38d6220462049eab9e3f285144e0"
+  ..$ name                  : chr "Larus fuscus"
+  ..$ rank                  : chr "Species"
+  ..$ name_status           : chr "accepted name"
+  ..$ record_scrutiny_date  :List of 1
+  .. ..$ : list()
+  ..$ online_resource       : chr "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=176821"
+  ..$ is_extinct            : chr "false"
+  ..$ source_database       : chr "ITIS Selected: The Integrated Taxonomic Information System"
+  ..$ source_database_url   : chr ""
+  ..$ bibliographic_citation: chr "Tom Orrell (custodian); Dave Nicolson (ed). (2020). ITIS Selected: The Integrated Taxonomic Information System "| __truncated__
+  ..$ name_html             : chr "<i>Larus fuscus</i> Linnaeus, 1758"
+  ..$ url                   : chr "http://www.catalogueoflife.org/col/details/species/id/4fdb38d6220462049eab9e3f285144e0"
+```
+
+Find synonyms via species name from Catalogue of Life Global
+```r
+find_Synonyms("Anguilla anguilla")
+```
+```r
+last Update: 2020-05-13
+Find the results of synonyms for Anguilla anguilla are as follows: 
+ [1] "Angill angill"                    "Anguilla acutirostris"            "Anguilla aegyptiaca"             
+ [4] "Anguilla altirostris"             "Anguilla ancidda"                 "Anguilla anguilla macrocephala"  
+ [7] "Anguilla anguilla mucrocephala"   "Anguilla anguilla ornithorhyncha" "Anguilla anguilla oxycephala"    
+[10] "Anguilla anguillai"               "Anguilla anguillia"               "Anguilla bibroni"                
+[13] "Anguilla brevirostris"            "Anguilla callensis"               "Anguilla canariensis"            
+[16] "Anguilla capitone"                "Anguilla cloacina"                "Anguilla cuvieri"                
+[19] "Anguilla eurystoma"               "Anguilla fluviatilis"             "Anguilla fluviatilis"            
+[22] "Anguilla fluviatilis"             "Anguilla hibernica"               "Anguilla kieneri"                
+[25] "Anguilla latirostris"             "Anguilla linnei"                  "Anguilla marginata"              
+[28] "Anguilla marina"                  "Anguilla mediorostris"            "Anguilla melanochir"             
+[31] "Anguilla microptera"              "Anguilla migratoria"              "Anguilla morena"                 
+[34] "Anguilla nilotica"                "Anguilla nilotica"                "Anguilla oblongirostris"         
+[37] "Anguilla platycephala"            "Anguilla platyrhynchus"           "Anguilla savignyi"               
+[40] "Anguilla septembrina"             "Anguilla vulgaris"                "Anguilla vulgaris"               
+[43] "Anguilla vulgaris fluviatilis"    "Anguilla vulgaris lacustus"       "Anguilla vulgaris macrocephala"  
+[46] "Anguilla vulgaris marina"         "Anguilla vulgaris ornithorhincha" "Anguilla vulgaris platyura"      
+[49] "Leptocephalus brevirostris"       "Muraena anguilla"                 "Muraena anguilla maculata"       
+[52] "Muraena anguilla marina"          "Muraena oxyrhina"                 "Muraena platyrhina"          
 ```
 ## Contribution
 
@@ -205,7 +263,6 @@ A BibTeX entry for LaTeX users is
     url = {https://CRAN.R-project.org/package=SP2000},
   }
 ```
-
 ### [How to cite this work](http://sp2000.org.cn/info/info_how_to_cite)
 
 ```r
