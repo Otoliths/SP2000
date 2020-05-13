@@ -15,7 +15,7 @@
 [![](https://cranlogs.r-pkg.org/badges/last-week/SP2000?color=orange)](https://cranlogs.r-pkg.org/downloads/total/last-week/SP2000)
 
 
-This [**SP2000**](https://cran.r-project.org/package=SP2000) package programatically download catalogue of the Chinese known species of animals, plants, fungi and micro-organisms. There are __106509__ species & infraspecific taxa in [2019 Annual Checklist of Catalogue of Life China](http://sp2000.org.cn/2019), including __94260__ species and __12249__ infraspecific taxa.
+This [**SP2000**](https://cran.r-project.org/package=SP2000) package programatically download catalogue of the Chinese known species of animals, plants, fungi and micro-organisms. There are __106509__ species & infraspecific taxa in [2019 Annual Checklist of Catalogue of Life China](http://sp2000.org.cn/2019), including __94260__ species and __12249__ infraspecific taxa.This package also supports access to catalogue of life global <http://catalogueoflife.org> and catalogue of life Taiwan <http://taibnet.sinica.edu.tw/home_eng.php?>.
 
 
 
@@ -56,8 +56,8 @@ library(SP2000)
 ```
 ###### Search family IDs via family name, supports Latin and Chinese names
 ```r
-apiKey <- "your apiKey"
-search_familyID(query = "Cyprinidae",apiKey = apiKey)
+set_search_key <- "your apiKey"
+search_familyID(query = "Cyprinidae")
 ```
 ```r
 #last Update: 2020-03-17
@@ -68,7 +68,7 @@ search_familyID(query = "Cyprinidae",apiKey = apiKey)
 ```
 ```r
 queries <- c("Rosaceae","Cyprinidae")
-search_familyID(query = queries,apiKey = apiKey)
+search_familyID(query = queries)
 ```
 ```r
 # last Update: 2020-03-17
@@ -82,7 +82,7 @@ search_familyID(query = queries,apiKey = apiKey)
 ###### Search taxon IDs via familyID ,scientificName and commonName
 ```r
 apiKey <- "your apiKey"
-search_taxonID(query = "Uncia uncia",name = "scientificName",apiKey = apiKey)
+search_taxonID(query = "Uncia uncia",name = "scientificName")
 ```
 ```r
 # last Update: 2020-03-17
@@ -93,7 +93,7 @@ search_taxonID(query = "Uncia uncia",name = "scientificName",apiKey = apiKey)
 ```
 ```r
 queries <- c("Anguilla marmorata","Uncia uncia")
-search_taxonID(query = queries,name = "scientificName",apiKey = apiKey)
+search_taxonID(query = queries,name = "scientificName")
 ```
 ```r
 # last Update: 2020-03-17
@@ -105,7 +105,7 @@ search_taxonID(query = queries,name = "scientificName",apiKey = apiKey)
 # 2 Uncia uncia        b8c6a086-3d28-4876-8e8a-ca96e667768d 2020-03-17  
 ```
 ```r
-search_taxonID(query = "bf72e220caf04592a68c025fc5c2bfb7",name = "familyID",apiKey = apiKey)
+search_taxonID(query = "bf72e220caf04592a68c025fc5c2bfb7",name = "familyID")
 ```
 ```r
 # last Update: 2020-03-17
@@ -134,7 +134,7 @@ queries <- c("025397f9-9891-40a7-b90b-5a61f9c7b597","04c59ee8-4b48-4095-be0d-663
            "b8c6a086-3d28-4876-8e8a-ca96e667768d","c1dbe9f7-e02f-4f05-a1ca-1487a41075bd",
            "d5938c75-e51a-4737-aaef-4f342fa8b364","f95f766f-7b96-464a-bff5-43b1adafcf50",
            "faaf346f-49f4-400a-947b-edb6b0f6bd5e")           
-x2 <- search_checklist(query = queries,apiKey = apiKey)
+x2 <- search_checklist(query = queries)
 ```
 ```r
 # last Update: 2020-03-17
@@ -232,6 +232,24 @@ Find the results of synonyms for Anguilla anguilla are as follows:
 [46] "Anguilla vulgaris marina"         "Anguilla vulgaris ornithorhincha" "Anguilla vulgaris platyura"      
 [49] "Leptocephalus brevirostris"       "Muraena anguilla"                 "Muraena anguilla maculata"       
 [52] "Muraena anguilla marina"          "Muraena oxyrhina"                 "Muraena platyrhina"          
+```
+
+###### Search Catalogue of Life Taiwan checklist
+```r
+get_CoLTaiwan(query="Anguilla",tree="name",option = "contain")
+```
+```r
+last Update: 2020-05-13
+# A tibble: 5 x 23
+  name_code kingdom kingdom_c phylum phylum_c class class_c order order_c family family_c genus genus_c species
+  <chr>     <chr>   <chr>     <chr>  <chr>    <chr> <chr>   <chr> <chr>   <chr>  <chr>    <chr> <chr>   <chr>  
+1 380710    Animal… 動物界    Chord… 脊索動物門… Acti… 條鰭魚綱… Angu… 鰻形目  Angui… 鰻鱺科   Angu… 鰻鱺屬  bicolor
+2 395489    Animal… 動物界    Chord… 脊索動物門… Acti… 條鰭魚綱… Angu… 鰻形目  Angui… 鰻鱺科   Angu… 鰻鱺屬  celebe…
+3 380711    Animal… 動物界    Chord… 脊索動物門… Acti… 條鰭魚綱… Angu… 鰻形目  Angui… 鰻鱺科   Angu… 鰻鱺屬  japoni…
+4 395491    Animal… 動物界    Chord… 脊索動物門… Acti… 條鰭魚綱… Angu… 鰻形目  Angui… 鰻鱺科   Angu… 鰻鱺屬  luzone…
+5 380712    Animal… 動物界    Chord… 脊索動物門… Acti… 條鰭魚綱… Angu… 鰻形目  Angui… 鰻鱺科   Angu… 鰻鱺屬  marmor…
+# … with 9 more variables: infraspecies_marker <chr>, infraspecies <chr>, infraspecies2_marker <chr>,
+#   infraspecies2 <chr>, author <chr>, author2 <chr>, common_name_c <chr>, endemic <chr>, dataprovider <chr>
 ```
 ## Contribution
 
