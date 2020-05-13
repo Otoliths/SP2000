@@ -2,19 +2,17 @@
 % Please edit documentation in R/search_checklist.R
 \name{search_checklist}
 \alias{search_checklist}
-\title{Search checklist}
+\title{Search Catalogue of Life China checklist}
 \usage{
-search_checklist(query = NULL, mc.cores = 2, apiKey = NULL)
+search_checklist(query = NULL, mc.cores = 2)
 }
 \arguments{
-\item{query}{\code{string} single or more query,see \link{search_familyID} and \link{search_taxonID} for more details.}
+\item{query}{\code{string} single or more query,see [search_familyID] and [search_taxonID] for more details.}
 
-\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see \link{mclapply} for details.}
-
-\item{apiKey}{\code{string} You need to apply for the apiKey from \url{http://sp2000.org.cn/api/document} to run this function.}
+\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see [mclapply] for details.}
 }
 \value{
-lists
+Catalogue of Life China list(s)
 }
 \description{
 Get checklist via species or infraspecies ID.
@@ -24,11 +22,10 @@ Visit the website \url{http://sp2000.org.cn/api/document} for more details.
 }
 \examples{
 \dontrun{
-apiKey <- "your apiKey"
-search_checklist(query="025397f9-9891-40a7-b90b-5a61f9c7b597",apiKey = apiKey)
+search_checklist(query="025397f9-9891-40a7-b90b-5a61f9c7b597")
 
 queries <- c("025397f9-9891-40a7-b90b-5a61f9c7b597","04c59ee8-4b48-4095-be0d-663485463f21")
-search_checklist(query = queries,apiKey = apiKey)
+search_checklist(query = queries)
 }
 }
 \author{
