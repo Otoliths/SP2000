@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_province.R
 \name{get_province}
 \alias{get_province}
-\title{Statistics on Species or Infraspecies by Province}
+\title{Statistics on Species or Infraspecies by Province from Catalogue of Life China checklist}
 \usage{
 get_province()
 }

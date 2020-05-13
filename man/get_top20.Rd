@@ -2,7 +2,7 @@
 % Please edit documentation in R/get_top20.R
 \name{get_top20}
 \alias{get_top20}
-\title{Download the top20 species}
+\title{Download the top20 species for Catalogue of Life China checklist}
 \usage{
 get_top20()
 }
@@ -10,7 +10,7 @@ get_top20()
 top20 species
 }
 \description{
-Download the most visited top20 species from \url{http://sp2000.org.cn} for more details.
+Download the most visited top20 species from \url{http://sp2000.org.cn}for more details.
 }
 \details{
 Visit the website \url{http://sp2000.org.cn} for more details.
