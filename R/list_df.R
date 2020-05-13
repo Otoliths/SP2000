@@ -1,8 +1,8 @@
-##' @title Lists convert data frame
+##' @title Catalogue of Life China list(s) convert data frame
 ##' @description Checklist lists convert data frame.
 ##' @rdname list_df
 ##' @name list_df
-##' @param x \code{list} object,See [search_checklist] for more details.
+##' @param x \code{list} object, See [search_checklist] for more details.
 ##' @importFrom tibble tibble
 ##' @importFrom rlist list.rbind
 ##' @importFrom rlist list.stack
@@ -30,12 +30,11 @@
 ##' \item{Download}{Download date}
 ##' }
 ##' @author Liuyong Ding
-##' @source Visit the website \url{http://sp2000.org.cn/api/document} for more details.
+##' @source Visit the website \url{http://sp2000.org.cn/api/document} for more details
 ##' @examples
 ##' \dontrun{
-##' apiKey <- "your apiKey"
 ##' queries <- c("025397f9-9891-40a7-b90b-5a61f9c7b597","04c59ee8-4b48-4095-be0d-663485463f21")
-##' x1 <- search_checklist(query = queries,apiKey = apiKey)
+##' x1 <- search_checklist(query = queries)
 ##' x2 <- list_df(x1)
 ##' for(i in 1:length(x2$References)){
 ##' x2$References[[i]] <- as.matrix(x2$References[[i]])

@@ -1,5 +1,5 @@
-#' @title Download the top20 species
-#' @description Download the most visited top20 species from \url{http://sp2000.org.cn} for more details.
+#' @title Download the top20 species for Catalogue of Life China checklist
+#' @description Download the most visited top20 species from \url{http://sp2000.org.cn}for more details.
 #' @rdname  get_top20
 #' @name get_top20
 #' @return top20 species

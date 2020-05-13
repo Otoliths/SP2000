@@ -1,5 +1,5 @@
-#' @title Statistics on Species or Infraspecies by Province
-#' @description Download the statistics datasets on species/infraspecies by province at \url{http://sp2000.org.cn/statistics/statistics_map}for more details.
+#' @title Statistics on Species or Infraspecies by Province from Catalogue of Life China checklist
+#' @description Download the statistics datasets on species/infraspecies by province at \url{http://sp2000.org.cn/statistics/statistics_map} for more details.
 #' @rdname  get_province
 #' @name get_province
 #' @return Statistics on species or infraspecies by province.
