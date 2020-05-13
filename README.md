@@ -54,7 +54,7 @@ Load the **SP2000** package
 ```r
 library(SP2000)
 ```
-Search family IDs via family name, supports Latin and Chinese names
+###### Search family IDs via family name, supports Latin and Chinese names
 ```r
 apiKey <- "your apiKey"
 search_familyID(query = "Cyprinidae",apiKey = apiKey)
@@ -79,7 +79,7 @@ search_familyID(query = queries,apiKey = apiKey)
 # 1 Rosaceae   F20171000000279                         2 2020-03-17   
 # 2 Cyprinidae bf72e220caf04592a68c025fc5c2bfb7        2 2020-03-17   
 ```
-Search taxon IDs via familyID ,scientificName and commonName
+###### Search taxon IDs via familyID ,scientificName and commonName
 ```r
 apiKey <- "your apiKey"
 search_taxonID(query = "Uncia uncia",name = "scientificName",apiKey = apiKey)
@@ -124,7 +124,7 @@ search_taxonID(query = "bf72e220caf04592a68c025fc5c2bfb7",name = "familyID",apiK
 #10 bf72e220caf04592a68c025fc5c2bfb7 032523c4852d406f8cd93fd8621b4676 2020-03-17   
 # … with 689 more rows
 ```
-Download detailed lists via species or infraspecies ID
+###### Download detailed lists via species or infraspecies ID
 ```r
 apiKey <- "your apiKey"
 queries <- c("025397f9-9891-40a7-b90b-5a61f9c7b597","04c59ee8-4b48-4095-be0d-663485463f21",
@@ -140,7 +140,7 @@ x2 <- search_checklist(query = queries,apiKey = apiKey)
 # last Update: 2020-03-17
 # |======================================================================================| 100%, Elapsed 00:02
 ```
-Checklist lists convert data frame
+###### Checklist lists convert data frame
 ```r
 x3 <- list_df(x2)
 head(x3)
@@ -160,7 +160,7 @@ head(x3)
 #   References <list>, Downloaddate <date>
 ```
 
-Query Redlist of China’s Biodiversity of Vertebrate, Higher Plants and Macrofungi
+###### Query Redlist of China’s Biodiversity of Vertebrate, Higher Plants and Macrofungi
 ```r
 get_RedlistChina(query = "Anguilla", option = "Scientific Names")
 ```
@@ -176,7 +176,7 @@ last Update: 2020-05-13
 # … with 2 more variables: Group <chr>, `Chinese Group` <chr>
 ```
 
-Get Catalogue of Life Global checklist via species name and id
+###### Get Catalogue of Life Global checklist via species name and id
 ```r
 dbentry1 <- get_CoLGlobal(query = "4fdb38d6220462049eab9e3f285144e0", option = "id")
 str(dbentry1)
@@ -207,7 +207,7 @@ List of 9
   ..$ url                   : chr "http://www.catalogueoflife.org/col/details/species/id/4fdb38d6220462049eab9e3f285144e0"
 ```
 
-Find synonyms via species name from Catalogue of Life Global
+###### Find synonyms via species name from Catalogue of Life Global
 ```r
 find_Synonyms("Anguilla anguilla")
 ```
