@@ -20,9 +20,7 @@ Imports:
   pbmcapply,
   purrr,
   rlist,
-  XML,
-  downloader,
-  DT
+  XML
 Suggests:
   utils
 License: Artistic-2.0
