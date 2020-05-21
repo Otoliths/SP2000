@@ -81,7 +81,6 @@ search_familyID(query = queries)
 ```
 ###### Search taxon IDs via familyID ,scientificName and commonName
 ```r
-apiKey <- "your apiKey"
 search_taxonID(query = "Uncia uncia",name = "scientificName")
 ```
 ```r
