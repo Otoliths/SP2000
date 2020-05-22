@@ -4,12 +4,12 @@
 \alias{download_CoLChina}
 \title{Download 'Catalogue of Life China': Annual Checklist}
 \usage{
-download_CoLChina(version = "2020", OS = "Mac", dir = tempdir())
+download_CoLChina(version = "2020", OS = "MacOS", dir = tempdir())
 }
 \arguments{
 \item{version}{\code{integer} Release version of annual checklist,the default value is 2020.}
 
-\item{OS}{\code{character} Supported operating system,c("Mac", "Ubuntu" ,"Windows"),the default value is "Mac".}
+\item{OS}{\code{character} Supported operating system,c("MacOS", "Ubuntu" ,"Windows"),the default value is "MacOS".}
 
 \item{dir}{a non-empty character vector giving the directory name by user,the default value is dir = tempdir(),see [tempdir()] for details.}
 }
@@ -25,7 +25,7 @@ Visit the website \url{http://sp2000.org.cn/download} for more details.
 \examples{
 \donttest{
 dir <- "data/"
-download_CoLChina(version = "2020",OS = "Mac", dir = dir)
+download_CoLChina(version = "2020",OS = "MacOS", dir = dir)
 }
 }
 \author{
