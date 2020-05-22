@@ -60,67 +60,67 @@ set_search_key <- "your apiKey"
 search_familyID(query = "Cyprinidae")
 ```
 ```r
-last Update: 2020-05-22
+# last Update: 2020-05-22
 # A tibble: 1 x 3
-  family     familyIDs                        download.date
-  <chr>      <chr>                            <date>       
-1 Cyprinidae bf72e220caf04592a68c025fc5c2bfb7 2020-05-22   
+#  family     familyIDs                        download.date
+#  <chr>      <chr>                            <date>       
+# 1 Cyprinidae bf72e220caf04592a68c025fc5c2bfb7 2020-05-22   
 ```
 ```r
 queries <- c("Rosaceae","Cyprinidae")
 search_familyID(query = queries)
 ```
 ```r
-last Update: 2020-05-22
-  |=============================================================================================| 100%, Elapsed 00:00
+# last Update: 2020-05-22
+#  |=============================================================================================| 100%, Elapsed 00:00
 # A tibble: 2 x 3
-  family     familyIDs                        download.date
-  <chr>      <chr>                            <date>       
-1 Rosaceae   F20171000000279                  2020-05-22   
-2 Cyprinidae bf72e220caf04592a68c025fc5c2bfb7 2020-05-22   
+#  family     familyIDs                        download.date
+#  <chr>      <chr>                            <date>       
+# 1 Rosaceae   F20171000000279                  2020-05-22   
+# 2 Cyprinidae bf72e220caf04592a68c025fc5c2bfb7 2020-05-22   
 ```
 ###### Search taxon IDs via familyID ,scientificName and commonName
 ```r
 search_taxonID(query = "Uncia uncia",name = "scientificName")
 ```
 ```r
-last Update: 2020-05-22
+# last Update: 2020-05-22
 # A tibble: 1 x 3
-  scientificName taxonIDs                             download.date
-  <chr>          <chr>                                <date>       
-1 Uncia uncia    b8c6a086-3d28-4876-8e8a-ca96e667768d 2020-05-22   
+#  scientificName taxonIDs                             download.date
+#  <chr>          <chr>                                <date>       
+# 1 Uncia uncia    b8c6a086-3d28-4876-8e8a-ca96e667768d 2020-05-22   
 ```
 ```r
 queries <- c("Anguilla marmorata","Uncia uncia")
 search_taxonID(query = queries,name = "scientificName")
 ```
 ```r
-last Update: 2020-05-22
-  |=============================================================================================| 100%, Elapsed 00:01
+# last Update: 2020-05-22
+#  |=============================================================================================| 100%, Elapsed 00:01
 # A tibble: 2 x 3
-  scientificName     taxonIDs                             download.date
-  <chr>              <chr>                                <date>       
-1 Anguilla marmorata e192fbc15df24049bcd0fd01d307affa     2020-05-22   
-2 Uncia uncia        b8c6a086-3d28-4876-8e8a-ca96e667768d 2020-05-22   
+#  scientificName     taxonIDs                             download.date
+#  <chr>              <chr>                                <date>       
+# 1 Anguilla marmorata e192fbc15df24049bcd0fd01d307affa     2020-05-22   
+# 2 Uncia uncia        b8c6a086-3d28-4876-8e8a-ca96e667768d 2020-05-22   
 ```
 ```r
 search_taxonID(query = "bf72e220caf04592a68c025fc5c2bfb7",name = "familyID")
 ```
 ```r
-last Update: 2020-05-22
+# last Update: 2020-05-22
 # A tibble: 699 x 3
-   familyID                         taxonIDs                         download.date
-   <chr>                            <chr>                            <date>       
- 1 bf72e220caf04592a68c025fc5c2bfb7 0019772b1f8f425f991eaa1b6faa0267 2020-05-22   
- 2 bf72e220caf04592a68c025fc5c2bfb7 002336a9094e46ad89611a712d4cbffd 2020-05-22   
- 3 bf72e220caf04592a68c025fc5c2bfb7 00f331f1289e43cfb51e19a1843c5b3d 2020-05-22   
- 4 bf72e220caf04592a68c025fc5c2bfb7 0105aa416e95405d807984f504addae4 2020-05-22   
- 5 bf72e220caf04592a68c025fc5c2bfb7 010ad956e57e4a489f79e11faf38d473 2020-05-22   
- 6 bf72e220caf04592a68c025fc5c2bfb7 01607832b13743c8b41a25dfb6406b0b 2020-05-22   
- 7 bf72e220caf04592a68c025fc5c2bfb7 01ec56a6ea8a44bf8dbc6aa1655aa875 2020-05-22   
- 8 bf72e220caf04592a68c025fc5c2bfb7 02d92b0d50884da5a3a7c78db34ce09c 2020-05-22   
- 9 bf72e220caf04592a68c025fc5c2bfb7 0323c94f48134445a7bd3c44c0b40227 2020-05-22   
-10 bf72e220caf04592a68c025fc5c2bfb7 032523c4852d406f8cd93fd8621b4676 2020-05-22   
+#   familyID                         taxonIDs                         download.date
+#   <chr>                            <chr>                            <date>       
+# 1 bf72e220caf04592a68c025fc5c2bfb7 0019772b1f8f425f991eaa1b6faa0267 2020-05-22   
+# 2 bf72e220caf04592a68c025fc5c2bfb7 002336a9094e46ad89611a712d4cbffd 2020-05-22   
+# 3 bf72e220caf04592a68c025fc5c2bfb7 00f331f1289e43cfb51e19a1843c5b3d 2020-05-22   
+# 4 bf72e220caf04592a68c025fc5c2bfb7 0105aa416e95405d807984f504addae4 2020-05-22   
+# 5 bf72e220caf04592a68c025fc5c2bfb7 010ad956e57e4a489f79e11faf38d473 2020-05-22   
+# 6 bf72e220caf04592a68c025fc5c2bfb7 01607832b13743c8b41a25dfb6406b0b 2020-05-22   
+# 7 bf72e220caf04592a68c025fc5c2bfb7 01ec56a6ea8a44bf8dbc6aa1655aa875 2020-05-22   
+# 8 bf72e220caf04592a68c025fc5c2bfb7 02d92b0d50884da5a3a7c78db34ce09c 2020-05-22   
+# 9 bf72e220caf04592a68c025fc5c2bfb7 0323c94f48134445a7bd3c44c0b40227 2020-05-22   
+# 10 bf72e220caf04592a68c025fc5c2bfb7 032523c4852d406f8cd93fd8621b4676 2020-05-22   
 # … with 689 more rows
 ```
 ###### Download detailed lists via species or infraspecies ID
@@ -135,8 +135,8 @@ queries <- c("025397f9-9891-40a7-b90b-5a61f9c7b597","04c59ee8-4b48-4095-be0d-663
 x2 <- search_checklist(query = queries)
 ```
 ```r
-last Update: 2020-05-22
-  |=============================================================================================| 100%, Elapsed 00:02
+# last Update: 2020-05-22
+#  |=============================================================================================| 100%, Elapsed 00:02
 ```
 ###### Checklist lists convert data frame
 ```r
@@ -145,14 +145,14 @@ head(x3)
 ```
 ```r
 # A tibble: 6 x 19
-  ScientificName[… Synonyms chineseName[,1] CommonNames Kingdom[,1] Phylum[,1] Class[,1] Order[,1] Family[,1]
-  <chr>            <list>   <chr>           <list>      <chr>       <chr>      <chr>     <chr>     <chr>     
-1 Pardofelis marm… <df[,2]… 云猫            <chr [4]>   Animalia    Chordata   Mammalia  CARNIVORA Felidae   
-2 Felis bietiMiln… <df[,2]… 漠猫            <chr [5]>   Animalia    Chordata   Mammalia  CARNIVORA Felidae   
-3 Panthera tigris… <df[,2]… 虎              <chr [6]>   Animalia    Chordata   Mammalia  CARNIVORA Felidae   
-4 Prionailurus be… <df[,2]… 豹猫            <chr [9]>   Animalia    Chordata   Mammalia  CARNIVORA Felidae   
-5 Neofelis nebulo… <df[,2]… 云豹            <chr [6]>   Animalia    Chordata   Mammalia  CARNIVORA Felidae   
-6 Catopuma temmin… <df[,2]… 金猫            <chr [6]>   Animalia    Chordata   Mammalia  CARNIVORA Felidae   
+#  ScientificName[… Synonyms chineseName[,1] CommonNames Kingdom[,1] Phylum[,1] Class[,1] Order[,1] Family[,1]
+#  <chr>            <list>   <chr>           <list>      <chr>       <chr>      <chr>     <chr>     <chr>     
+# 1 Pardofelis marm… <df[,2]… 云猫            <chr [4]>   Animalia    Chordata   Mammalia  CARNIVORA Felidae   
+# 2 Felis bietiMiln… <df[,2]… 漠猫            <chr [5]>   Animalia    Chordata   Mammalia  CARNIVORA Felidae   
+# 3 Panthera tigris… <df[,2]… 虎              <chr [6]>   Animalia    Chordata   Mammalia  CARNIVORA Felidae   
+# 4 Prionailurus be… <df[,2]… 豹猫            <chr [9]>   Animalia    Chordata   Mammalia  CARNIVORA Felidae   
+# 5 Neofelis nebulo… <df[,2]… 云豹            <chr [6]>   Animalia    Chordata   Mammalia  CARNIVORA Felidae   
+# 6 Catopuma temmin… <df[,2]… 金猫            <chr [6]>   Animalia    Chordata   Mammalia  CARNIVORA Felidae   
 # … with 10 more variables: Genus[,1] <chr>, Species[,1] <chr>, Infraspecies[,1] <chr>, Distribution[,1] <chr>,
 #   Name[,1] <chr>, Email[,1] <chr>, Address[,1] <chr>, Institution[,1] <chr>, References <list>, Downloaddate <date>
 ```
@@ -163,7 +163,7 @@ dbentry1 <- get_CoLGlobal(query = "4fdb38d6220462049eab9e3f285144e0", option = "
 str(dbentry1)
 ```
 ```r
-List of 9
+# List of 9
  $ id                        : chr "4fdb38d6220462049eab9e3f285144e0"
  $ name                      : chr ""
  $ total_number_of_results   : int 1
