@@ -2,7 +2,7 @@ Package: SP2000
 Type: Package
 Title: Catalogue of Life Toolkit
 Version: 0.0.7
-Date: 2020-05-22
+Date: 2020-05-23
 Authors@R: c(person(given = "Liuyong",     family = "Ding",   email = "ly_ding@126.com",              role = c("aut", "cre")),
              person(given = "Minrui",      family = "Huang",  email = "minrui-huang@mail.ynu.edu.cn", role = "ctb"),
              person(given = "Ke",          family = "Yang",   email = "ydyangke@163.com",             role = "ctb"),
@@ -12,7 +12,7 @@ Authors@R: c(person(given = "Liuyong",     family = "Ding",   email = "ly_ding@1
              person(given = "Daming",      family = "He",     email = "dmhe@ynu.edu.cn",             role = "ctb")
              )
 Maintainer: Liuyong Ding <ly_ding@126.com>
-Description: A programmatic interface to <http://sp2000.org.cn>, re-written based on an accompanying 'Species 2000' API. Access tables describing catalogue of the Chinese known species of animals, plants, fungi, micro-organisms, and more. This package also supports access to catalogue of life global <http://catalogueoflife.org> and catalogue of life Taiwan <http://taibnet.sinica.edu.tw/home_eng.php?>. The development of 'SP2000' package were supported by Yunnan University's Research Innovation Fund for Graduate Students and the Biodiversity Survey and Assessment Project of the Ministry of Ecology and Environment, China (2019HJ2096001006).
+Description: A programmatic interface to <http://sp2000.org.cn>, re-written based on an accompanying 'Species 2000' API. Access tables describing catalogue of the Chinese known species of animals, plants, fungi, micro-organisms, and more. This package also supports access to catalogue of life global <http://catalogueoflife.org> and catalogue of life Taiwan <http://taibnet.sinica.edu.tw/home_eng.php?>. The development of 'SP2000' package were supported by Biodiversity Survey and Assessment Project of the Ministry of Ecology and Environment, China and Yunnan University's Research Innovation Fund for Graduate Students.
 Depends: R (>= 3.0.0)
 Imports: 
   jsonlite,
