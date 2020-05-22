@@ -250,16 +250,16 @@ citation("SP2000")
 
 To cite package ‘SP2000’ in publications use:
 
-  Liuyong Ding (2020). SP2000: 'Catalogue of Life China' Toolkit. R package version 0.0.5.
+  Liuyong Ding (2020). SP2000: Catalogue of Life Toolkit. R package version 0.0.6.
   https://CRAN.R-project.org/package=SP2000
 
 A BibTeX entry for LaTeX users is
 
   @Manual{,
-    title = {SP2000: 'Catalogue of Life China' Toolkit},
+    title = {SP2000: Catalogue of Life Toolkit},
     author = {Liuyong Ding},
     year = {2020},
-    note = {R package version 0.0.5},
+    note = {R package version 0.0.6},
     url = {https://CRAN.R-project.org/package=SP2000},
   }
 ```
