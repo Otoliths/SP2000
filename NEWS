@@ -1,3 +1,8 @@
+0.0.7
+ - Update DESCRIPTION
+ - Update download_CoLChina
+ - Added get_RedlistChina function
+
 0.0.6
  - Update DESCRIPTION
  - Update search_checklist function
@@ -6,7 +11,6 @@
  - Added set_search_key function
  - Added get_CoLGlobal function
  - Added get_CoLTaiwan function
- - Added get_RedlistChina function
  - Added find_Synonyms function
 
 0.0.5
