@@ -3,7 +3,7 @@
 #' @rdname download_CoLChina
 #' @name download_CoLChina
 #' @param version \code{integer} Release version of annual checklist,the default value is 2020.
-#' @param OS \code{character} Supported operating system,c("Mac", "Ubuntu" ,"Windows"),the default value is "Mac".
+#' @param OS \code{character} Supported operating system,c("MacOS", "Ubuntu" ,"Windows"),the default value is "MacOS".
 #' @param dir a non-empty character vector giving the directory name by user,the default value is dir = tempdir(),see [tempdir()] for details.
 #' @return URL
 #' @author Liuyong Ding
@@ -13,17 +13,17 @@
 #' @examples
 #' \donttest{
 #' dir <- "data/"
-#' download_CoLChina(version = "2020",OS = "Mac", dir = dir)
+#' download_CoLChina(version = "2020",OS = "MacOS", dir = dir)
 #' }
 #' @export
-download_CoLChina <- function(version = "2020", OS = "Mac", dir = tempdir()) {
+download_CoLChina <- function(version = "2020", OS = "MacOS", dir = tempdir()) {
   cat(sprintf("Download the date: %s",Sys.Date()),sep = "\n")
   version <- match.arg(version, 2018:2020)
-  OS <- match.arg(OS, c("Mac", "Ubuntu" ,"Windows"))
+  OS <- match.arg(OS, c("MacOS", "Ubuntu" ,"Windows"))
   if (version %in% c("2018","2019") ){
     url <- paste0('http://sp2000.org.cn/CoL/CoLChina',version, '.',"iso")
   }
-  if (version == "2020" & OS == "Mac"){
+  if (version == "2020" & OS == "MacOS"){
     url <- paste0('http://sp2000.org.cn/CoL/CoLChina',version,"-v20.1.12_mac_64", '.',"iso")
   }
   if (version == "2020" & OS == "Ubuntu"){
