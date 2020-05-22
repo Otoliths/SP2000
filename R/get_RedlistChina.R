@@ -26,13 +26,14 @@
 #' @return object
 #' @details Visit the website \url{http://www.mee.gov.cn} for more details.
 #' @examples
+#' \dontrun{
 #' #query assessment status via Chinese Names or Scientific Names
 #' get_RedlistChina(query = "Anguilla", option = "Scientific Names")
 #' get_RedlistChina(query = "Anguilla nebulosa", option = "Scientific Names")
 #'
 #' #creates an HTML widget to display rectangular data
 #' get_RedlistChina(taxon = "Inland Fishes", viewDT = TRUE)
-#'
+#'}
 #' @export
 get_RedlistChina <- function(query = NULL,option = NULL,taxon = "Amphibians",viewDT = FALSE){
   cat(sprintf("last Update: %s",Sys.Date()),sep = "\n")
