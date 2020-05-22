@@ -44,11 +44,12 @@ Query Redlist of China’s Biodiversity of Vertebrate, Higher Plants and Macrofu
 Visit the website \url{http://www.mee.gov.cn} for more details.
 }
 \examples{
+\dontrun{
 #query assessment status via Chinese Names or Scientific Names
 get_RedlistChina(query = "Anguilla", option = "Scientific Names")
 get_RedlistChina(query = "Anguilla nebulosa", option = "Scientific Names")
 
 #creates an HTML widget to display rectangular data
 get_RedlistChina(taxon = "Inland Fishes", viewDT = TRUE)
-
+}
 }
