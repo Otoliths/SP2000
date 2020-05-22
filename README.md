@@ -240,7 +240,7 @@ Feel also free to contact us by creating [**an issue**](https://github.com/Otoli
 
 ## Acknowledgment
 
-The development of this [**SP2000**](https://cran.r-project.org/package=SP2000) package were supported by Biodiversity Survey and Assessment Project of the Ministry of Ecology and Environment, China ([**2019HJ2096001006**](http://www.mee.gov.cn/xxgk/zfcg/zbxx09/201906/t20190620_707171.shtml)) and Yunnan University's Research Innovation Fund for Graduate Students.
+The development of this [**SP2000**](https://cran.r-project.org/package=SP2000) package were supported by the Biodiversity Survey and Assessment Project of the Ministry of Ecology and Environment, China ([**2019HJ2096001006**](http://www.mee.gov.cn/xxgk/zfcg/zbxx09/201906/t20190620_707171.shtml)) and the Yunnan University's Research Innovation Fund for Graduate Students.
 
 
 ### How to cite this package
