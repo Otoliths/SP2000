@@ -37,12 +37,16 @@ install.packages("SP2000")
 ### Current beta / GitHub release:
 
 Installation using R package
-[**devtools**](https://cran.r-project.org/package=devtools):
+[**remotes**](https://cran.r-project.org/package=remotes):
 ```r
-if (!requireNamespace("devtools", quietly=TRUE))
-    install.packages("devtools")
+if (!requireNamespace("remotes", quietly=TRUE))
+    install.packages("remotes")
     
-devtools::install_github("Otoliths/sp2000")
+remotes::install_github("Otoliths/sp2000")
+
+#or
+
+remotes::install_git("git://github.com/Otoliths/sp2000.git")
 
 ```
 
