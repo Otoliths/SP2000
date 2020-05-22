@@ -4,19 +4,12 @@
 \alias{download_CoLChina}
 \title{Download 'Catalogue of Life China': Annual Checklist}
 \usage{
-download_CoLChina(
-  version = "2019",
-  format = "zip",
-  download = FALSE,
-  dir = tempdir()
-)
+download_CoLChina(version = "2020", OS = "Mac", dir = tempdir())
 }
 \arguments{
-\item{version}{\code{integer} Release version of annual checklist,the default value is 2019.}
+\item{version}{\code{integer} Release version of annual checklist,the default value is 2020.}
 
-\item{format}{\code{character} Release version of format,the default value is zip.}
-
-\item{download}{\code{logic} TRUE or FALSE,the default value is FALSE.}
+\item{OS}{\code{character} Supported operating system,c("Mac", "Ubuntu" ,"Windows"),the default value is "Mac".}
 
 \item{dir}{a non-empty character vector giving the directory name by user,the default value is dir = tempdir(),see [tempdir()] for details.}
 }
@@ -24,15 +17,15 @@ download_CoLChina(
 URL
 }
 \description{
-Organized by the Biodiversity Committee of Chinese Academy of Sciences, 'Catalogue of Life China' 2019 Annual Checklist edition has been compiled by 'Species 2000' China Node. It is funded by the Strategic Priority Research Program of the Chinese Academy of Sciences (Grant No. XDA19050202). It is released at Beijing on May, 2019.
+Organized by the Biodiversity Committee of Chinese Academy of Sciences (BC-CAS), Catalogue of Life China Annual Checklist edition has been compiled by Species 2000 China Node.
 }
 \details{
 Visit the website \url{http://sp2000.org.cn/download} for more details.
 }
 \examples{
 \donttest{
-dir <- tempdir()
-download_CoLChina(version = "2019",format = "zip",download = TRUE, dir = dir)
+dir <- "data/"
+download_CoLChina(version = "2020",OS = "Mac", dir = dir)
 }
 }
 \author{
