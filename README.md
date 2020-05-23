@@ -236,6 +236,23 @@ last Update: 2020-05-22
 # … with 9 more variables: infraspecies_marker <chr>, infraspecies <chr>, infraspecies2_marker <chr>,
 #   infraspecies2 <chr>, author <chr>, author2 <chr>, common_name_c <chr>, endemic <chr>, dataprovider <chr>
 ```
+
+###### Query Redlist of Chinese Biodiversity
+```r
+get_RedlistChina(query = "Anguilla", option = "Scientific Names")
+```
+```r
+last Update: 2020-05-23
+# A tibble: 4 x 11
+  `Chinese Family… Family `Chinese Names` ScientificNames Status `Assessment Cri… Endemic Taxon `Chinese Taxon` Group
+  <chr>            <chr>  <chr>           <chr>           <chr>  <chr>            <chr>   <chr> <chr>           <chr>
+1 鳗鲡科           Angui… 日本鳗鲡        Anguilla japon… EN     A2bcd            NA      Inla… 内陆鱼类        Vert…
+2 鳗鲡科           Angui… 花鳗鲡          Anguilla marmo… EN     A2bcd            NA      Inla… 内陆鱼类        Vert…
+3 鳗鲡科           Angui… 双色鳗鲡        Anguilla bicol… NT     NA               NA      Inla… 内陆鱼类        Vert…
+4 鳗鲡科           Angui… 云纹鳗鲡        Anguilla nebul… NT     NA               NA      Inla… 内陆鱼类        Vert…
+# … with 1 more variable: `Chinese Group` <chr>
+```
+
 ## Contribution
 
 Contributions to this package are welcome. 
