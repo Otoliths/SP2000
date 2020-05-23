@@ -45,8 +45,10 @@ if (!requireNamespace("remotes", quietly=TRUE))
 remotes::install_github("Otoliths/sp2000")
 
 #or
-
 remotes::install_git("git://github.com/Otoliths/sp2000.git")
+
+#or
+remotes::install_gitlab("Otoliths/sp2000")
 
 ```
 
