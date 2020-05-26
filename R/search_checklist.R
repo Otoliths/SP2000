@@ -2,8 +2,8 @@
 ##' @description Get checklist via species or infraspecies ID.
 ##' @rdname search_checklist
 ##' @name search_checklist
-##' @param query \code{string} single or more query,see [search_familyID] and [search_taxonID] for more details.
-##' @param mc.cores The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see [mclapply] for details.
+##' @param query \code{string} single or more query, see [search_familyid()] and [search_taxonid()] for more details.
+##' @param mc.cores The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see [mclapply()] for details.
 ##' @return Catalogue of Life China list(s)
 ##' @author Liuyong Ding
 ##' @details Visit the website \url{http://sp2000.org.cn/api/document} for more details.
