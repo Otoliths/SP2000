@@ -7,9 +7,9 @@
 search_checklist(query = NULL, mc.cores = 2)
 }
 \arguments{
-\item{query}{\code{string} single or more query,see [search_familyID] and [search_taxonID] for more details.}
+\item{query}{\code{string} single or more query, see [search_familyid()] and [search_taxonid()] for more details.}
 
-\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see [mclapply] for details.}
+\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see [mclapply()] for details.}
 }
 \value{
 Catalogue of Life China list(s)
