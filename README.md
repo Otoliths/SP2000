@@ -74,7 +74,7 @@ search_familyid(query = "Cyprinidae")
 ```
 ```r
 queries <- c("Rosaceae","Cyprinidae")
-search_familyID(query = queries)
+search_familyid(query = queries)
 ```
 ```r
 # last Update: 2020-05-22
@@ -272,7 +272,7 @@ citation("SP2000")
 
 To cite package ‘SP2000’ in publications use:
 
-  Liuyong Ding (2020). SP2000: Catalogue of Life Toolkit. R package version 0.0.7.
+  Liuyong Ding (2020). SP2000: Catalogue of Life Toolkit. R package version 0.0.8.
   https://CRAN.R-project.org/package=SP2000
 
 A BibTeX entry for LaTeX users is
