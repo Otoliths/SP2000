@@ -63,7 +63,7 @@ library(SP2000)
 ###### Search family IDs via family name, supports Latin and Chinese names
 ```r
 set_search_key <- "your apiKey"
-search_familyID(query = "Cyprinidae")
+search_familyid(query = "Cyprinidae")
 ```
 ```r
 # last Update: 2020-05-22
@@ -87,7 +87,7 @@ search_familyID(query = queries)
 ```
 ###### Search taxon IDs via familyID ,scientificName and commonName
 ```r
-search_taxonID(query = "Uncia uncia",name = "scientificName")
+search_taxonid(query = "Uncia uncia",name = "scientificName")
 ```
 ```r
 # last Update: 2020-05-22
@@ -98,7 +98,7 @@ search_taxonID(query = "Uncia uncia",name = "scientificName")
 ```
 ```r
 queries <- c("Anguilla marmorata","Uncia uncia")
-search_taxonID(query = queries,name = "scientificName")
+search_taxonid(query = queries,name = "scientificName")
 ```
 ```r
 # last Update: 2020-05-22
@@ -110,7 +110,7 @@ search_taxonID(query = queries,name = "scientificName")
 # 2 Uncia uncia        b8c6a086-3d28-4876-8e8a-ca96e667768d 2020-05-22   
 ```
 ```r
-search_taxonID(query = "bf72e220caf04592a68c025fc5c2bfb7",name = "familyID")
+search_taxonid(query = "bf72e220caf04592a68c025fc5c2bfb7",name = "familyID")
 ```
 ```r
 # last Update: 2020-05-22
@@ -165,7 +165,7 @@ head(x3)
 
 ###### Get Catalogue of Life Global checklist via species name and id
 ```r
-dbentry1 <- get_CoLGlobal(query = "4fdb38d6220462049eab9e3f285144e0", option = "id")
+dbentry1 <- get_colglobal(query = "4fdb38d6220462049eab9e3f285144e0", option = "id")
 str(dbentry1)
 ```
 ```r
@@ -196,7 +196,7 @@ str(dbentry1)
 
 ###### Find synonyms via species name from Catalogue of Life Global
 ```r
-find_Synonyms("Anguilla anguilla")
+find_synonyms("Anguilla anguilla")
 ```
 ```r
 last Update: 2020-05-22
@@ -223,7 +223,7 @@ Find the results of synonyms for Anguilla anguilla are as follows:
 
 ###### Search Catalogue of Life Taiwan checklist
 ```r
-get_CoLTaiwan(query="Anguilla",tree="name",option = "contain")
+get_coltaiwan(query="Anguilla",tree="name",option = "contain")
 ```
 ```r
 last Update: 2020-05-22
@@ -241,7 +241,7 @@ last Update: 2020-05-22
 
 ###### Query Redlist of Chinese Biodiversity
 ```r
-get_RedlistChina(query = "Anguilla", option = "Scientific Names")
+get_redlistchina(query = "Anguilla", option = "Scientific Names")
 ```
 ```r
 last Update: 2020-05-23
