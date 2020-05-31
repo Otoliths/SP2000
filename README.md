@@ -3,10 +3,10 @@
 ## SP2000 <img src="inst/figures/logo.png" align="right" width="140" />
 
 [![CRAN Version](http://www.r-pkg.org/badges/version/SP2000)](https://cran.r-project.org/package=SP2000)
-[![codecov](https://badge.fury.io/gh/Otoliths%2Fsp2000.svg)](https://badge.fury.io/for/gh/Otoliths/sp2000)
-[![Build Status](https://travis-ci.org/Otoliths/sp2000.svg?branch=master)](https://travis-ci.org/easystats/sp2000)
-![R-CMD-check](https://github.com/Otoliths/sp2000/workflows/R-CMD-check/badge.svg)
-[![CI](https://github.com/Otoliths/sp2000/workflows/CI/badge.svg)](https://github.com/Otoliths/sp2000/actions?query=workflow%3ACI)
+[![codecov](https://badge.fury.io/gh/Otoliths%2FSP2000.svg)](https://badge.fury.io/for/gh/Otoliths/SP2000)
+[![Build Status](https://travis-ci.org/Otoliths/SP2000.svg?branch=master)](https://travis-ci.org/easystats/SP2000)
+![R-CMD-check](https://github.com/Otoliths/SP2000/workflows/R-CMD-check/badge.svg)
+[![CI](https://github.com/Otoliths/SP2000/workflows/CI/badge.svg)](https://github.com/Otoliths/SP2000/actions?query=workflow%3ACI)
 [![Rdoc](https://www.rdocumentation.org/badges/version/SP2000)](https://www.rdocumentation.org/packages/SP2000)
 
 <!-- r badge_devel("Otoliths/sp2000", "blue") -->
@@ -42,13 +42,13 @@ Installation using R package
 if (!requireNamespace("remotes", quietly=TRUE))
     install.packages("remotes")
     
-remotes::install_github("Otoliths/sp2000")
+remotes::install_github("Otoliths/SP2000")
 
 #or
-remotes::install_git("git://github.com/Otoliths/sp2000.git")
+remotes::install_git("git://github.com/Otoliths/SP2000.git")
 
 #or
-remotes::install_gitlab("Otoliths/sp2000")
+remotes::install_gitlab("Otoliths/SP2000")
 
 ```
 
