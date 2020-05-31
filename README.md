@@ -199,26 +199,25 @@ str(dbentry1)
 find_synonyms("Anguilla anguilla")
 ```
 ```r
-last Update: 2020-05-22
-Find the results of synonyms for Anguilla anguilla are as follows: 
+last Update: 2020-06-01
+Find 50 results of synonyms for Anguilla anguilla are as follows: 
  [1] "Angill angill"                    "Anguilla acutirostris"            "Anguilla aegyptiaca"             
  [4] "Anguilla altirostris"             "Anguilla ancidda"                 "Anguilla anguilla macrocephala"  
  [7] "Anguilla anguilla mucrocephala"   "Anguilla anguilla ornithorhyncha" "Anguilla anguilla oxycephala"    
 [10] "Anguilla anguillai"               "Anguilla anguillia"               "Anguilla bibroni"                
 [13] "Anguilla brevirostris"            "Anguilla callensis"               "Anguilla canariensis"            
 [16] "Anguilla capitone"                "Anguilla cloacina"                "Anguilla cuvieri"                
-[19] "Anguilla eurystoma"               "Anguilla fluviatilis"             "Anguilla fluviatilis"            
-[22] "Anguilla fluviatilis"             "Anguilla hibernica"               "Anguilla kieneri"                
-[25] "Anguilla latirostris"             "Anguilla linnei"                  "Anguilla marginata"              
-[28] "Anguilla marina"                  "Anguilla mediorostris"            "Anguilla melanochir"             
-[31] "Anguilla microptera"              "Anguilla migratoria"              "Anguilla morena"                 
-[34] "Anguilla nilotica"                "Anguilla nilotica"                "Anguilla oblongirostris"         
-[37] "Anguilla platycephala"            "Anguilla platyrhynchus"           "Anguilla savignyi"               
-[40] "Anguilla septembrina"             "Anguilla vulgaris"                "Anguilla vulgaris"               
-[43] "Anguilla vulgaris fluviatilis"    "Anguilla vulgaris lacustus"       "Anguilla vulgaris macrocephala"  
-[46] "Anguilla vulgaris marina"         "Anguilla vulgaris ornithorhincha" "Anguilla vulgaris platyura"      
-[49] "Leptocephalus brevirostris"       "Muraena anguilla"                 "Muraena anguilla maculata"       
-[52] "Muraena anguilla marina"          "Muraena oxyrhina"                 "Muraena platyrhina"                      
+[19] "Anguilla eurystoma"               "Anguilla fluviatilis"             "Anguilla hibernica"              
+[22] "Anguilla kieneri"                 "Anguilla latirostris"             "Anguilla linnei"                 
+[25] "Anguilla marginata"               "Anguilla marina"                  "Anguilla mediorostris"           
+[28] "Anguilla melanochir"              "Anguilla microptera"              "Anguilla migratoria"             
+[31] "Anguilla morena"                  "Anguilla nilotica"                "Anguilla oblongirostris"         
+[34] "Anguilla platycephala"            "Anguilla platyrhynchus"           "Anguilla savignyi"               
+[37] "Anguilla septembrina"             "Anguilla vulgaris"                "Anguilla vulgaris fluviatilis"   
+[40] "Anguilla vulgaris lacustus"       "Anguilla vulgaris macrocephala"   "Anguilla vulgaris marina"        
+[43] "Anguilla vulgaris ornithorhincha" "Anguilla vulgaris platyura"       "Leptocephalus brevirostris"      
+[46] "Muraena anguilla"                 "Muraena anguilla maculata"        "Muraena anguilla marina"         
+[49] "Muraena oxyrhina"                 "Muraena platyrhina"                              
 ```
 
 ###### Search Catalogue of Life Taiwan checklist
