@@ -280,7 +280,7 @@ A BibTeX entry for LaTeX users is
     title = {SP2000: Catalogue of Life Toolkit},
     author = {Liuyong Ding},
     year = {2020},
-    note = {R package version 0.0.6},
+    note = {R package version 0.0.8},
     url = {https://CRAN.R-project.org/package=SP2000},
   }
 ```
