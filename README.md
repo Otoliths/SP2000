@@ -95,7 +95,7 @@ taxonid1
 queries <- c("Anguilla marmorata","Anguilla japonica",
              "Anguilla bicolor","Anguilla nebulosa",
              "Anguilla luzonensis")
-taxonid2 <- search_taxonid(query = queries,name = "scientificName")
+taxonid2 <- search_taxon_id(query = queries,name = "scientificName")
 taxonid2
 ```
 ```r
