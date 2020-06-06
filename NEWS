@@ -1,3 +1,13 @@
+0.0.10
+ - Update DESCRIPTION
+ - Fixed bugs of the list_df function
+
+0.0.9
+ - Update DESCRIPTION
+ - Delete the duplicates of the result returned by the find_synonyms function
+ - Added SP2000 alias
+ - Update search_checklist,find_synonyms,get_col_global,search_taxon_id and search_family_id functions
+
 0.0.8
  - Update DESCRIPTION
  - Update all function names in lowercase for user input
