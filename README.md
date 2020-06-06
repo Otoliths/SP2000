@@ -144,33 +144,30 @@ list_df(x2,db = "colchina")
 
 ###### Get Catalogue of Life Global checklist via species name and id
 ```r
-dbentry1 <- get_colglobal(query = "4fdb38d6220462049eab9e3f285144e0", option = "id")
-str(dbentry1)
+x3 <- get_colglobal(query = queries, option = "name")
+class(x3)
 ```
 ```r
-# List of 9
- $ id                        : chr "4fdb38d6220462049eab9e3f285144e0"
- $ name                      : chr ""
- $ total_number_of_results   : int 1
- $ number_of_results_returned: int 1
- $ start                     : int 0
- $ error_message             : chr ""
- $ version                   : chr "1.9 rev 2126ab0"
- $ rank                      : chr ""
- $ results                   :'data.frame':	1 obs. of  12 variables:
-  ..$ id                    : chr "4fdb38d6220462049eab9e3f285144e0"
-  ..$ name                  : chr "Larus fuscus"
-  ..$ rank                  : chr "Species"
-  ..$ name_status           : chr "accepted name"
-  ..$ record_scrutiny_date  :List of 1
-  .. ..$ : list()
-  ..$ online_resource       : chr "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=176821"
-  ..$ is_extinct            : chr "false"
-  ..$ source_database       : chr "ITIS Selected: The Integrated Taxonomic Information System"
-  ..$ source_database_url   : chr ""
-  ..$ bibliographic_citation: chr "Tom Orrell (custodian); Dave Nicolson (ed). (2020). ITIS Selected: The Integrated Taxonomic Information System "| __truncated__
-  ..$ name_html             : chr "<i>Larus fuscus</i> Linnaeus, 1758"
-  ..$ url                   : chr "http://www.catalogueoflife.org/col/details/species/id/4fdb38d6220462049eab9e3f285144e0"
+# last Update: 2020-06-06
+# |======================================================================================| 100%, Elapsed 00:01
+# [1] "list"
+```
+```r
+list_df(x3,db = "colglobal")
+```
+```r
+# # A tibble: 9 x 5
+# `Anguilla marmorata` `Anguilla japonica` `Anguilla bicolor` `Anguilla nebulosa` `Anguilla luzonensis`
+# <named list>         <named list>        <named list>       <named list>        <named list>         
+#   1 <chr [1]>            <chr [1]>           <chr [1]>          <chr [1]>           <chr [1]>            
+#   2 <chr [1]>            <chr [1]>           <chr [1]>          <chr [1]>           <chr [1]>            
+#   3 <int [1]>            <int [1]>           <int [1]>          <int [1]>           <int [1]>            
+#   4 <int [1]>            <int [1]>           <int [1]>          <int [1]>           <int [1]>            
+#   5 <int [1]>            <int [1]>           <int [1]>          <int [1]>           <int [1]>            
+#   6 <chr [1]>            <chr [1]>           <chr [1]>          <chr [1]>           <chr [1]>            
+#   7 <chr [1]>            <chr [1]>           <chr [1]>          <chr [1]>           <chr [1]>            
+#   8 <chr [1]>            <chr [1]>           <chr [1]>          <chr [1]>           <chr [1]>            
+#   9 <df[,24] [2 × 24]>   <df[,12] [1 × 12]>  <df[,24] [3 × 24]> <df[,24] [4 × 24]>  <df[,12] [1 × 12]> 
 ```
 
 ###### Find synonyms via species name from Catalogue of Life Global
