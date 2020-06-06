@@ -17,8 +17,8 @@ Visit the website \url{http://sp2000.org.cn/statistics/statistics_map} for more 
 }
 \examples{
 \donttest{
-x <- get_province()
-head(x)
+get_province()
+
 }
 }
 \author{

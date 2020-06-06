@@ -17,8 +17,7 @@ Visit the website \url{http://sp2000.org.cn} for more details.
 }
 \examples{
 \donttest{
-x <- get_top20()
-head(x)
+get_top20()
 }
 }
 \author{

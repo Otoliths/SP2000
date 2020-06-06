@@ -2,7 +2,7 @@
 % Please edit documentation in R/list_df.R
 \name{list_df}
 \alias{list_df}
-\title{Catalogue of Life China list(s) convert data frame}
+\title{Catalogue of Life list(s) convert data frame}
 \format{
 A data frame with 19 variables:
 \describe{
@@ -31,24 +31,39 @@ A data frame with 19 variables:
 Visit the website \url{http://sp2000.org.cn/api/document} for more details
 }
 \usage{
-list_df(x)
+list_df(x, db = c("colchina", "colglobal"))
 }
 \arguments{
-\item{x}{\code{list} object, See [search_checklist] for more details.}
+\item{x}{\code{list} The result returned by the function [search_checklist] or [get_col_global].}
+
+\item{db}{\code{character} db = c("colchina","colglobal")}
 }
 \description{
 Checklist lists convert data frame.
 }
 \examples{
 \dontrun{
-queries <- c("025397f9-9891-40a7-b90b-5a61f9c7b597","04c59ee8-4b48-4095-be0d-663485463f21")
-x1 <- search_checklist(query = queries)
-x2 <- list_df(x1)
-for(i in 1:length(x2$References)){
-x2$References[[i]] <- as.matrix(x2$References[[i]])
-x2$References[[i]] <- diag(x2$References[[i]])
-x2$References[[i]] <- paste(x2$References[[i]][1:length(x2$References[[i]])],collapse=";")
-}
+##Set your key
+set_search_key <- "your apiKey"
+
+##Search family IDs via family name
+familyid <- search_family_id(query = "Anguillidae")
+
+##Search taxon IDs via familyID
+taxonid <- search_taxon_id(query = familyid$familyIDs,name = "familyID")
+
+#Download detailed lists via species or infraspecies ID
+x1 <- search_checklist(query = taxonid$taxonIDs)
+str(x1)
+x1 <- list_df(x1,db = "colchina")
+
+#Get Catalogue of Life Global checklist via species name
+x2 <- get_col_global(query = c("Anguilla marmorata","Anguilla japonica",
+                               "Anguilla bicolor","Anguilla nebulosa",
+                               "Anguilla luzonensis"),
+                               option = "name")
+str(x2)
+x2 <- list_df(x2,db = "colglobal")
 }
 }
 \author{

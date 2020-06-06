@@ -4,10 +4,12 @@
 \alias{find_synonyms}
 \title{Find synonyms via species name}
 \usage{
-find_synonyms(query)
+find_synonyms(query, mc.cores = 2)
 }
 \arguments{
-\item{query}{\code{character} species name,The function is similar to [get_colglobal()].}
+\item{query}{\code{character} species name,The function is similar to [get_col_global()].}
+
+\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see [mclapply()] for details.}
 }
 \value{
 object
@@ -19,16 +21,18 @@ Find synonyms via species name from Catalogue of Life Global.
 Visit the website \url{http://webservice.catalogueoflife.org/col/webservice} for more details.
 }
 \examples{
-\dontrun{
-dbentry1 <- get_colglobal(query = "4fdb38d6220462049eab9e3f285144e0", option = "id")
-str(dbentry1)
-head(dbentry1$results)
+\donttest{
+##Get Catalogue of Life Global checklist via species name
+x <- get_col_global(query = c("Anguilla marmorata","Anguilla japonica",
+                              "Anguilla bicolor","Anguilla nebulosa",
+                              "Anguilla luzonensis"),
+                               option = "name")
+str(x)
 
-dbentry2 <- get_colglobal(query = "Platalea leucorodia", option = "name")
-str(dbentry2)
-head(dbentry2$results)
-
-find_synonyms("Anguilla anguilla")
+##Find synonyms via species name
+find_synonyms(query = c("Anguilla marmorata","Anguilla japonica",
+                        "Anguilla bicolor","Anguilla nebulosa",
+                        "Anguilla luzonensis"))
 }
 }
 \author{

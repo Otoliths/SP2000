@@ -7,7 +7,7 @@
 search_checklist(query = NULL, mc.cores = 2)
 }
 \arguments{
-\item{query}{\code{string} single or more query, see [search_familyid()] and [search_taxonid()] for more details.}
+\item{query}{\code{string} single or more query, see [search_family_id()] and [search_taxon_id()] for more details.}
 
 \item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see [mclapply()] for details.}
 }
@@ -22,10 +22,18 @@ Visit the website \url{http://sp2000.org.cn/api/document} for more details.
 }
 \examples{
 \dontrun{
-search_checklist(query="025397f9-9891-40a7-b90b-5a61f9c7b597")
+##Set your key
+set_search_key <- "your apiKey"
 
-queries <- c("025397f9-9891-40a7-b90b-5a61f9c7b597","04c59ee8-4b48-4095-be0d-663485463f21")
-search_checklist(query = queries)
+##Search family IDs via family name
+familyid <- search_family_id(query = "Anguillidae")
+
+##Search taxon IDs via familyID
+taxonid <- search_taxon_id(query = familyid$familyIDs,name = "familyID")
+
+#Download detailed lists via species or infraspecies ID
+x <- search_checklist(query = taxonid$taxonIDs)
+str(x)
 }
 }
 \author{
