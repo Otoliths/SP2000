@@ -243,6 +243,34 @@ get_redlist_china(query = "Anguilla", option = "Scientific Names")
 # 4 鳗鲡科           Angui… 云纹鳗鲡        Anguilla nebul… NT     NA               NA      Inla… 内陆鱼类       
 # # … with 2 more variables: Group <chr>, `Chinese Group` <chr>
 ```
+```r
+sessionInfo()
+```
+```r
+# R version 4.0.0 (2020-04-24)
+# Platform: x86_64-apple-darwin17.0 (64-bit)
+# Running under: macOS Catalina 10.15.5
+# 
+# Matrix products: default
+# BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+# LAPACK: /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRlapack.dylib
+# 
+# locale:
+#   [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+# 
+# attached base packages:
+#   [1] stats     graphics  grDevices utils     datasets  methods   base     
+# 
+# other attached packages:
+#   [1] SP2000_0.0.10
+# 
+# loaded via a namespace (and not attached):
+#   [1] Rcpp_1.0.4.6      rstudioapi_0.11   magrittr_1.5      rlang_0.4.6       fansi_0.4.1       tools_4.0.0      
+# [7] parallel_4.0.0    DT_0.13           data.table_1.12.8 utf8_1.1.4        cli_2.0.2         htmltools_0.4.0  
+# [13] ellipsis_0.3.1    assertthat_0.2.1  digest_0.6.25     tibble_3.0.1      lifecycle_0.2.0   crayon_1.3.4     
+# [19] pbmcapply_1.5.0   purrr_0.3.4       htmlwidgets_1.5.1 vctrs_0.3.0       curl_4.3          rlist_0.4.6.1    
+# [25] glue_1.4.1        compiler_4.0.0    pillar_1.4.4      XML_3.99-0.3      jsonlite_1.6.1    pkgconfig_2.0.3 
+```
 
 ## Contribution
 
@@ -258,11 +286,12 @@ The development of this [**SP2000**](https://cran.r-project.org/package=SP2000) 
 ### How to cite this package
 ```r
 citation("SP2000")
-
+```
+```r
 To cite package ‘SP2000’ in publications use:
 
-  Liuyong Ding (2020). SP2000: Catalogue of Life Toolkit. R package version 0.0.8.
-  https://CRAN.R-project.org/package=SP2000
+  Liuyong Ding (2020). SP2000: Catalogue of Life Toolkit. R package version 0.0.10.
+  https://github.com/Otoliths/SP2000
 
 A BibTeX entry for LaTeX users is
 
@@ -270,8 +299,8 @@ A BibTeX entry for LaTeX users is
     title = {SP2000: Catalogue of Life Toolkit},
     author = {Liuyong Ding},
     year = {2020},
-    note = {R package version 0.0.8},
-    url = {https://CRAN.R-project.org/package=SP2000},
+    note = {R package version 0.0.10},
+    url = {https://github.com/Otoliths/SP2000},
   }
 ```
 ### [How to cite this work](http://sp2000.org.cn/info/info_how_to_cite)
