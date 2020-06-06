@@ -39,7 +39,7 @@ install.packages("SP2000")
 Installation using R package
 [**remotes**](https://cran.r-project.org/package=remotes):
 ```r
-if (!requireNamespace("remotes", quietly=TRUE))
+if (!requireNamespace("remotes", quietly = TRUE))
     install.packages("remotes")
     
 remotes::install_github("Otoliths/SP2000")
