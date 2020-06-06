@@ -6,19 +6,20 @@
 #' @author Liuyong Ding
 #' @details Visit the website \url{http://sp2000.org.cn} for more details.
 #' @importFrom jsonlite fromJSON
+#' @importFrom tibble tibble
 #' @examples
 #' \donttest{
-#' x <- get_top20()
-#' head(x)
+#' get_top20()
 #' }
 #' @export
 
 get_top20 <- function() {
+  cat(sprintf("last Update: %s",Sys.Date()),sep = "\n")
   url <- 'http://sp2000.org.cn/record/speciesView/top20?_=1580870992724'
   top20 <- jsonlite::fromJSON(url)
   top20$url <- gsub("species/show_species_details/", "", top20$url)
   top20$target <- gsub("_top","top20",top20$target)
   names(top20) <- c("species","taxonIDs","rank")
   top20$date <- as.Date(Sys.time())
-  return(top20)
+  return(tibble(top20))
 }

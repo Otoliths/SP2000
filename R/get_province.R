@@ -6,17 +6,19 @@
 #' @author Liuyong Ding
 #' @details Visit the website \url{http://sp2000.org.cn/statistics/statistics_map} for more details.
 #' @importFrom jsonlite fromJSON
+#' @importFrom tibble tibble
 #' @examples
 #' \donttest{
-#' x <- get_province()
-#' head(x)
+#' get_province()
+#'
 #' }
 #' @export
 get_province <- function() {
+  cat(sprintf("last Update: %s",Sys.Date()),sep = "\n")
   url <- 'http://sp2000.org.cn/statistics/show_in_map_all'
   map_all <- fromJSON(url)
   map_all <- map_all$data
   names(map_all) <- c("province","species_counts")
   map_all$date <- as.Date(Sys.time())
-  return(map_all)
+  return(tibble(map_all))
 }

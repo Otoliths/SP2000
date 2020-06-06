@@ -1,27 +1,47 @@
 ##' @title Find synonyms via species name
 ##' @description Find synonyms via species name from Catalogue of Life Global.
-##' @param query \code{character} species name,The function is similar to [get_colglobal()].
 ##' @rdname find_synonyms
+##' @param query \code{character} species name,The function is similar to [get_col_global()].
+##' @param mc.cores The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see [mclapply()] for details.
 ##' @importFrom jsonlite fromJSON
 ##' @importFrom rlist list.rbind
+##' @importFrom pbmcapply pbmclapply
 ##' @return object
 ##' @author Liuyong Ding
 ##' @details Visit the website \url{http://webservice.catalogueoflife.org/col/webservice} for more details.
 ##' @examples
-##'\dontrun{
-##' dbentry1 <- get_colglobal(query = "4fdb38d6220462049eab9e3f285144e0", option = "id")
-##' str(dbentry1)
-##' head(dbentry1$results)
+##' \donttest{
+##' ##Get Catalogue of Life Global checklist via species name
+##' x <- get_col_global(query = c("Anguilla marmorata","Anguilla japonica",
+##'                               "Anguilla bicolor","Anguilla nebulosa",
+##'                               "Anguilla luzonensis"),
+##'                                option = "name")
+##' str(x)
 ##'
-##' dbentry2 <- get_colglobal(query = "Platalea leucorodia", option = "name")
-##' str(dbentry2)
-##' head(dbentry2$results)
-##'
-##' find_synonyms("Anguilla anguilla")
-##'}
+##' ##Find synonyms via species name
+##' find_synonyms(query = c("Anguilla marmorata","Anguilla japonica",
+##'                         "Anguilla bicolor","Anguilla nebulosa",
+##'                         "Anguilla luzonensis"))
+##' }
 ##' @export
-find_synonyms <- function(query) {
+find_synonyms <- function(query,mc.cores = 2) {
   cat(sprintf("last Update: %s",Sys.Date()),sep = "\n")
+  if (.Platform$OS.type == "windows") {
+    mc.cores = 1
+  }
+  if(length(query) == 1){
+    x <- synonyms(query)
+  }else{
+    x <- pbmclapply(query,synonyms,mc.cores = mc.cores)
+    names(x)<- query
+    for (i in 1:length(x)) {
+      cat(sprintf("Find %s results of synonyms for %s are as follows: ",length(x[[query[i]]]), query[i]),sep = "\n")
+    }
+  }
+  return(x)
+}
+
+synonyms <- function(query) {
   synonyms = list()
   species_name_no_spaces = gsub(" ","+",query, fixed=TRUE)
   url = paste0(webservice(),"name=",species_name_no_spaces, "&format=json&response=full")
@@ -46,8 +66,8 @@ find_synonyms <- function(query) {
       }
     }
   }
-  cat(sprintf("Find %s results of synonyms for %s are as follows: ",length(rlist::list.rbind(synonyms)[,1]), query),sep = "\n")
-  return(rlist::list.rbind(synonyms)[,1])
+  cat(sprintf("Find %s results of synonyms for %s are as follows: ",length(unique(rlist::list.rbind(synonyms)[,1])), query),sep = "\n")
+  return(unique(rlist::list.rbind(synonyms)[,1]))
 }
 
 webservice <- function() "http://webservice.catalogueoflife.org/col/webservice?"
