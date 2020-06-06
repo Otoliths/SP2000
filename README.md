@@ -76,7 +76,7 @@ familyid
 ```
 ```r
 queries <- c("Rosaceae","Cyprinidae")
-search_familyid(query = queries)
+search_family_id(query = queries)
 ```
 ```r
 # last Update: 2020-05-22
