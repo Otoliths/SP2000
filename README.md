@@ -74,19 +74,6 @@ familyid
 #   1 Anguillidae 3851c5311bed46c19529cb155d37aa9b 2020-06-06   
 
 ```
-```r
-queries <- c("Rosaceae","Cyprinidae")
-search_family_id(query = queries)
-```
-```r
-# last Update: 2020-05-22
-#  |=============================================================================================| 100%, Elapsed 00:00
-# A tibble: 2 x 3
-#  family     familyIDs                        download.date
-#  <chr>      <chr>                            <date>       
-# 1 Rosaceae   F20171000000279                  2020-05-22   
-# 2 Cyprinidae bf72e220caf04592a68c025fc5c2bfb7 2020-05-22   
-```
 ###### Search taxon IDs via familyID
 ```r
 taxonid1 <- search_taxon_id(query = familyid$familyIDs,name = "familyID")
@@ -123,26 +110,6 @@ taxonid2
 # 4 Anguilla nebulosa   9b9b328f6fa045089021ba38f912a0e8 2020-06-06   
 # 5 Anguilla luzonensis cbf03e5022f94c3daad91843b9f0b1e7 2020-06-06   
 
-```
-```r
-search_taxonid(query = "bf72e220caf04592a68c025fc5c2bfb7",name = "familyID")
-```
-```r
-# last Update: 2020-05-22
-# A tibble: 699 x 3
-#   familyID                         taxonIDs                         download.date
-#   <chr>                            <chr>                            <date>       
-# 1 bf72e220caf04592a68c025fc5c2bfb7 0019772b1f8f425f991eaa1b6faa0267 2020-05-22   
-# 2 bf72e220caf04592a68c025fc5c2bfb7 002336a9094e46ad89611a712d4cbffd 2020-05-22   
-# 3 bf72e220caf04592a68c025fc5c2bfb7 00f331f1289e43cfb51e19a1843c5b3d 2020-05-22   
-# 4 bf72e220caf04592a68c025fc5c2bfb7 0105aa416e95405d807984f504addae4 2020-05-22   
-# 5 bf72e220caf04592a68c025fc5c2bfb7 010ad956e57e4a489f79e11faf38d473 2020-05-22   
-# 6 bf72e220caf04592a68c025fc5c2bfb7 01607832b13743c8b41a25dfb6406b0b 2020-05-22   
-# 7 bf72e220caf04592a68c025fc5c2bfb7 01ec56a6ea8a44bf8dbc6aa1655aa875 2020-05-22   
-# 8 bf72e220caf04592a68c025fc5c2bfb7 02d92b0d50884da5a3a7c78db34ce09c 2020-05-22   
-# 9 bf72e220caf04592a68c025fc5c2bfb7 0323c94f48134445a7bd3c44c0b40227 2020-05-22   
-# 10 bf72e220caf04592a68c025fc5c2bfb7 032523c4852d406f8cd93fd8621b4676 2020-05-22   
-# … with 689 more rows
 ```
 ###### Download detailed lists via species or infraspecies ID
 ```r
