@@ -60,7 +60,7 @@ Load the **SP2000** package
 ```r
 library(SP2000)
 ```
-###### Search family IDs via family name, supports Latin and Chinese names
+###### Search family IDs via family name
 ```r
 set_search_key <- "your apiKey"
 familyid <- search_family_id(query = "Anguillidae")
@@ -87,16 +87,21 @@ search_familyid(query = queries)
 # 1 Rosaceae   F20171000000279                  2020-05-22   
 # 2 Cyprinidae bf72e220caf04592a68c025fc5c2bfb7 2020-05-22   
 ```
-###### Search taxon IDs via familyID ,scientificName and commonName
+###### Search taxon IDs via familyID
 ```r
-search_taxonid(query = "Uncia uncia",name = "scientificName")
+taxonid <- search_taxon_id(query = familyid$familyIDs,name = "familyID")
+taxonid
 ```
 ```r
-# last Update: 2020-05-22
-# A tibble: 1 x 3
-#  scientificName taxonIDs                             download.date
-#  <chr>          <chr>                                <date>       
-# 1 Uncia uncia    b8c6a086-3d28-4876-8e8a-ca96e667768d 2020-05-22   
+# last Update: 2020-06-06
+# # A tibble: 5 x 3
+# familyID                         taxonIDs                         download.date
+# <chr>                            <chr>                            <date>       
+# 1 3851c5311bed46c19529cb155d37aa9b 1bcb107bcbf74c6eb81554e398beb840 2020-06-06   
+# 2 3851c5311bed46c19529cb155d37aa9b 9b9b328f6fa045089021ba38f912a0e8 2020-06-06   
+# 3 3851c5311bed46c19529cb155d37aa9b cbf03e5022f94c3daad91843b9f0b1e7 2020-06-06   
+# 4 3851c5311bed46c19529cb155d37aa9b e192fbc15df24049bcd0fd01d307affa 2020-06-06   
+# 5 3851c5311bed46c19529cb155d37aa9b f542929f776246efa44e559c389139d8 2020-06-06    
 ```
 ```r
 queries <- c("Anguilla marmorata","Uncia uncia")
