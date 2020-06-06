@@ -172,28 +172,40 @@ list_df(x3,db = "colglobal")
 
 ###### Find synonyms via species name from Catalogue of Life Global
 ```r
-find_synonyms("Anguilla anguilla")
+find_synonyms(queries)
 ```
 ```r
-last Update: 2020-06-01
-Find 50 results of synonyms for Anguilla anguilla are as follows: 
- [1] "Angill angill"                    "Anguilla acutirostris"            "Anguilla aegyptiaca"             
- [4] "Anguilla altirostris"             "Anguilla ancidda"                 "Anguilla anguilla macrocephala"  
- [7] "Anguilla anguilla mucrocephala"   "Anguilla anguilla ornithorhyncha" "Anguilla anguilla oxycephala"    
-[10] "Anguilla anguillai"               "Anguilla anguillia"               "Anguilla bibroni"                
-[13] "Anguilla brevirostris"            "Anguilla callensis"               "Anguilla canariensis"            
-[16] "Anguilla capitone"                "Anguilla cloacina"                "Anguilla cuvieri"                
-[19] "Anguilla eurystoma"               "Anguilla fluviatilis"             "Anguilla hibernica"              
-[22] "Anguilla kieneri"                 "Anguilla latirostris"             "Anguilla linnei"                 
-[25] "Anguilla marginata"               "Anguilla marina"                  "Anguilla mediorostris"           
-[28] "Anguilla melanochir"              "Anguilla microptera"              "Anguilla migratoria"             
-[31] "Anguilla morena"                  "Anguilla nilotica"                "Anguilla oblongirostris"         
-[34] "Anguilla platycephala"            "Anguilla platyrhynchus"           "Anguilla savignyi"               
-[37] "Anguilla septembrina"             "Anguilla vulgaris"                "Anguilla vulgaris fluviatilis"   
-[40] "Anguilla vulgaris lacustus"       "Anguilla vulgaris macrocephala"   "Anguilla vulgaris marina"        
-[43] "Anguilla vulgaris ornithorhincha" "Anguilla vulgaris platyura"       "Leptocephalus brevirostris"      
-[46] "Muraena anguilla"                 "Muraena anguilla maculata"        "Muraena anguilla marina"         
-[49] "Muraena oxyrhina"                 "Muraena platyrhina"                              
+# last Update: 2020-06-06
+# |=========================================================================================| 100%, Elapsed 00:05
+# Find 8 results of synonyms for Anguilla marmorata are as follows: 
+# Find 6 results of synonyms for Anguilla japonica are as follows: 
+# Find 23 results of synonyms for Anguilla bicolor are as follows: 
+# Find 4 results of synonyms for Anguilla nebulosa are as follows: 
+# Find 1 results of synonyms for Anguilla luzonensis are as follows: 
+# $`Anguilla marmorata`
+# [1] "Anguilla fidjiensis"   "Anguilla hildebrandti" "Anguilla johannae"     "Anguilla labrosa"     
+# [5] "Anguilla marmolata"    "Anguilla mauritiana"   "Muraena manillensis"   "Muraena mossambica"   
+# 
+# $`Anguilla japonica`
+# [1] "Anguilla angustidens" "Anguilla breviceps"   "Anguilla manabei"     "Anguilla nigricans"  
+# [5] "Anguilla remifera"    "Muraena pekinensis"  
+# 
+# $`Anguilla bicolor`
+# [1] "Anguilla amblodon"          "Anguilla australis"         "Anguilla bicolor bicolor"  
+# [4] "Anguilla bicolor pacifica"  "Anguilla bicolour"          "Anguilla bicolour bicolour"
+# [7] "Anguilla bleekeri"          "Anguilla cantori"           "Anguilla dussumieri"       
+# [10] "Anguilla malabarica"        "Anguilla malgumora"         "Anguilla mauritiana"       
+# [13] "Anguilla moa"               "Anguilla mowa"              "Anguilla pacifica"         
+# [16] "Anguilla sidat"             "Anguilla spengeli"          "Anguilla virescens"        
+# [19] "Muraena halmaherensis"      "Muraena macrocephala"       "Muraena moa"               
+# [22] "Muraena mossambica"         "Muraena virescens"         
+# 
+# $`Anguilla nebulosa`
+# [1] "Anguilla bengalensis"       "Anguilla elphinstonei"      "Anguilla nebulosa nebulosa"
+# [4] "Muraena maculata"          
+# 
+# $`Anguilla luzonensis`
+# [1] "Anguilla huangi"                        
 ```
 
 ###### Search Catalogue of Life Taiwan checklist
