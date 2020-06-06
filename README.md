@@ -210,36 +210,38 @@ find_synonyms(queries)
 
 ###### Search Catalogue of Life Taiwan checklist
 ```r
-get_coltaiwan(query="Anguilla",tree="name",option = "contain")
+get_col_taiwan(query="Anguilla",tree="name",option = "contain")
 ```
 ```r
-last Update: 2020-05-22
-# A tibble: 5 x 23
-  name_code kingdom kingdom_c phylum phylum_c class class_c order order_c family family_c genus genus_c species
-  <chr>     <chr>   <chr>     <chr>  <chr>    <chr> <chr>   <chr> <chr>   <chr>  <chr>    <chr> <chr>   <chr>  
-1 380710    Animal… 動物界    Chord… 脊索動物門… Acti… 條鰭魚綱… Angu… 鰻形目  Angui… 鰻鱺科   Angu… 鰻鱺屬  bicolor
-2 395489    Animal… 動物界    Chord… 脊索動物門… Acti… 條鰭魚綱… Angu… 鰻形目  Angui… 鰻鱺科   Angu… 鰻鱺屬  celebe…
-3 380711    Animal… 動物界    Chord… 脊索動物門… Acti… 條鰭魚綱… Angu… 鰻形目  Angui… 鰻鱺科   Angu… 鰻鱺屬  japoni…
-4 395491    Animal… 動物界    Chord… 脊索動物門… Acti… 條鰭魚綱… Angu… 鰻形目  Angui… 鰻鱺科   Angu… 鰻鱺屬  luzone…
-5 380712    Animal… 動物界    Chord… 脊索動物門… Acti… 條鰭魚綱… Angu… 鰻形目  Angui… 鰻鱺科   Angu… 鰻鱺屬  marmor…
-# … with 9 more variables: infraspecies_marker <chr>, infraspecies <chr>, infraspecies2_marker <chr>,
-#   infraspecies2 <chr>, author <chr>, author2 <chr>, common_name_c <chr>, endemic <chr>, dataprovider <chr>
+# last Update: 2020-06-06
+# # A tibble: 5 x 23
+# name_code kingdom kingdom_c phylum phylum_c class class_c order order_c family family_c genus genus_c species
+# <chr>     <chr>   <chr>     <chr>  <chr>    <chr> <chr>   <chr> <chr>   <chr>  <chr>    <chr> <chr>   <chr>  
+# 1 380710    Animal… 動物界    Chord… 脊索動物門… Acti… 條鰭魚綱… Angu… 鰻形目  Angui… 鰻鱺科   Angu… 鰻鱺屬  bicolor
+# 2 395489    Animal… 動物界    Chord… 脊索動物門… Acti… 條鰭魚綱… Angu… 鰻形目  Angui… 鰻鱺科   Angu… 鰻鱺屬  celebe…
+# 3 380711    Animal… 動物界    Chord… 脊索動物門… Acti… 條鰭魚綱… Angu… 鰻形目  Angui… 鰻鱺科   Angu… 鰻鱺屬  japoni…
+# 4 395491    Animal… 動物界    Chord… 脊索動物門… Acti… 條鰭魚綱… Angu… 鰻形目  Angui… 鰻鱺科   Angu… 鰻鱺屬  luzone…
+# 5 380712    Animal… 動物界    Chord… 脊索動物門… Acti… 條鰭魚綱… Angu… 鰻形目  Angui… 鰻鱺科   Angu… 鰻鱺屬  marmor…
+# # … with 9 more variables: infraspecies_marker <chr>, infraspecies <chr>, infraspecies2_marker <chr>,
+# #   infraspecies2 <chr>, author <chr>, author2 <chr>, common_name_c <chr>, endemic <chr>, dataprovider <chr>
+# 
+
 ```
 
 ###### Query Redlist of Chinese Biodiversity
 ```r
-get_redlistchina(query = "Anguilla", option = "Scientific Names")
+get_redlist_china(query = "Anguilla", option = "Scientific Names")
 ```
 ```r
-last Update: 2020-05-23
-# A tibble: 4 x 11
-  `Chinese Family… Family `Chinese Names` ScientificNames Status `Assessment Cri… Endemic Taxon `Chinese Taxon` Group
-  <chr>            <chr>  <chr>           <chr>           <chr>  <chr>            <chr>   <chr> <chr>           <chr>
-1 鳗鲡科           Angui… 日本鳗鲡        Anguilla japon… EN     A2bcd            NA      Inla… 内陆鱼类        Vert…
-2 鳗鲡科           Angui… 花鳗鲡          Anguilla marmo… EN     A2bcd            NA      Inla… 内陆鱼类        Vert…
-3 鳗鲡科           Angui… 双色鳗鲡        Anguilla bicol… NT     NA               NA      Inla… 内陆鱼类        Vert…
-4 鳗鲡科           Angui… 云纹鳗鲡        Anguilla nebul… NT     NA               NA      Inla… 内陆鱼类        Vert…
-# … with 1 more variable: `Chinese Group` <chr>
+# last Update: 2020-06-06
+# # A tibble: 4 x 11
+# `Chinese Family… Family `Chinese Names` ScientificNames Status `Assessment Cri… Endemic Taxon `Chinese Taxon`
+# <chr>            <chr>  <chr>           <chr>           <chr>  <chr>            <chr>   <chr> <chr>          
+# 1 鳗鲡科           Angui… 日本鳗鲡        Anguilla japon… EN     A2bcd            NA      Inla… 内陆鱼类       
+# 2 鳗鲡科           Angui… 花鳗鲡          Anguilla marmo… EN     A2bcd            NA      Inla… 内陆鱼类       
+# 3 鳗鲡科           Angui… 双色鳗鲡        Anguilla bicol… NT     NA               NA      Inla… 内陆鱼类       
+# 4 鳗鲡科           Angui… 云纹鳗鲡        Anguilla nebul… NT     NA               NA      Inla… 内陆鱼类       
+# # … with 2 more variables: Group <chr>, `Chinese Group` <chr>
 ```
 
 ## Contribution
