@@ -265,7 +265,7 @@ sessionInfo()
 #   [1] SP2000_0.0.10
 # 
 # loaded via a namespace (and not attached):
-#   [1] Rcpp_1.0.4.6      rstudioapi_0.11   magrittr_1.5      rlang_0.4.6       fansi_0.4.1       tools_4.0.0      
+# [1] Rcpp_1.0.4.6      rstudioapi_0.11   magrittr_1.5      rlang_0.4.6       fansi_0.4.1       tools_4.0.0      
 # [7] parallel_4.0.0    DT_0.13           data.table_1.12.8 utf8_1.1.4        cli_2.0.2         htmltools_0.4.0  
 # [13] ellipsis_0.3.1    assertthat_0.2.1  digest_0.6.25     tibble_3.0.1      lifecycle_0.2.0   crayon_1.3.4     
 # [19] pbmcapply_1.5.0   purrr_0.3.4       htmlwidgets_1.5.1 vctrs_0.3.0       curl_4.3          rlist_0.4.6.1    
