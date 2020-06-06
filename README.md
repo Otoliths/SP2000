@@ -115,30 +115,31 @@ taxonid2
 ```r
 x1 <- search_checklist(query = taxonid1$taxonIDs)
 x2 <- search_checklist(query = taxonid2$taxonIDs)
-str(x1)
-str(x2)
+class(x1)
+class(x2)
 ```
+```r
+# last Update: 2020-06-06
+# |======================================================================================| 100%, Elapsed 00:01
+# [1] "list"
+```
+
 ```r
 list_df(x1,db = "colchina")
 list_df(x2,db = "colchina")
 ```
-###### Checklist lists convert data frame
 ```r
-x3 <- list_df(x2)
-head(x3)
-```
-```r
-# A tibble: 6 x 19
-#  ScientificName[… Synonyms chineseName[,1] CommonNames Kingdom[,1] Phylum[,1] Class[,1] Order[,1] Family[,1]
-#  <chr>            <list>   <chr>           <list>      <chr>       <chr>      <chr>     <chr>     <chr>     
-# 1 Pardofelis marm… <df[,2]… 云猫            <chr [4]>   Animalia    Chordata   Mammalia  CARNIVORA Felidae   
-# 2 Felis bietiMiln… <df[,2]… 漠猫            <chr [5]>   Animalia    Chordata   Mammalia  CARNIVORA Felidae   
-# 3 Panthera tigris… <df[,2]… 虎              <chr [6]>   Animalia    Chordata   Mammalia  CARNIVORA Felidae   
-# 4 Prionailurus be… <df[,2]… 豹猫            <chr [9]>   Animalia    Chordata   Mammalia  CARNIVORA Felidae   
-# 5 Neofelis nebulo… <df[,2]… 云豹            <chr [6]>   Animalia    Chordata   Mammalia  CARNIVORA Felidae   
-# 6 Catopuma temmin… <df[,2]… 金猫            <chr [6]>   Animalia    Chordata   Mammalia  CARNIVORA Felidae   
-# … with 10 more variables: Genus[,1] <chr>, Species[,1] <chr>, Infraspecies[,1] <chr>, Distribution[,1] <chr>,
-#   Name[,1] <chr>, Email[,1] <chr>, Address[,1] <chr>, Institution[,1] <chr>, References <list>, Downloaddate <date>
+# # A tibble: 5 x 19
+# ScientificName[… Synonyms chineseName[,1] CommonNames Kingdom[,1] Phylum[,1] Class[,1] Order[,1] Family[,1]
+# <chr>            <list>   <chr>           <list>      <chr>       <chr>      <chr>     <chr>     <chr>     
+# 1 Anguilla bicolo… <df[,2]… 双色鳗鲡        <chr [1]>   Animalia    Chordata   Actinopt… Anguilli… Anguillid…
+# 2 Anguilla nebulo… <df[,1]… 云纹鳗鲡        <list [0]>  Animalia    Chordata   Actinopt… Anguilli… Anguillid…
+# 3 Anguilla luzone… <df[,2]… 吕宋鳗鲡        <list [0]>  Animalia    Chordata   Actinopt… Anguilli… Anguillid…
+# 4 Anguilla marmor… <df[,1]… 花鳗鲡          <list [0]>  Animalia    Chordata   Actinopt… Anguilli… Anguillid…
+# 5 Anguilla japoni… <df[,2]… 鳗鲡            <chr [1]>   Animalia    Chordata   Actinopt… Anguilli… Anguillid…
+# # … with 18 more variables: Genus[,1] <chr>, Species[,1] <chr>, Infraspecies[,1] <chr>, Distribution[,1] <chr>,
+# #   Name[,1] <chr>, [,2] <chr>, [,3] <chr>, Email[,1] <chr>, [,2] <chr>, [,3] <chr>, Address[,1] <chr>,
+# #   [,2] <chr>, [,3] <chr>, Institution[,1] <chr>, [,2] <chr>, [,3] <chr>, References <list>, Downloaddate <date>
 ```
 
 ###### Get Catalogue of Life Global checklist via species name and id
