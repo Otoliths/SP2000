@@ -144,7 +144,7 @@ list_df(x2,db = "colchina")
 
 ###### Get Catalogue of Life Global checklist via species name and id
 ```r
-x3 <- get_colglobal(query = queries, option = "name")
+x3 <- get_col_global(query = queries, option = "name")
 class(x3)
 ```
 ```r
