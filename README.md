@@ -30,12 +30,17 @@ This [**SP2000**](https://cran.r-project.org/package=SP2000) package programatic
 
 You might be able to avoid reading all this documentation if you instead use one of the several excellent libraries that have been written for the Catalogue of Life API. For example:
 
-- [SP2000](https://gitlab.com/crossref/crossref_commons_py) (Python, developed by Crossref)
-- [SP2000](https://github.com/sckott/habanero) (Python)
-- [serrano](https://github.com/sckott/serrano) (Ruby)
-- [rcrossref](https://github.com/ropensci/rcrossref) (R)
-- [crossrefapi](https://github.com/fabiobatalha/crossrefapi) (Python)
-- [crossref-rs](https://github.com/MattsSe/crossref-rs) (rust)
+- [SP2000](https://github.com/Otoliths/SP2000) (R, developed by Liuyong Ding)
+- [general](https://github.com/CatalogueOfLife/general) (R,developed by CoL Global Team)
+- [colpluz](https://github.com/ropensci/colpluz) (R,developed by ropensci)
+- [SP2000](https://github.com/ynulihao/SP2000) (Python,developed by Hao Li)
+- [coldpy](https://github.com/gdower/coldpy) (Python)
+- [coldp](https://github.com/CatalogueOfLife/coldp) (SQL)
+- [data](https://github.com/CatalogueOfLife/data) (SQL)
+- [backend](https://github.com/CatalogueOfLife/backend) (Java)
+- [clearinghouse-ui](https://github.com/CatalogueOfLife/clearinghouse-ui) (Java)
+- [portal](https://github.com/CatalogueOfLife/portal) (Java)
+- [taicol-db-docker](https://github.com/TaiBIF/taicol-db-docker) (Shell)
 
 
 ## Installation
