@@ -1,3 +1,7 @@
+0.1.0
+ - Update DESCRIPTION
+ - Upgrade 'Species 2000' API (version 2)
+
 0.0.10
  - Update DESCRIPTION
  - Fixed bugs of the list_df function
