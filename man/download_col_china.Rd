@@ -11,7 +11,7 @@ download_col_china(version = "2020", OS = "MacOS", dir = tempdir())
 
 \item{OS}{\code{character} Supported operating system,c("MacOS", "Ubuntu" ,"Windows"),the default value is "MacOS".}
 
-\item{dir}{a non-empty character vector giving the directory name by user,the default value is dir = tempdir(),see [tempdir()] for details.}
+\item{dir}{a non-empty character vector giving the directory name by user,the default value is dir = tempdir(),see \code{\link{tempdir}} for details.}
 }
 \value{
 URL
@@ -29,5 +29,5 @@ download_col_china(version = "2020",OS = "MacOS", dir = dir)
 }
 }
 \author{
-Liuyong Ding
+Liuyong Ding \email{ly_ding@126.com}
 }

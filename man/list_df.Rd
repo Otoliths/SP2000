@@ -34,7 +34,7 @@ Visit the website \url{http://sp2000.org.cn/api/document} for more details
 list_df(x, db = c("colchina", "colglobal"))
 }
 \arguments{
-\item{x}{\code{list} The result returned by the function [search_checklist] or [get_col_global].}
+\item{x}{\code{list} Results returned by the function \code{\link{search_checklist}} and \code{\link{get_col_global}}.}
 
 \item{db}{\code{character} db = c("colchina","colglobal")}
 }
@@ -50,10 +50,11 @@ set_search_key <- "your apiKey"
 familyid <- search_family_id(query = "Anguillidae")
 
 ##Search taxon IDs via familyID
-taxonid <- search_taxon_id(query = familyid$familyIDs,name = "familyID")
+taxonid <- search_taxon_id(query = familyid$Anguillidae$data$record_id, name = "familyID")
 
 #Download detailed lists via species or infraspecies ID
-x1 <- search_checklist(query = taxonid$taxonIDs)
+query <- taxonid[["3851c5311bed46c19529cb155d37aa9b"]][["data"]][["namecode"]]
+x1 <- search_checklist(query = query)
 str(x1)
 x1 <- list_df(x1,db = "colchina")
 
@@ -67,5 +68,5 @@ x2 <- list_df(x2,db = "colglobal")
 }
 }
 \author{
-Liuyong Ding
+Liuyong Ding \email{ly_ding@126.com}
 }

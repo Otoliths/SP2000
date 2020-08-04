@@ -20,17 +20,17 @@ assessment status:
 \usage{
 get_redlist_china(
   query = NULL,
-  option = NULL,
-  taxon = "Amphibians",
+  option = "Scientific Names",
+  group = "Amphibians",
   viewDT = FALSE
 )
 }
 \arguments{
 \item{query}{\code{string} The string to query for.}
 
-\item{option}{\code{character} There is one required parameter, which is either Chinese Names or Scientific Names. Give eithera Chinese Names or Scientific Names. If an Scientific Names is given, the Chinese Names parameter may not be used. Only exact matches found the name given will be returned. option=c("Chinese Names","Scientific Names").}
+\item{option}{\code{character} There is one required parameter, which is either Chinese Names or Scientific Names. Give eithera Chinese Names or Scientific Names. If an Scientific Names is given, the Chinese Names parameter may not be used. Only exact matches found the name given will be returned. option=c("Chinese Names","Scientific Names"),,the default value is "Scientific Names".}
 
-\item{taxon}{\code{character} There is one required parameter, taxon=c("Amphibians","Angiospermae","Ascomycetes","Basidiomycetes","Birds","Bryophyta","Gymnospermae","Inland Fishes","Lichens","Mammals","Pteridophyta","Reptiles").}
+\item{group}{\code{character} There is one required parameter, group=c("Amphibians","Birds","Inland Fishes","Mammals","Reptiles","Plants","Fungi").}
 
 \item{viewDT}{\code{logic} TRUE or FALSE,the default value is FALSE.}
 }
@@ -50,6 +50,20 @@ get_redlist_china(query = "Anguilla", option = "Scientific Names")
 get_redlist_china(query = "Anguilla nebulosa", option = "Scientific Names")
 
 #creates an HTML widget to display rectangular data
-get_redlist_china(taxon = "Inland Fishes", viewDT = TRUE)
+get_redlist_china(group = "Inland Fishes", viewDT = TRUE)
 }
+}
+\references{
+\url{http://www.mee.gov.cn}
+
+\url{http://www.mee.gov.cn/xxgk2018/xxgk/xxgk01/201805/t20180524_629586.html}
+
+\url{http://www.mee.gov.cn/gkml/hbb/bgg/201309/t20130912_260061.html}
+
+\url{http://www.mee.gov.cn/gkml/hbb/bgg/201505/t20150525_302233.html}
+}
+\author{
+Liuyong Ding \email{ly_ding@126.com}
+
+Ke Yang \email{ydyangke@163.com}
 }

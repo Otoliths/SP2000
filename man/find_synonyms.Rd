@@ -7,9 +7,9 @@
 find_synonyms(query, mc.cores = 2)
 }
 \arguments{
-\item{query}{\code{character} species name,The function is similar to [get_col_global()].}
+\item{query}{\code{character} species name,The function is similar to \code{\link{get_col_global}}.}
 
-\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see [mclapply()] for details.}
+\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see \code{\link{mclapply}} for details.}
 }
 \value{
 object
@@ -21,13 +21,17 @@ Find synonyms via species name from Catalogue of Life Global.
 Visit the website \url{http://webservice.catalogueoflife.org/col/webservice} for more details.
 }
 \examples{
-\donttest{
+\dontrun{
 ##Get Catalogue of Life Global checklist via species name
-x <- get_col_global(query = c("Anguilla marmorata","Anguilla japonica",
+x1 <- get_col_global(query = c("Anguilla marmorata","Anguilla japonica",
                               "Anguilla bicolor","Anguilla nebulosa",
                               "Anguilla luzonensis"),
                                option = "name")
-str(x)
+str(x1)
+
+##full queries
+x2 <- get_col_global(query = "Anguilla", response = "full")
+
 
 ##Find synonyms via species name
 find_synonyms(query = c("Anguilla marmorata","Anguilla japonica",
@@ -35,6 +39,9 @@ find_synonyms(query = c("Anguilla marmorata","Anguilla japonica",
                         "Anguilla luzonensis"))
 }
 }
+\references{
+\url{https://github.com/lutteropp/SpeciesSynonymFinder/blob/master/find_synonyms.r}
+}
 \author{
-Liuyong Ding
+Liuyong Ding \email{ly_ding@126.com}
 }

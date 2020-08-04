@@ -4,12 +4,17 @@
 \alias{get_col_taiwan}
 \title{Search Catalogue of Life Taiwan checklist}
 \usage{
-get_col_taiwan(query, tree, option = "equal", include_synonyms = TRUE)
+get_col_taiwan(
+  query,
+  level = "species",
+  option = "equal",
+  include_synonyms = TRUE
+)
 }
 \arguments{
 \item{query}{\code{string} The string to search for.}
 
-\item{tree}{\code{character} Query by category tree, tree=c("kingdom","phylum","class","order","family","genus","name"),the default value is "name".}
+\item{level}{\code{character} Query by category level, level=c("kingdom","phylum","class","order","family","genus","species"),the default value is "species".}
 
 \item{option}{\code{character} Query format, option=c("contain","equal","beginning"),the default value is "equal".}
 
@@ -22,15 +27,15 @@ object
 Get Catalogue of Life Taiwan checklist via advanced query.
 }
 \details{
-Visit the website \url{http://taibnet.sinica.edu.tw/eng/taibnet_species_query.php?} for more details.
+Visit the website \url{http://taibnet.sinica.edu.tw/eng/taibnet_species_query.php} for more details.
 }
 \examples{
-\donttest{
-get_col_taiwan(query="Anguilla",tree="name",option = "contain")
+\dontrun{
+get_col_taiwan(query="Anguilla",level="species",option = "contain")
 
-get_col_taiwan(query="Giganthorhynchidae",tree="family")
+get_col_taiwan(query="Anguillidae",level="family")
 }
 }
 \author{
-Liuyong Ding
+Liuyong Ding \email{ly_ding@126.com}
 }

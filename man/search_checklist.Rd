@@ -7,9 +7,9 @@
 search_checklist(query = NULL, mc.cores = 2)
 }
 \arguments{
-\item{query}{\code{string} single or more query, see [search_family_id()] and [search_taxon_id()] for more details.}
+\item{query}{\code{string} One or more queries, see \code{\link{search_family_id}} and \code{\link{search_taxon_id}} for more details.}
 
-\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see [mclapply()] for details.}
+\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see \code{\link{mclapply}} for details.}
 }
 \value{
 Catalogue of Life China list(s)
@@ -29,13 +29,14 @@ set_search_key <- "your apiKey"
 familyid <- search_family_id(query = "Anguillidae")
 
 ##Search taxon IDs via familyID
-taxonid <- search_taxon_id(query = familyid$familyIDs,name = "familyID")
+taxonid <- search_taxon_id(query = familyid$Anguillidae$data$record_id,name = "familyID")
 
 #Download detailed lists via species or infraspecies ID
-x <- search_checklist(query = taxonid$taxonIDs)
+query <- taxonid[["3851c5311bed46c19529cb155d37aa9b"]][["data"]][["namecode"]]
+x <- search_checklist(query = query)
 str(x)
 }
 }
 \author{
-Liuyong Ding
+Liuyong Ding \email{ly_ding@126.com}
 }

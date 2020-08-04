@@ -13,14 +13,24 @@ query:
 }
 }
 \usage{
-search_taxon_id(query = NULL, name = "scientificName", mc.cores = 2)
+search_taxon_id(
+  query = NULL,
+  name = "scientificName",
+  start = 1,
+  limit = 20,
+  mc.cores = 2
+)
 }
 \arguments{
 \item{query}{\code{string} familyID ,scientificName or commonName.}
 
 \item{name}{\code{character} name = c("familyID","scientificName","commonName"),the default value is "scientificName".}
 
-\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see [mclapply] for details.}
+\item{start}{\code{intenger} Record number to start at. If omitted, the results are returned from the first record (start=1). Use in combination with limit to page through results. Note that we do the paging internally for you, but you can manually set the start parameter.}
+
+\item{limit}{\code{intenger} Number of records to return. This is passed across all sources,when you first query, set the limit to something smallish so that you can get a result quickly, then do more as needed.}
+
+\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see \code{\link{mclapply}} for details.}
 }
 \value{
 dataframe
@@ -40,16 +50,10 @@ set_search_key <- "your apiKey"
 familyid <- search_family_id(query = "Anguillidae")
 
 ##Search taxon IDs via familyID
-taxonid <- search_taxon_id(query = familyid$familyIDs,name = "familyID")
-
-##Search taxon IDs via scientificName
-taxonid <- search_taxon_id(query = c("Anguilla marmorata","Anguilla japonica",
-                                     "Anguilla bicolor","Anguilla nebulosa",
-                                     "Anguilla luzonensis"),
-                                     name = "scientificName")
+taxonid <- search_taxon_id(query = familyid$Anguillidae$data$record_id,name = "familyID")
 
 }
 }
 \author{
-Liuyong Ding
+Liuyong Ding \email{ly_ding@126.com}
 }

@@ -27,4 +27,6 @@ open_url(query = "Anguilla marmorata",name = "scientificName",language = 'zh')
 }
 \author{
 Liuyong Ding
+
+Liuyong Ding \email{ly_ding@126.com}
 }

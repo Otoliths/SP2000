@@ -23,4 +23,6 @@ get_province()
 }
 \author{
 Liuyong Ding
+
+Liuyong Ding \email{ly_ding@126.com}
 }

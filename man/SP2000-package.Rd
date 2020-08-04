@@ -15,24 +15,26 @@ This package is designed for mining the checklist of animals, plants, fungi and 
 
 \examples{
 \dontrun{
-#Note: You need to apply for the apiKey <http://sp2000.org.cn/api/document>
+# Note: You need to apply for the apiKey <http://sp2000.org.cn/api/document>
 to run search_* functions of this package.
 
-##Load "SP2000"
+## Load "SP2000"
 
 library('SP2000')
 
-##Set your key
+## Set your key
 
 set_search_key <- "your apiKey"
 
-##Search family IDs via family name, supports Latin and Chinese names
+## Search family IDs via family name, supports Latin and Chinese names
 
 familyid <- search_family_id(query = "Anguillidae")
 
-##Search taxon IDs via familyID ,scientificName and commonName
+## Search taxon IDs via familyID ,scientificName and commonName
 
-taxonid <- search_taxon_id(query = familyid$familyIDs,name = "familyID")
+query <- familyid$Anguillidae$data$record_id
+
+taxonid <- search_taxon_id(query = query,name = "familyID")
 
 queries = c("Anguilla marmorata","Anguilla japonica",
             "Anguilla bicolor","Anguilla nebulosa",
@@ -40,29 +42,30 @@ queries = c("Anguilla marmorata","Anguilla japonica",
 
 search_taxon_id(query = queries,name = "scientificName")
 
-#Download detailed lists via species or infraspecies ID
+## Download detailed lists via species or infraspecies ID
 
-checklist1 <- search_checklist(query = taxonid$taxonIDs)
+query <- taxonid[["3851c5311bed46c19529cb155d37aa9b"]][["data"]][["namecode"]]
 
-checklist1 <- list_df(checklist1,db = "colchina")
+checklist <- search_checklist(query = query)
 
-##Get Catalogue of Life Global checklist via species name and id
 
-checklist2 <- get_col_global(query = queries, option = "name")
+## Get Catalogue of Life Global checklist via species name and id
 
-str(checklist2)
+x <- get_col_global(query = "Anguilla", response = "full")
 
-checklist2 <- list_df(checklist2,db = "colglobal")
+str(x)
 
-##Find synonyms via species name from Catalogue of Life Global
+x[["Anguilla"]][["meta"]][["total_number_of_results"]] [1]
+
+## Find synonyms via species name from Catalogue of Life Global
 
 find_synonyms(query = queries)
 
-##Search Catalogue of Life Taiwan checklist
+## Search Catalogue of Life Taiwan checklist
 
-get_col_taiwan(query = "Anguilla",tree = "name",option = "contain")
+get_col_taiwan(query = "Anguillidae", level = "family")
 
-##Query Redlist of Chinese Biodiversity
+## Query Redlist of Chinese Biodiversity
 
 get_redlist_china(query = "Anguilla", option = "Scientific Names")
 
@@ -70,7 +73,7 @@ get_redlist_china(query = "Anguilla", option = "Scientific Names")
 }
 
 \references{
-Ding LY, Li H, Tao J, Zhang JL, Huang MR, Yang K, Wang J, He DM, Ding CZ (2020) SP2000: A package written in R and Python for downloading catalogue of life. Biodiversity Science.
+Ding LY, Li H, Tao J, Zhang JL, Huang MR, Yang K, Wang J, He DM, Ding CZ (2020) SP2000: An open source R package for querying the catalogue of life. Biodiversity Science.
 
 https://cran.r-project.org/package=SP2000
 

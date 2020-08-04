@@ -4,12 +4,16 @@
 \alias{search_family_id}
 \title{Search family IDs}
 \usage{
-search_family_id(query = NULL, mc.cores = 2)
+search_family_id(query = NULL, start = 1, limit = 20, mc.cores = 2)
 }
 \arguments{
-\item{query}{\code{character} Family name, or part of family name, supports Latin and Chinese names.}
+\item{query}{\code{character} One and more queries,support Family name, or part of family name, supports Latin and Chinese names.}
 
-\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see [mclapply()] for details.}
+\item{start}{\code{integer} Record number to start at. If omitted, the results are returned from the first record (start=1). Use in combination with limit to page through results. Note that we do the paging internally for you, but you can manually set the start parameter.}
+
+\item{limit}{\code{integer} Number of records to return, the default value is 20.}
+
+\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see \code{\link{mclapply}} for details.}
 }
 \value{
 dataframe
@@ -30,5 +34,5 @@ familyid <- search_family_id(query = "Anguillidae")
 }
 }
 \author{
-Liuyong Ding
+Liuyong Ding \email{ly_ding@126.com}
 }

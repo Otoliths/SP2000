@@ -9,6 +9,7 @@ get_col_global(
   option = "name",
   response = "terse",
   start = 0,
+  limit = 500,
   mc.cores = 2
 )
 }
@@ -19,9 +20,11 @@ get_col_global(
 
 \item{response}{\code{character} Type of response returned. Valid values are response=terse and response=full. if the response parameter is omitted, the results are returned in the default terse format. If format=terse then a minimum set of results are returned (this is faster and smaller, enough for name lookup), if format=full then all available information is returned, response=c("full","terse"),the default value is "terse".}
 
-\item{start}{\code{integer} The first record to return. If omitted, the results are returned from the first record (start=0). This is useful if the total number of results is larger than the maximum number of results returned by a single Web service query (currently the maximum number of results returned by a single query is 500 for terse queries and 50 for full queries,the default value is 0.}
+\item{start}{\code{integer} Record number to start at. If omitted, the results are returned from the first record (start=0). Use in combination with limit to page through results. Note that we do the paging internally for you, but you can manually set the start parameter.}
 
-\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see [mclapply()] for details.}
+\item{limit}{\code{integer} Number of records to return. This is useful if the total number of results is larger than the maximum number of results returned by a single Web service query (currently the maximum number of results returned by a single query is 500 for terse queries and 50 for full queries,the default value is 500.Note that there is a hard maximum of 10,000, which is calculated as the limit+start, so start=99,00 and limit=2000 won't work.}
+
+\item{mc.cores}{The number of cores to use, i.e. at most how many child processes will be run simultaneously. The option is initialized from environment variable MC_CORES if set. Must be at least one, and parallelization requires at least two cores,see \code{\link{mclapply}} for details.}
 }
 \value{
 object
@@ -33,13 +36,17 @@ Get Catalogue of Life Global checklist via species name and id.
 Visit the website \url{http://webservice.catalogueoflife.org/col/webservice} for more details.
 }
 \examples{
-\donttest{
+\dontrun{
 ##Get Catalogue of Life Global checklist via species name
-x <- get_col_global(query = c("Anguilla marmorata","Anguilla japonica",
+x1 <- get_col_global(query = c("Anguilla marmorata","Anguilla japonica",
                               "Anguilla bicolor","Anguilla nebulosa",
                               "Anguilla luzonensis"),
-                              option = "name")
-str(x)
+                               option = "name")
+str(x1)
+
+##full queries
+x2 <- get_col_global(query = "Anguilla", response = "full")
+
 
 ##Find synonyms via species name
 find_synonyms(query = c("Anguilla marmorata","Anguilla japonica",
@@ -48,5 +55,5 @@ find_synonyms(query = c("Anguilla marmorata","Anguilla japonica",
 }
 }
 \author{
-Liuyong Ding
+Liuyong Ding \email{ly_ding@126.com}
 }
