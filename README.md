@@ -63,31 +63,45 @@ library(SP2000)
 ```r
 set_search_key <- "your apiKey"
 familyid <- search_family_id(query = "Anguillidae")
-familyid
+str(familyid)
 ```
 ```r
-# last Update: 2020-06-06
-# A tibble: 1 x 3
-# family      familyIDs                        download.date
-# <chr>       <chr>                            <date>       
-#   1 Anguillidae 3851c5311bed46c19529cb155d37aa9b 2020-06-06   
-
+List of 1
+ $ Anguillidae:List of 2
+  ..$ meta:List of 5
+  .. ..$ code   : int 200
+  .. ..$ limit  : int 20
+  .. ..$ count  : int 1
+  .. ..$ page   : int 1
+  .. ..$ message: chr "success"
+  ..$ data: tibble [1 × 14] (S3: tbl_df/tbl/data.frame)
+  .. ..$ family_c     : chr "鳗鲡科"
+  .. ..$ phylum_c     : chr "脊索动物门"
+  .. ..$ superfamily  : logi NA
+  .. ..$ kingdom      : chr "Animalia"
+  .. ..$ record_id    : chr "3851c5311bed46c19529cb155d37aa9b"
+  .. ..$ phylum       : chr "Chordata"
+  .. ..$ kingdom_c    : chr "动物界"
+  .. ..$ family       : chr "Anguillidae"
+  .. ..$ class        : chr "Actinopterygii"
+  .. ..$ class_c      : chr "辐鳍鱼纲"
+  .. ..$ order_c      : chr "鳗鲡目"
+  .. ..$ order        : chr "Anguilliformes"
+  .. ..$ superfamily_c: logi NA
+  .. ..$ download_date: Date[1:1], format: "2020-08-04"
 ```
 ###### Search taxon IDs via familyID
 ```r
-taxonid1 <- search_taxon_id(query = familyid$familyIDs,name = "familyID")
-taxonid1
+taxonid1 <- search_taxon_id(query = familyid$Anguillidae$data$record_id,name = "familyID")
+str(taxonid1[["3851c5311bed46c19529cb155d37aa9b"]][["meta"]])
 ```
 ```r
-# last Update: 2020-06-06
-# # A tibble: 5 x 3
-# familyID                         taxonIDs                         download.date
-# <chr>                            <chr>                            <date>       
-# 1 3851c5311bed46c19529cb155d37aa9b 1bcb107bcbf74c6eb81554e398beb840 2020-06-06   
-# 2 3851c5311bed46c19529cb155d37aa9b 9b9b328f6fa045089021ba38f912a0e8 2020-06-06   
-# 3 3851c5311bed46c19529cb155d37aa9b cbf03e5022f94c3daad91843b9f0b1e7 2020-06-06   
-# 4 3851c5311bed46c19529cb155d37aa9b e192fbc15df24049bcd0fd01d307affa 2020-06-06   
-# 5 3851c5311bed46c19529cb155d37aa9b f542929f776246efa44e559c389139d8 2020-06-06    
+List of 5
+ $ code   : int 200
+ $ limit  : int 20
+ $ count  : int 5
+ $ page   : int 1
+ $ message: chr "success"  
 ```
 ###### Search taxon IDs via scientificName
 ```r
