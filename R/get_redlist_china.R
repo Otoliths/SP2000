@@ -2,8 +2,8 @@
 #' @description Query Redlist of China’s Biodiversity of Vertebrate, Higher Plants and Macrofungi.
 #' @rdname get_redlist_china
 #' @param query \code{string} The string to query for.
-#' @param option \code{character} There is one required parameter, which is either Chinese Names or Scientific Names. Give eithera Chinese Names or Scientific Names. If an Scientific Names is given, the Chinese Names parameter may not be used. Only exact matches found the name given will be returned. option=c("Chinese Names","Scientific Names").
-#' @param taxon \code{character} There is one required parameter, taxon=c("Amphibians","Angiospermae","Ascomycetes","Basidiomycetes","Birds","Bryophyta","Gymnospermae","Inland Fishes","Lichens","Mammals","Pteridophyta","Reptiles").
+#' @param option \code{character} There is one required parameter, which is either Chinese Names or Scientific Names. Give eithera Chinese Names or Scientific Names. If an Scientific Names is given, the Chinese Names parameter may not be used. Only exact matches found the name given will be returned. option=c("Chinese Names","Scientific Names"),,the default value is "Scientific Names".
+#' @param group \code{character} There is one required parameter, group=c("Amphibians","Birds","Inland Fishes","Mammals","Reptiles","Plants","Fungi").
 #' @param viewDT \code{logic} TRUE or FALSE,the default value is FALSE.
 #' @importFrom utils download.file
 #' @importFrom DT datatable
@@ -25,6 +25,12 @@
 #' }
 #' @return object
 #' @details Visit the website \url{http://www.mee.gov.cn} for more details.
+#' @author Liuyong Ding \email{ly_ding@126.com}
+#' @author Ke Yang \email{ydyangke@163.com}
+#' @references \url{http://www.mee.gov.cn}
+#' @references \url{http://www.mee.gov.cn/xxgk2018/xxgk/xxgk01/201805/t20180524_629586.html}
+#' @references \url{http://www.mee.gov.cn/gkml/hbb/bgg/201309/t20130912_260061.html}
+#' @references \url{http://www.mee.gov.cn/gkml/hbb/bgg/201505/t20150525_302233.html}
 #' @examples
 #' \donttest{
 #' #query assessment status via Chinese Names or Scientific Names
@@ -32,20 +38,18 @@
 #' get_redlist_china(query = "Anguilla nebulosa", option = "Scientific Names")
 #'
 #' #creates an HTML widget to display rectangular data
-#' get_redlist_china(taxon = "Inland Fishes", viewDT = TRUE)
+#' get_redlist_china(group = "Inland Fishes", viewDT = TRUE)
 #' }
 #' @export
-get_redlist_china <- function(query = NULL,option = NULL,taxon = "Amphibians",viewDT = FALSE){
-  cat(sprintf("last Update: %s",Sys.Date()),sep = "\n")
+get_redlist_china <- function(query = NULL,option = "Scientific Names",group = "Amphibians",viewDT = FALSE){
+  cat(sprintf("Download  date: %s",Sys.Date()),sep = "\n")
   option <- match.arg(option, c("Chinese Names","Scientific Names"))
-  taxon <- match.arg(taxon, c("Amphibians","Angiospermae","Ascomycetes","Basidiomycetes","Birds","Bryophyta",
-                              "Gymnospermae","Inland Fishes","Lichens","Mammals","Pteridophyta","Reptiles"))
+  group <- match.arg(group, c("Amphibians","Birds","Fungi","Inland Fishes","Mammals","Plants","Reptiles"))
   rds <- tempfile(pattern=".rds")
-  url = 'https://gitee.com/LiuyongDing/latest_literature/raw/master/RedlistChina.rds'
-  download.file(url,destfile = rds, quiet = TRUE)
+  download.file(update_dataset(),destfile = rds, quiet = TRUE)
   RedlistChina <- readRDS(rds)
-  if (viewDT & taxon == taxon){
-    data = RedlistChina[which(RedlistChina$Taxon == taxon),]
+  if (viewDT & group == group){
+    data = RedlistChina[which(RedlistChina$group == group),]
     print(table(data[,c(2,8,10)]))
     DT::datatable(data,filter = 'top',extensions = c("AutoFill",'Buttons',"ColReorder"),selection = "multiple",
                   options = list(
@@ -55,23 +59,27 @@ get_redlist_china <- function(query = NULL,option = NULL,taxon = "Amphibians",vi
                   dom = 'Bfrtlip',
                   buttons = c('copy', 'csv', 'excel')
     )) %>% formatStyle(
-      'Status',
+      'status',
       color = styleEqual(c("EX","EW","RE","CR","EN","VU","NT","LC","DD"), rep("white",9)),
       backgroundColor = styleEqual(c("EX","EW","RE","CR","EN","VU","NT","LC","DD"),
                                       c("#010101","#525252","#919191","#D74D3B","#DE7F44","#FEF75E","#A3D2A5","#5B8D2A","#6CB4B7"))
     )
   } else{
     if (option == "Chinese Names"){
-      names(RedlistChina)[3] <- "ChineseNames"
-      i <- grep("Anguilla", RedlistChina$ChineseNames)
+      names(RedlistChina)[3] <- "species_c"
+      i <- grep("Anguilla", RedlistChina$species_c)
     }
     if (option == "Scientific Names"){
-      names(RedlistChina)[4] <- "ScientificNames"
-      i <- grep(query, RedlistChina$ScientificNames)
+      names(RedlistChina)[4] <- "species"
+      i <- grep(query, RedlistChina$species)
     }
     return(tibble::tibble(RedlistChina[i,]))
   }
 
 }
 
-update_dataset <- function() 'https://gitee.com/LiuyongDing/latest_literature/raw/master/RedlistChina.rds'
+update_dataset <- function() 'https://gitee.com/LiuyongDing/latest_literature/raw/master/RedlistChina_0.1.0.rds'
+
+
+
+

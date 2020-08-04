@@ -4,9 +4,9 @@
 #' @name download_col_china
 #' @param version \code{integer} Release version of annual checklist,the default value is 2020.
 #' @param OS \code{character} Supported operating system,c("MacOS", "Ubuntu" ,"Windows"),the default value is "MacOS".
-#' @param dir a non-empty character vector giving the directory name by user,the default value is dir = tempdir(),see [tempdir()] for details.
+#' @param dir a non-empty character vector giving the directory name by user,the default value is dir = tempdir(),see \code{\link{tempdir}} for details.
 #' @return URL
-#' @author Liuyong Ding
+#' @author Liuyong Ding \email{ly_ding@126.com}
 #' @details Visit the website \url{http://sp2000.org.cn/download} for more details.
 #' @importFrom utils download.file
 #' @importFrom utils browseURL
@@ -17,7 +17,7 @@
 #' }
 #' @export
 download_col_china <- function(version = "2020", OS = "MacOS", dir = tempdir()) {
-  cat(sprintf("Download the date: %s",Sys.Date()),sep = "\n")
+  cat(sprintf("Download date: %s",Sys.Date()),sep = "\n")
   version <- match.arg(version, 2018:2020)
   OS <- match.arg(OS, c("MacOS", "Ubuntu" ,"Windows"))
   if (version %in% c("2018","2019") ){

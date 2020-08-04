@@ -7,6 +7,7 @@
 #' @details Visit the website \url{http://sp2000.org.cn/statistics/statistics_map} for more details.
 #' @importFrom jsonlite fromJSON
 #' @importFrom tibble tibble
+#' @author Liuyong Ding \email{ly_ding@126.com}
 #' @examples
 #' \donttest{
 #' get_province()

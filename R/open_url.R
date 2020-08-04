@@ -8,6 +8,7 @@
 ##' @author Liuyong Ding
 ##' @details Visit the website \url{http://sp2000.org.cn/pageservices/document} for more details.
 ##' @importFrom utils browseURL
+##' @author Liuyong Ding \email{ly_ding@126.com}
 ##' @examples
 ##'\donttest{
 ##' open_url(query = "Anguilla marmorata",name = "scientificName",language = 'en')

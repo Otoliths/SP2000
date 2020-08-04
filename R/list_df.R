@@ -2,12 +2,10 @@
 ##' @description Checklist lists convert data frame.
 ##' @rdname list_df
 ##' @name list_df
-##' @param x \code{list} The result returned by the function [search_checklist] or [get_col_global].
+##' @param x \code{list} Results returned by the function \code{\link{search_checklist}} and \code{\link{get_col_global}}.
 ##' @param db \code{character} db = c("colchina","colglobal")
-##' @importFrom tibble tibble
 ##' @importFrom tibble as_tibble
 ##' @importFrom rlist list.rbind
-##' @importFrom rlist list.stack
 ##' @importFrom purrr transpose
 ##' @format A data frame with 19 variables:
 ##' \describe{
@@ -31,7 +29,7 @@
 ##' \item{References}{References}
 ##' \item{Download}{Download date}
 ##' }
-##' @author Liuyong Ding
+##' @author Liuyong Ding \email{ly_ding@126.com}
 ##' @source Visit the website \url{http://sp2000.org.cn/api/document} for more details
 ##' @examples
 ##' \dontrun{
@@ -42,10 +40,11 @@
 ##' familyid <- search_family_id(query = "Anguillidae")
 ##'
 ##' ##Search taxon IDs via familyID
-##' taxonid <- search_taxon_id(query = familyid$familyIDs,name = "familyID")
+##' taxonid <- search_taxon_id(query = familyid$Anguillidae$data$record_id, name = "familyID")
 ##'
 ##' #Download detailed lists via species or infraspecies ID
-##' x1 <- search_checklist(query = taxonid$taxonIDs)
+##' query <- taxonid[["3851c5311bed46c19529cb155d37aa9b"]][["data"]][["namecode"]]
+##' x1 <- search_checklist(query = query)
 ##' str(x1)
 ##' x1 <- list_df(x1,db = "colchina")
 ##'
@@ -58,42 +57,20 @@
 ##' x2 <- list_df(x2,db = "colglobal")
 ##' }
 ##' @export
+
 list_df <- function(x,db = c("colchina","colglobal")){
   db <- match.arg(db, c("colchina","colglobal"))
-  if(db == "colchina"){
-    name <- c("Synonyms","scientificName","Refs","Distribution","taxonTree","chineseName","CommonNames","SpecialistInfo","downloadDate")
-    for (i in 1:length(x)) {
-      if(is.element("Synonyms", names(x[[i]]))== FALSE){
-        x[[i]]$Synonyms = data.frame(synonyms = NA)
-      }
-      if(is.element("Distribution", names(x[[i]]))== FALSE){
-        x[[i]][["Distribution"]] = Distribution = NA
-      }
+  switch(
+    db,
+    colchina = {
+      data <- transpose(x)
+      data$meta <- transpose(data$meta)
+    } ,
+    colglobal = {
+      data <- transpose(x)
+      data$meta <- transpose(data$meta)
     }
-    data <- tibble(
-      ScientificName = do.call("rbind", transpose(x)[["scientificName"]]),
-      Synonyms = transpose(x)[["Synonyms"]],
-      chineseName = do.call("rbind", transpose(x)[["chineseName"]]),
-      CommonNames = transpose(x)[["CommonNames"]],
-      Kingdom = do.call("rbind", transpose(transpose(x)[["taxonTree"]])[["kingdom"]]),
-      Phylum = do.call("rbind", transpose(transpose(x)[["taxonTree"]])[["phylum"]]),
-      Class = do.call("rbind", transpose(transpose(x)[["taxonTree"]])[["class"]]),
-      Order = do.call("rbind", transpose(transpose(x)[["taxonTree"]])[["order"]]),
-      Family = do.call("rbind", transpose(transpose(x)[["taxonTree"]])[["family"]]),
-      Genus = do.call("rbind", transpose(transpose(x)[["taxonTree"]])[["genus"]]),
-      Species = do.call("rbind", transpose(transpose(x)[["taxonTree"]])[["species"]]),
-      Infraspecies = do.call("rbind", transpose(transpose(x)[["taxonTree"]])[["infraspecies"]]),
-      Distribution = list.rbind(as.character(transpose(x)[["Distribution"]])),
-      Name = do.call("rbind",transpose(transpose(x)[["SpecialistInfo"]])[["name"]]),
-      Email = do.call("rbind",transpose(transpose(x)[["SpecialistInfo"]])[["E-Mail"]]),
-      Address = do.call("rbind",transpose(transpose(x)[["SpecialistInfo"]])[["Address"]]),
-      Institution = do.call("rbind",transpose(transpose(x)[["SpecialistInfo"]])[["Institution"]]),
-      References = transpose(x)[["Refs"]],
-      Downloaddate = rep(as.Date(Sys.time()),length(x))
-    )
-  }else{
-    data <- as_tibble(transpose(x))
-  }
+  )
   return(data)
 }
 
