@@ -26,6 +26,18 @@ This [**SP2000**](https://cran.r-project.org/package=SP2000) package programatic
 [**Species 2000**](http://sp2000.org.cn) China node is a regional node of the international species 2000 project, proposed by the international species 2000 Secretariat in October 20, 2006, was officially launched in February 7, 2006. Chinese Academy of Sciences, biological diversity Committee (BC-CAS), together with its partners, to support and manage the construction of species 2000 China node. The main task of the species 2000 China node, according to the species 2000 standard data format, the classification information of the distribution in China of all species to finish and check, the establishment and maintenance of Chinese biological species list, to provide free services to users around the world.
 
 
+### Libraries
+
+You might be able to avoid reading all this documentation if you instead use one of the several excellent libraries that have been written for the Catalogue of Life API. For example:
+
+- [SP2000](https://gitlab.com/crossref/crossref_commons_py) (Python, developed by Crossref)
+- [SP2000](https://github.com/sckott/habanero) (Python)
+- [serrano](https://github.com/sckott/serrano) (Ruby)
+- [rcrossref](https://github.com/ropensci/rcrossref) (R)
+- [crossrefapi](https://github.com/fabiobatalha/crossrefapi) (Python)
+- [crossref-rs](https://github.com/MattsSe/crossref-rs) (rust)
+
+
 ## Installation
 
 ### Current official release:
