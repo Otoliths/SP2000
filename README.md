@@ -109,78 +109,202 @@ queries <- c("Anguilla marmorata","Anguilla japonica",
              "Anguilla bicolor","Anguilla nebulosa",
              "Anguilla luzonensis")
 taxonid2 <- search_taxon_id(query = queries,name = "scientificName")
-taxonid2
+str(taxonid2[["Anguilla marmorata"]])
 ```
 ```r
-# last Update: 2020-06-06
-#  |=============================================================================================| 100%, Elapsed 00:01
-# # A tibble: 5 x 3
-# scientificName      taxonIDs                         download.date
-# <chr>               <chr>                            <date>       
-# 1 Anguilla marmorata  e192fbc15df24049bcd0fd01d307affa 2020-06-06   
-# 2 Anguilla japonica   f542929f776246efa44e559c389139d8 2020-06-06   
-# 3 Anguilla bicolor    1bcb107bcbf74c6eb81554e398beb840 2020-06-06   
-# 4 Anguilla nebulosa   9b9b328f6fa045089021ba38f912a0e8 2020-06-06   
-# 5 Anguilla luzonensis cbf03e5022f94c3daad91843b9f0b1e7 2020-06-06   
-
+List of 2
+ $ meta:List of 5
+  ..$ code   : int 200
+  ..$ limit  : int 20
+  ..$ count  : int 1
+  ..$ page   : int 1
+  ..$ message: chr "success"
+ $ data:'data.frame':	1 obs. of  5 variables:
+  ..$ accepted_name_info:'data.frame':	1 obs. of  11 variables:
+  .. ..$ searchCodeStatus: chr "accepted name"
+  .. ..$ namecode        : chr "e192fbc15df24049bcd0fd01d307affa"
+  .. ..$ scientificName  : chr "Anguilla marmorata"
+  .. ..$ author          : chr "Quoy et Gaimard，1824"
+  .. ..$ Refs            :List of 1
+  .. .. ..$ :'data.frame':	2 obs. of  2 variables:
+  .. .. .. ..$ [1]: chr [1:2] "" NA
+  .. .. .. ..$ [2]: chr [1:2] NA ""
+  .. ..$ Distribution    : chr "Zhejiang(浙江)"
+  .. ..$ taxonTree       :'data.frame':	1 obs. of  8 variables:
+  .. .. ..$ phylum      : chr "Chordata"
+  .. .. ..$ genus       : chr "Anguilla"
+  .. .. ..$ species     : chr "marmorata"
+  .. .. ..$ infraspecies: chr ""
+  .. .. ..$ family      : chr "Anguillidae"
+  .. .. ..$ kingdom     : chr "Animalia"
+  .. .. ..$ class       : chr "Actinopterygii"
+  .. .. ..$ order       : chr "Anguilliformes"
+  .. ..$ chineseName     : chr "花鳗鲡"
+  .. ..$ searchCode      : chr "e192fbc15df24049bcd0fd01d307affa"
+  .. ..$ CommonNames     :List of 1
+  .. .. ..$ : list()
+  .. ..$ SpecialistInfo  :List of 1
+  .. .. ..$ :'data.frame':	3 obs. of  4 variables:
+  .. .. .. ..$ E-Mail     : chr [1:3] "zhangcg@ioz.ac.cn" "zoskt@gate.sinica.edu.tw" ""
+  .. .. .. ..$ Address    : chr [1:3] "1 Beichen West Road, Chaoyang District, Beijing 100101, P.R.China(北京市朝阳区北辰西路1号院5号 中国科学院动物研究所)" "()" "No.999, Huchenghuan Rd , Nanhui New City, Shanghai, P.R. China(上海市浦东新区沪城环路999号)"
+  .. .. .. ..$ name       : chr [1:3] "Zhang Chunguang(张春光)" "Shao, Kwang-Tsao(邵广昭)" "Wu Hanlin(伍汉霖)"
+  .. .. .. ..$ Institution: chr [1:3] "Institute of Zoology, Chinese Academy of Sciences(中国科学院动物研究所)" "(中央研究院生物多樣性研究中心)" "College of Life Science & Technology, Shanghai Ocean University(上海海洋大学生命科学与技术学院)"
+  ..$ name_code         : chr "e192fbc15df24049bcd0fd01d307affa"
+  ..$ name_status       : chr "accepted name"
+  ..$ scientific_name   : chr "Anguilla marmorata"
+  ..$ download_date     : Date[1:1], format: "2020-08-04"
 ```
 ###### Download detailed lists via species or infraspecies ID
 ```r
-x1 <- search_checklist(query = taxonid1$taxonIDs)
-x2 <- search_checklist(query = taxonid2$taxonIDs)
-class(x1)
-class(x2)
+x1 <- search_checklist(query = taxonid1[["3851c5311bed46c19529cb155d37aa9b"]][["data"]][["namecode"]])
+x2 <- search_checklist(query = taxonid2[["Anguilla marmorata"]][["data"]][["name_code"]])
+
 ```
 ```r
-# last Update: 2020-06-06
-# |======================================================================================| 100%, Elapsed 00:01
-# [1] "list"
+str(x1[["Anguilla marmorata"]])
 ```
 
 ```r
-list_df(x1,db = "colchina")
-list_df(x2,db = "colchina")
+List of 2
+ $ meta:List of 2
+  ..$ code   : int 200
+  ..$ message: chr "success"
+ $ data:List of 12
+  ..$ searchCodeStatus: chr "accepted name"
+  ..$ namecode        : chr "e192fbc15df24049bcd0fd01d307affa"
+  ..$ scientificName  : chr "Anguilla marmorata"
+  ..$ author          : chr "Quoy et Gaimard，1824"
+  ..$ Refs            : chr [1:2] "" ""
+  ..$ Distribution    : chr "Zhejiang(浙江)"
+  ..$ taxonTree       : tibble [1 × 8] (S3: tbl_df/tbl/data.frame)
+  .. ..$ phylum      : chr "Chordata"
+  .. ..$ genus       : chr "Anguilla"
+  .. ..$ species     : chr "marmorata"
+  .. ..$ infraspecies: chr ""
+  .. ..$ family      : chr "Anguillidae"
+  .. ..$ kingdom     : chr "Animalia"
+  .. ..$ class       : chr "Actinopterygii"
+  .. ..$ order       : chr "Anguilliformes"
+  ..$ chineseName     : chr "花鳗鲡"
+  ..$ searchCode      : chr "e192fbc15df24049bcd0fd01d307affa"
+  ..$ CommonNames     : list()
+  ..$ SpecialistInfo  :'data.frame':	3 obs. of  4 variables:
+  .. ..$ E-Mail     : chr [1:3] "zhangcg@ioz.ac.cn" "zoskt@gate.sinica.edu.tw" ""
+  .. ..$ Address    : chr [1:3] "1 Beichen West Road, Chaoyang District, Beijing 100101, P.R.China(北京市朝阳区北辰西路1号院5号 中国科学院动物研究所)" "()" "No.999, Huchenghuan Rd , Nanhui New City, Shanghai, P.R. China(上海市浦东新区沪城环路999号)"
+  .. ..$ name       : chr [1:3] "Zhang Chunguang(张春光)" "Shao, Kwang-Tsao(邵广昭)" "Wu Hanlin(伍汉霖)"
+  .. ..$ Institution: chr [1:3] "Institute of Zoology, Chinese Academy of Sciences(中国科学院动物研究所)" "(中央研究院生物多樣性研究中心)" "College of Life Science & Technology, Shanghai Ocean University(上海海洋大学生命科学与技术学院)"
+  ..$ download_date   : Date[1:1], format: "2020-08-04"
 ```
+
 ```r
-# # A tibble: 5 x 19
-# ScientificName[… Synonyms chineseName[,1] CommonNames Kingdom[,1] Phylum[,1] Class[,1] Order[,1] Family[,1]
-# <chr>            <list>   <chr>           <list>      <chr>       <chr>      <chr>     <chr>     <chr>     
-# 1 Anguilla bicolo… <df[,2]… 双色鳗鲡        <chr [1]>   Animalia    Chordata   Actinopt… Anguilli… Anguillid…
-# 2 Anguilla nebulo… <df[,1]… 云纹鳗鲡        <list [0]>  Animalia    Chordata   Actinopt… Anguilli… Anguillid…
-# 3 Anguilla luzone… <df[,2]… 吕宋鳗鲡        <list [0]>  Animalia    Chordata   Actinopt… Anguilli… Anguillid…
-# 4 Anguilla marmor… <df[,1]… 花鳗鲡          <list [0]>  Animalia    Chordata   Actinopt… Anguilli… Anguillid…
-# 5 Anguilla japoni… <df[,2]… 鳗鲡            <chr [1]>   Animalia    Chordata   Actinopt… Anguilli… Anguillid…
-# # … with 18 more variables: Genus[,1] <chr>, Species[,1] <chr>, Infraspecies[,1] <chr>, Distribution[,1] <chr>,
-# #   Name[,1] <chr>, [,2] <chr>, [,3] <chr>, Email[,1] <chr>, [,2] <chr>, [,3] <chr>, Address[,1] <chr>,
-# #   [,2] <chr>, [,3] <chr>, Institution[,1] <chr>, [,2] <chr>, [,3] <chr>, References <list>, Downloaddate <date>
+str(x2)
+```
+
+```r
+List of 1
+ $ Anguilla marmorata:List of 2
+  ..$ meta:List of 2
+  .. ..$ code   : int 200
+  .. ..$ message: chr "success"
+  ..$ data:List of 12
+  .. ..$ searchCodeStatus: chr "accepted name"
+  .. ..$ namecode        : chr "e192fbc15df24049bcd0fd01d307affa"
+  .. ..$ scientificName  : chr "Anguilla marmorata"
+  .. ..$ author          : chr "Quoy et Gaimard，1824"
+  .. ..$ Refs            : chr [1:2] "" ""
+  .. ..$ Distribution    : chr "Zhejiang(浙江)"
+  .. ..$ taxonTree       : tibble [1 × 8] (S3: tbl_df/tbl/data.frame)
+  .. .. ..$ phylum      : chr "Chordata"
+  .. .. ..$ genus       : chr "Anguilla"
+  .. .. ..$ species     : chr "marmorata"
+  .. .. ..$ infraspecies: chr ""
+  .. .. ..$ family      : chr "Anguillidae"
+  .. .. ..$ kingdom     : chr "Animalia"
+  .. .. ..$ class       : chr "Actinopterygii"
+  .. .. ..$ order       : chr "Anguilliformes"
+  .. ..$ chineseName     : chr "花鳗鲡"
+  .. ..$ searchCode      : chr "e192fbc15df24049bcd0fd01d307affa"
+  .. ..$ CommonNames     : list()
+  .. ..$ SpecialistInfo  :'data.frame':	3 obs. of  4 variables:
+  .. .. ..$ E-Mail     : chr [1:3] "zhangcg@ioz.ac.cn" "zoskt@gate.sinica.edu.tw" ""
+  .. .. ..$ Address    : chr [1:3] "1 Beichen West Road, Chaoyang District, Beijing 100101, P.R.China(北京市朝阳区北辰西路1号院5号 中国科学院动物研究所)" "()" "No.999, Huchenghuan Rd , Nanhui New City, Shanghai, P.R. China(上海市浦东新区沪城环路999号)"
+  .. .. ..$ name       : chr [1:3] "Zhang Chunguang(张春光)" "Shao, Kwang-Tsao(邵广昭)" "Wu Hanlin(伍汉霖)"
+  .. .. ..$ Institution: chr [1:3] "Institute of Zoology, Chinese Academy of Sciences(中国科学院动物研究所)" "(中央研究院生物多樣性研究中心)" "College of Life Science & Technology, Shanghai Ocean University(上海海洋大学生命科学与技术学院)"
+  .. ..$ download_date   : Date[1:1], format: "2020-08-04"
 ```
 
 ###### Get Catalogue of Life Global checklist via species name and id
 ```r
 x3 <- get_col_global(query = queries, option = "name")
-class(x3)
+head(x3[["Anguilla marmorata"]][["data"]])
 ```
 ```r
-# last Update: 2020-06-06
-# |======================================================================================| 100%, Elapsed 00:01
-# [1] "list"
+# A tibble: 2 x 24
+  id    name  rank  name_status record_scrutiny… online_resource is_extinct source_database
+  <chr> <chr> <chr> <chr>       <list>           <chr>           <chr>      <chr>          
+1 433e… Angu… Spec… accepted n… <list [0]>       "http://www.fi… false      FishBase       
+2 1a44… Angu… Spec… misapplied… <NULL>           ""              NA         FishBase       
+# … with 16 more variables: source_database_url <chr>, bibliographic_citation <chr>, name_html <chr>,
+#   url <chr>, accepted_name.id <chr>, accepted_name.name <chr>, accepted_name.rank <chr>,
+#   accepted_name.name_status <chr>, accepted_name.record_scrutiny_date <list>,
+#   accepted_name.online_resource <chr>, accepted_name.is_extinct <chr>,
+#   accepted_name.source_database <chr>, accepted_name.source_database_url <chr>,
+#   accepted_name.bibliographic_citation <chr>, accepted_name.name_html <chr>,
+#   accepted_name.url <chr>
 ```
 ```r
-list_df(x3,db = "colglobal")
+str(list_df(x3,db = "colglobal")[["meta"]])
 ```
 ```r
-# # A tibble: 9 x 5
-# `Anguilla marmorata` `Anguilla japonica` `Anguilla bicolor` `Anguilla nebulosa` `Anguilla luzonensis`
-# <named list>         <named list>        <named list>       <named list>        <named list>         
-#   1 <chr [1]>            <chr [1]>           <chr [1]>          <chr [1]>           <chr [1]>            
-#   2 <chr [1]>            <chr [1]>           <chr [1]>          <chr [1]>           <chr [1]>            
-#   3 <int [1]>            <int [1]>           <int [1]>          <int [1]>           <int [1]>            
-#   4 <int [1]>            <int [1]>           <int [1]>          <int [1]>           <int [1]>            
-#   5 <int [1]>            <int [1]>           <int [1]>          <int [1]>           <int [1]>            
-#   6 <chr [1]>            <chr [1]>           <chr [1]>          <chr [1]>           <chr [1]>            
-#   7 <chr [1]>            <chr [1]>           <chr [1]>          <chr [1]>           <chr [1]>            
-#   8 <chr [1]>            <chr [1]>           <chr [1]>          <chr [1]>           <chr [1]>            
-#   9 <df[,24] [2 × 24]>   <df[,12] [1 × 12]>  <df[,24] [3 × 24]> <df[,24] [4 × 24]>  <df[,12] [1 × 12]> 
+List of 8
+ $ id                        :List of 5
+  ..$ Anguilla marmorata : chr ""
+  ..$ Anguilla japonica  : chr ""
+  ..$ Anguilla bicolor   : chr ""
+  ..$ Anguilla nebulosa  : chr ""
+  ..$ Anguilla luzonensis: chr ""
+ $ name                      :List of 5
+  ..$ Anguilla marmorata : chr "Anguilla marmorata"
+  ..$ Anguilla japonica  : chr "Anguilla japonica"
+  ..$ Anguilla bicolor   : chr "Anguilla bicolor"
+  ..$ Anguilla nebulosa  : chr "Anguilla nebulosa"
+  ..$ Anguilla luzonensis: chr "Anguilla luzonensis"
+ $ total_number_of_results   :List of 5
+  ..$ Anguilla marmorata : int 2
+  ..$ Anguilla japonica  : int 1
+  ..$ Anguilla bicolor   : int 3
+  ..$ Anguilla nebulosa  : int 4
+  ..$ Anguilla luzonensis: int 1
+ $ number_of_results_returned:List of 5
+  ..$ Anguilla marmorata : int 2
+  ..$ Anguilla japonica  : int 1
+  ..$ Anguilla bicolor   : int 3
+  ..$ Anguilla nebulosa  : int 4
+  ..$ Anguilla luzonensis: int 1
+ $ start                     :List of 5
+  ..$ Anguilla marmorata : int 0
+  ..$ Anguilla japonica  : int 0
+  ..$ Anguilla bicolor   : int 0
+  ..$ Anguilla nebulosa  : int 0
+  ..$ Anguilla luzonensis: int 0
+ $ error_mexage              :List of 5
+  ..$ Anguilla marmorata : NULL
+  ..$ Anguilla japonica  : NULL
+  ..$ Anguilla bicolor   : NULL
+  ..$ Anguilla nebulosa  : NULL
+  ..$ Anguilla luzonensis: NULL
+ $ version                   :List of 5
+  ..$ Anguilla marmorata : chr "1.9 rev 2126ab0"
+  ..$ Anguilla japonica  : chr "1.9 rev 2126ab0"
+  ..$ Anguilla bicolor   : chr "1.9 rev 2126ab0"
+  ..$ Anguilla nebulosa  : chr "1.9 rev 2126ab0"
+  ..$ Anguilla luzonensis: chr "1.9 rev 2126ab0"
+ $ rank                      :List of 5
+  ..$ Anguilla marmorata : chr ""
+  ..$ Anguilla japonica  : chr ""
+  ..$ Anguilla bicolor   : chr ""
+  ..$ Anguilla nebulosa  : chr ""
+  ..$ Anguilla luzonensis: chr ""
 ```
 
 ###### Find synonyms via species name from Catalogue of Life Global
@@ -188,7 +312,7 @@ list_df(x3,db = "colglobal")
 find_synonyms(queries)
 ```
 ```r
-# last Update: 2020-06-06
+# last Update: 2020-08-04
 # |=========================================================================================| 100%, Elapsed 00:05
 # Find 8 results of synonyms for Anguilla marmorata are as follows: 
 # Find 6 results of synonyms for Anguilla japonica are as follows: 
@@ -223,10 +347,10 @@ find_synonyms(queries)
 
 ###### Search Catalogue of Life Taiwan checklist
 ```r
-get_col_taiwan(query="Anguilla",tree="name",option = "contain")
+get_col_taiwan(query = "Anguilla",level = "species",option = "contain")
 ```
 ```r
-# last Update: 2020-06-06
+# last Update: 2020-08-04
 # # A tibble: 5 x 23
 # name_code kingdom kingdom_c phylum phylum_c class class_c order order_c family family_c genus genus_c species
 # <chr>     <chr>   <chr>     <chr>  <chr>    <chr> <chr>   <chr> <chr>   <chr>  <chr>    <chr> <chr>   <chr>  
@@ -246,7 +370,7 @@ get_col_taiwan(query="Anguilla",tree="name",option = "contain")
 get_redlist_china(query = "Anguilla", option = "Scientific Names")
 ```
 ```r
-# last Update: 2020-06-06
+# last Update: 2020-08-04
 # # A tibble: 4 x 11
 # `Chinese Family… Family `Chinese Names` ScientificNames Status `Assessment Cri… Endemic Taxon `Chinese Taxon`
 # <chr>            <chr>  <chr>           <chr>           <chr>  <chr>            <chr>   <chr> <chr>          
@@ -275,7 +399,7 @@ sessionInfo()
 #   [1] stats     graphics  grDevices utils     datasets  methods   base     
 # 
 # other attached packages:
-#   [1] SP2000_0.0.10
+#   [1] SP2000_0.1.0
 # 
 # loaded via a namespace (and not attached):
 # [1] Rcpp_1.0.4.6      rstudioapi_0.11   magrittr_1.5      rlang_0.4.6       fansi_0.4.1       tools_4.0.0      
@@ -302,7 +426,7 @@ citation("SP2000")
 ```r
 To cite package ‘SP2000’ in publications use:
 
-  Liuyong Ding (2020). SP2000: Catalogue of Life Toolkit. R package version 0.0.10.
+  Liuyong Ding (2020). SP2000: Catalogue of Life Toolkit. R package version 0.1.0.
   https://github.com/Otoliths/SP2000
 
 A BibTeX entry for LaTeX users is
@@ -311,7 +435,7 @@ A BibTeX entry for LaTeX users is
     title = {SP2000: Catalogue of Life Toolkit},
     author = {Liuyong Ding},
     year = {2020},
-    note = {R package version 0.0.10},
+    note = {R package version 0.1.0},
     url = {https://github.com/Otoliths/SP2000},
   }
 ```
