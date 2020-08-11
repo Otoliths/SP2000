@@ -5,7 +5,6 @@
 [![CRAN Version](http://www.r-pkg.org/badges/version/SP2000)](https://cran.r-project.org/package=SP2000)
 [![codecov](https://badge.fury.io/gh/Otoliths%2FSP2000.svg)](https://badge.fury.io/for/gh/Otoliths/SP2000)
 [![R-CMD-check](https://github.com/Otoliths/SP2000/workflows/R-CMD-check/badge.svg)](https://github.com/Otoliths/SP2000/actions?query=workflow%3AR-CMD-check)
-[![CI](https://github.com/Otoliths/SP2000/workflows/CI/badge.svg)](https://github.com/Otoliths/SP2000/actions?query=workflow%3ACI)
 [![Rdoc](https://www.rdocumentation.org/badges/version/SP2000)](https://www.rdocumentation.org/packages/SP2000)
 
 <!-- r badge_devel("Otoliths/sp2000", "blue") -->
