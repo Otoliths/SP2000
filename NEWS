@@ -1,6 +1,7 @@
 0.2.0
  - Update DESCRIPTION
  - Added China animal scientific database
+ - Fixed bugs of the download_col_china function
 
 0.1.0
  - Update DESCRIPTION
