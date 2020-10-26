@@ -14,7 +14,7 @@
 #' \item{8}{China Inland Water Fish Database}
 #' \item{9}{Chinese Amphibian Database}
 #' \item{10}{Chinese Reptile database}
-#' \item{...}{...}
+#' \item{...}{allow additional more databases to be used}
 #' }
 #' @return A collection of names for all China animal scientific databases
 #' @details Visit the website \url{http://zoology.especies.cn} for more details.

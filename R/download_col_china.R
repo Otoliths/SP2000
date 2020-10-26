@@ -4,8 +4,9 @@
 #' @name download_col_china
 #' @param version \code{integer} Release version of annual checklist,the default value is 2020.
 #' @param OS \code{character} Supported operating system,c("MacOS", "Ubuntu" ,"Windows"),the default value is "MacOS".
-#' @param dir a non-empty character vector giving the directory name by user,the default value is dir = tempdir(),see \code{\link{tempdir}} for details.
-#' @param method Method to be used for downloading files. Current download methods are "internal", "wininet" (Windows only) "libcurl", "wget" and "curl", and there is a value "auto", see \code{\link{download.file}} for details.
+#' @param dir A non-empty character vector giving the directory name by user,the default value is dir = tempdir(),see \code{\link{tempdir}} for details.
+#' @param mode A character string specifying the mode with which to write the file. Useful values are "w", "wb" (binary), "a" (append) and "ab". see \code{\link{download.file}} for details.
+#' @param ... Allow additional arguments to be passed, unused. see \code{\link{download.file}} for details.
 #' @return URL
 #' @author Liuyong Ding \email{ly_ding@126.com}
 #' @details Visit the website \url{http://sp2000.org.cn/download} for more details.
@@ -17,7 +18,7 @@
 #' download_col_china(version = "2020",OS = "MacOS", dir = dir)
 #' }
 #' @export
-download_col_china <- function(version = "2020", OS = "MacOS", dir = tempdir(), method) {
+download_col_china <- function(version = "2020", OS = "MacOS", dir = tempdir(), mode, ...) {
   cat(sprintf("Download date: %s",Sys.Date()),sep = "\n")
   version <- match.arg(version, 2018:as.integer(substr(Sys.Date(), 1, 4)))
   OS <- match.arg(OS, c("MacOS", "Ubuntu" ,"Windows"))
@@ -34,7 +35,7 @@ download_col_china <- function(version = "2020", OS = "MacOS", dir = tempdir(), 
     url <- paste0('http://sp2000.org.cn/CoL/CoLChina',version,"-v20.1.12_win_x86_64", '.',"iso")
   }
   outfile <- sub(".*/", "", url)
-  download.file(url, file.path(dir,outfile),method)
+  download.file(url, file.path(dir,outfile),mode, ...)
   cat(sprintf("Download path: %s",dir),sep = "\n")
   browseURL(url)
 }
