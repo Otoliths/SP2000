@@ -3,13 +3,12 @@
 #' @rdname  get_province
 #' @name get_province
 #' @return Statistics on species or infraspecies by province.
-#' @author Liuyong Ding
 #' @details Visit the website \url{http://sp2000.org.cn/statistics/statistics_map} for more details.
 #' @importFrom jsonlite fromJSON
 #' @importFrom tibble tibble
 #' @author Liuyong Ding \email{ly_ding@126.com}
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_province()
 #'
 #' }
@@ -17,7 +16,7 @@
 get_province <- function() {
   cat(sprintf("last Update: %s",Sys.Date()),sep = "\n")
   url <- 'http://sp2000.org.cn/statistics/show_in_map_all'
-  map_all <- fromJSON(url)
+  map_all <- jsonlite::fromJSON(url)
   map_all <- map_all$data
   names(map_all) <- c("province","species_counts")
   map_all$date <- as.Date(Sys.time())

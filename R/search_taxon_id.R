@@ -26,7 +26,7 @@
 ##' @examples
 ##' \dontrun{
 ##' ##Set your key
-##' set_search_key <- "your apiKey"
+##' set_search_key("your apiKey",db = "sp2000")
 ##'
 ##' ##Search family IDs via family name
 ##' familyid <- search_family_id(query = "Anguillidae")
@@ -103,27 +103,6 @@ taxonID <- function(query = NULL, name, page) {
 
 web_v2 <- function()"http://www.sp2000.org.cn/api/v2/"
 
-# queries1 <- function(query,x){
-#   if (length(query) > 3){
-#     paste0(query[1:3],"(",sapply(1:3,function(i)dim(x[[query[3]]][["data"]])[1]),")")
-#   }else{
-#     paste0(query,"(",sapply(1:length(query),function(i)dim(x[[query[i]]][["data"]])[1]),")")
-#   }
-# }
-#
-#
-# found1 <- function(query,x){
-#   sum(sapply(1:length(query),function(i){
-#     x[[query[i]]][["meta"]][["count"]][1]
-#   }))
-# }
-#
-#
-# returned1 <- function(query,x){
-#   sum(sapply(1:length(query),function(i){
-#     dim(x[[query[i]]][["data"]][["accepted_name_info"]])[1]
-#   }))
-# }
 
 queries1 <- function(query,x){
   if (length(query) > 3){
@@ -193,11 +172,3 @@ lapplytaxonID <- function(query = NULL, name, page){
                         message=x[[query]][["message"]]),
             data = x[[query]][["data"]][["species"]])
 }
-
-
-# limit <- function(query,name){
-#   lapply(1:length(query),function(x){
-#     lapplytaxonID(query = query[x], name = name, page=1)
-#   })
-# }
-# taxonid <- search_taxon_id(query = "Actinidia",name = "scientificName", mc.cores=1, limit = 200)

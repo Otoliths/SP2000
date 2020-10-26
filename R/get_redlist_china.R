@@ -24,15 +24,15 @@
 #' \item{DD}{Data Deficient}
 #' }
 #' @return object
-#' @details Visit the website \url{http://www.mee.gov.cn} for more details.
+#' @details Visit the website \url{http://zoology.especies.cn/} for more details.
 #' @author Liuyong Ding \email{ly_ding@126.com}
 #' @author Ke Yang \email{ydyangke@163.com}
+#' @references \url{http://zoology.especies.cn/}
+#' @references \url{http://www.fungalinfo.net}
+#' @references \url{http://www.iplant.cn/rep/protlist}
 #' @references \url{http://www.mee.gov.cn}
-#' @references \url{http://www.mee.gov.cn/xxgk2018/xxgk/xxgk01/201805/t20180524_629586.html}
-#' @references \url{http://www.mee.gov.cn/gkml/hbb/bgg/201309/t20130912_260061.html}
-#' @references \url{http://www.mee.gov.cn/gkml/hbb/bgg/201505/t20150525_302233.html}
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' #query assessment status via Chinese Names or Scientific Names
 #' get_redlist_china(query = "Anguilla", option = "Scientific Names")
 #' get_redlist_china(query = "Anguilla nebulosa", option = "Scientific Names")
@@ -79,6 +79,13 @@ get_redlist_china <- function(query = NULL,option = "Scientific Names",group = "
 }
 
 update_dataset <- function() 'https://gitee.com/LiuyongDing/latest_literature/raw/master/RedlistChina_0.1.0.rds'
+
+
+
+
+
+
+
 
 
 

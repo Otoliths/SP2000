@@ -170,17 +170,3 @@ clean <- function(x,response){
   )
   return(ss)
 }
-
-# found3 <- function(query,x){
-#     sum(sapply(1:length(query),function(i){
-#       x[[query[i]]][["meta"]][["total_number_of_results"]][1]
-#   }))
-# }
-#
-#
-#
-# returned3 <- function(query,x){
-#   sum(sapply(1:length(query),function(i){
-#     dim(x[[query[i]]][["data"]])[1]
-#   }))
-# }

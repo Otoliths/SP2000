@@ -8,7 +8,7 @@
 #' @importFrom jsonlite fromJSON
 #' @importFrom tibble tibble
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' get_top20()
 #' }
 #' @export
