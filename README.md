@@ -397,6 +397,74 @@ get_redlist_china(query = "Anguilla", option = "Scientific Names")
 # 4 鳗鲡科           Angui… 云纹鳗鲡        Anguilla nebul… NT     NA               NA      Inla… 内陆鱼类       
 # # … with 2 more variables: Group <chr>, `Chinese Group` <chr>
 ```
+
+###### Query details of species in China Animal Scientific Database
+###### Note: You need to apply for the [*apiKey*](http://zoology.especies.cn/database/api) to run zoology_* functions of this package.
+```r
+##Set your key
+set_search_key("your apiKey",db = "zoology")
+
+## Query China Animal Scientific Database lists
+zoology_dbase_name()
+```
+
+```r
+Request returned successfully!!!
+last Update: 2020-10-26
+China Animal Scientific Database - Found: 13
+1:中国动物志数据库
+2:中国动物图谱数据库
+3:中国经济动物数据库
+4:中国鸟类数据库
+5:中国哺乳动物数据库
+6:中国蝴蝶数据库
+7:中国蜜蜂数据库
+8:中国内陆水体鱼类数据库
+9:中国两栖动物
+10:中国爬行动物数据库
+11:中国直翅目与革翅目昆虫数据库
+12:中国蜚蠊目数据库
+13:中国双尾纲与原尾纲数据库
+```
+```r
+## Query description type information of Chinese Bird Database
+zoology_description_type(query = "Aix galericulata",dbname = 4)
+```
+
+```r
+Request returned successfully!!!
+last Update: 2020-10-26
+   id       type
+1   1   形态描述
+2 152   生境信息
+3 159   鸣声描述
+4 205 地理区分布
+5 208   国外分布
+6 209   国内分布
+7 301   保护信息
+```
+```r
+## Query details of species in Chinese Bird Database
+zoology_description(query = "Aix galericulata",dbname = 4,destype = 209)
+```
+```r
+Request returned successfully!!!
+last Update: 2020-10-26
+$`Aix galericulata`
+$`Aix galericulata`$meta
+$`Aix galericulata`$meta$scientificName
+[1] "Aix galericulata"
+
+
+$`Aix galericulata`$data
+                                                           refs                           descontent
+1 郑光美, 2011, 中国鸟类分类与分布名录. 北京：科学出版社. pp456 All except Xinjiang, Xizang, Qinghai
+2 郑光美, 2011, 中国鸟类分类与分布名录. 北京：科学出版社. pp456       除新疆、西藏、青海外，见于各省
+                    destitle
+1 Aix galericulata的国内分布
+2 Aix galericulata的国内分布
+```
+
 ```r
 sessionInfo()
 ```
