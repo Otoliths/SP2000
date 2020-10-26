@@ -398,8 +398,9 @@ get_redlist_china(query = "Anguilla", option = "Scientific Names")
 # # … with 2 more variables: Group <chr>, `Chinese Group` <chr>
 ```
 
+##### Note: You need to apply for the [*apiKey*](http://zoology.especies.cn/database/api) to run zoology_* functions of this package.
 ###### Query details of species in China Animal Scientific Database
-###### Note: You need to apply for the [*apiKey*](http://zoology.especies.cn/database/api) to run zoology_* functions of this package.
+
 ```r
 ##Set your key
 set_search_key("your apiKey",db = "zoology")
