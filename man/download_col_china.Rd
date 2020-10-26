@@ -4,16 +4,18 @@
 \alias{download_col_china}
 \title{Download 'Catalogue of Life China': Annual Checklist}
 \usage{
-download_col_china(version = "2020", OS = "MacOS", dir = tempdir(), method)
+download_col_china(version = "2020", OS = "MacOS", dir = tempdir(), mode, ...)
 }
 \arguments{
 \item{version}{\code{integer} Release version of annual checklist,the default value is 2020.}
 
 \item{OS}{\code{character} Supported operating system,c("MacOS", "Ubuntu" ,"Windows"),the default value is "MacOS".}
 
-\item{dir}{a non-empty character vector giving the directory name by user,the default value is dir = tempdir(),see \code{\link{tempdir}} for details.}
+\item{dir}{A non-empty character vector giving the directory name by user,the default value is dir = tempdir(),see \code{\link{tempdir}} for details.}
 
-\item{method}{Method to be used for downloading files. Current download methods are "internal", "wininet" (Windows only) "libcurl", "wget" and "curl", and there is a value "auto", see \code{\link{download.file}} for details.}
+\item{mode}{A character string specifying the mode with which to write the file. Useful values are "w", "wb" (binary), "a" (append) and "ab". see \code{\link{download.file}} for details.}
+
+\item{...}{Allow additional arguments to be passed, unused. see \code{\link{download.file}} for details.}
 }
 \value{
 URL

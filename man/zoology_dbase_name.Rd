@@ -16,7 +16,7 @@ China Animal Scientific Database
 \item{8}{China Inland Water Fish Database}
 \item{9}{Chinese Amphibian Database}
 \item{10}{Chinese Reptile database}
-\item{...}{...}
+\item{...}{allow additional more databases to be used}
 }
 }
 \usage{
