@@ -77,7 +77,8 @@ library(SP2000)
 ```
 ###### Search family IDs via family name
 ```r
-set_search_key <- "your apiKey"
+set_search_key("your apiKey",db = "sp2000")
+
 familyid <- search_family_id(query = "Anguillidae")
 str(familyid)
 ```
