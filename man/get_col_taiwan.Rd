@@ -27,10 +27,11 @@ object
 Get Catalogue of Life Taiwan checklist via advanced query.
 }
 \details{
-Visit the website \url{http://taibnet.sinica.edu.tw/eng/taibnet_species_query.php} for more details.
+Visit the website \url{https://taibnet.sinica.edu.tw/eng/taibnet_species_query.php} for more details.
 }
 \examples{
 \dontrun{
+##Search Catalogue of Life Taiwan checklist
 get_col_taiwan(query="Anguilla",level="species",option = "contain")
 
 get_col_taiwan(query="Anguillidae",level="family")

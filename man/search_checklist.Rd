@@ -23,7 +23,7 @@ Visit the website \url{http://sp2000.org.cn/api/document} for more details.
 \examples{
 \dontrun{
 ##Set your key
-set_search_key <- "your apiKey"
+set_search_key("your apiKey",db = "sp2000")
 
 ##Search family IDs via family name
 familyid <- search_family_id(query = "Anguillidae")

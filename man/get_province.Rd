@@ -16,13 +16,11 @@ Download the statistics datasets on species/infraspecies by province at \url{htt
 Visit the website \url{http://sp2000.org.cn/statistics/statistics_map} for more details.
 }
 \examples{
-\donttest{
+\dontrun{
 get_province()
 
 }
 }
 \author{
-Liuyong Ding
-
 Liuyong Ding \email{ly_ding@126.com}
 }

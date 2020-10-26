@@ -41,10 +41,10 @@ object
 Query Redlist of China’s Biodiversity of Vertebrate, Higher Plants and Macrofungi.
 }
 \details{
-Visit the website \url{http://www.mee.gov.cn} for more details.
+Visit the website \url{http://zoology.especies.cn/} for more details.
 }
 \examples{
-\donttest{
+\dontrun{
 #query assessment status via Chinese Names or Scientific Names
 get_redlist_china(query = "Anguilla", option = "Scientific Names")
 get_redlist_china(query = "Anguilla nebulosa", option = "Scientific Names")
@@ -54,13 +54,13 @@ get_redlist_china(group = "Inland Fishes", viewDT = TRUE)
 }
 }
 \references{
+\url{http://zoology.especies.cn/}
+
+\url{http://www.fungalinfo.net}
+
+\url{http://www.iplant.cn/rep/protlist}
+
 \url{http://www.mee.gov.cn}
-
-\url{http://www.mee.gov.cn/xxgk2018/xxgk/xxgk01/201805/t20180524_629586.html}
-
-\url{http://www.mee.gov.cn/gkml/hbb/bgg/201309/t20130912_260061.html}
-
-\url{http://www.mee.gov.cn/gkml/hbb/bgg/201505/t20150525_302233.html}
 }
 \author{
 Liuyong Ding \email{ly_ding@126.com}

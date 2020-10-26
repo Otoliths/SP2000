@@ -16,7 +16,7 @@ Download the most visited top20 species from \url{http://sp2000.org.cn}for more 
 Visit the website \url{http://sp2000.org.cn} for more details.
 }
 \examples{
-\donttest{
+\dontrun{
 get_top20()
 }
 }

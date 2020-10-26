@@ -24,7 +24,7 @@ library('SP2000')
 
 ## Set your key
 
-set_search_key <- "your apiKey"
+set_search_key("your apiKey",db = "sp2000")
 
 ## Search family IDs via family name, supports Latin and Chinese names
 
@@ -73,7 +73,7 @@ get_redlist_china(query = "Anguilla", option = "Scientific Names")
 }
 
 \references{
-Ding LY, Li H, Tao J, Zhang JL, Huang MR, Yang K, Wang J, He DM, Ding CZ (2020) SP2000: An open source R package for querying the catalogue of life. Biodiversity Science.
+Ding LY, Li H, Tao J, Zhang JL, Huang MR, Yang K, Wang J, He DM, Ding CZ (2020) SP2000: An open-sourced R package for querying the Catalogue of Life. Biodiversity Science.
 
 https://cran.r-project.org/package=SP2000
 
