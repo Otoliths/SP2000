@@ -40,6 +40,7 @@ You might be able to avoid reading all this documentation if you instead use one
 - [clearinghouse-ui](https://github.com/CatalogueOfLife/clearinghouse-ui) (Java)
 - [portal](https://github.com/CatalogueOfLife/portal) (Java)
 - [taicol-db-docker](https://github.com/TaiBIF/taicol-db-docker) (Shell)
+- [zbank](https://github.com/ropensci/zbank) (R,developed by ropensci)
 
 
 ## Installation
