@@ -17,7 +17,7 @@ This [**SP2000**](https://cran.r-project.org/package=SP2000) package programatic
 
 
 ## Citation
-[![](https://img.shields.io/badge/DOI-10.1111/eff.12437-blue.svg)](https://www.biodiversity-science.net/CN/10.17520/biods.2020235)
+[![](https://img.shields.io/badge/DOI-10.17520/biods.2020235-blue.svg)](https://www.biodiversity-science.net/CN/10.17520/biods.2020235)
 
 Liuyong Ding, Hao Li, Juan Tao, Jinlong Zhang, Minrui Huang, Ke Yang, Jun Wang, ChengzhiDing, Daming He. SP2000: An open-sourced R package for querying the Catalogue of Life[J]. Biodiv Sci, 2021, 29(1): 118-122.
 
