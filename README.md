@@ -15,9 +15,9 @@
 
 This [**SP2000**](https://cran.r-project.org/package=SP2000) package programatically download catalogue of the Chinese known species of animals, plants, fungi and micro-organisms. There are __122280__ species & infraspecific taxa in [2020 Annual Checklist of Catalogue of Life China](http://sp2000.org.cn/2019), including __110231__ species and __12049__ infraspecific taxa.This package also supports access to catalogue of life global <http://catalogueoflife.org> , China animal scientific database <http://zoology.especies.cn> and catalogue of life Taiwan <http://taibnet.sinica.edu.tw/home_eng.php?>.
 
-[![](https://img.shields.io/badge/DOI-10.1111/eff.12437-blue.svg)](https://www.biodiversity-science.net/CN/10.17520/biods.2020235)
 
 ## Citation
+[![](https://img.shields.io/badge/DOI-10.1111/eff.12437-blue.svg)](https://www.biodiversity-science.net/CN/10.17520/biods.2020235)
 
 Liuyong Ding, Hao Li, Juan Tao, Jinlong Zhang, Minrui Huang, Ke Yang, Jun Wang, ChengzhiDing, Daming He. SP2000: An open-sourced R package for querying the Catalogue of Life[J]. Biodiv Sci, 2021, 29(1): 118-122.
 
