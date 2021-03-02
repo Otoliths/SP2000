@@ -555,4 +555,4 @@ LEI Fumin, et al, 2020. Aix galericulata in Catalogue of Life China: 2020 Annual
 ```
 
 
-[![Visit tracker](https://clustrmaps.com/map_v2.png?cl=e8e8e8&w=500&t=n&d=TP5cgHa9nJsMwX2GcvcT47FkNjFBVOzdyLKOjIMwuRE&co=88bfe5 "Visit tracker”)](http://www.clustrmaps.com/map/Github.com/Otoliths/SP2000)  
+[![Visit tracker](https:////www.clustrmaps.com/map_v2.png?d=TP5cgHa9nJsMwX2GcvcT47FkNjFBVOzdyLKOjIMwuRE&cl=ffffff)](http://www.clustrmaps.com/map/Github.com/Otoliths/SP2000)  
