@@ -26,9 +26,6 @@ Liuyong Ding, Hao Li, Juan Tao, Jinlong Zhang, Minrui Huang, Ke Yang, Jun Wang, 
 
 [![Visit tracker](https://clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=tt&d=TP5cgHa9nJsMwX2GcvcT47FkNjFBVOzdyLKOjIMwuRE)](https://clustrmaps.com/site/1bgid)
 
-<body><a href='https://clustrmaps.com/site/1bgid'  title='Visit tracker'><img src='https://clustrmaps.com/map_v2.png?cl=ffffff&w=a&t=tt&d=TP5cgHa9nJsMwX2GcvcT47FkNjFBVOzdyLKOjIMwuRE'/></a></body>
-
-<body><script type='text/javascript' id='clustrmaps' src='https://cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=TP5cgHa9nJsMwX2GcvcT47FkNjFBVOzdyLKOjIMwuRE&cmo=ab5b5b'></script></body>
 
 ## Overview 
 
