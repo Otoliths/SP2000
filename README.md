@@ -1,6 +1,5 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-<a href="http://www.clustrmaps.com/map/Github.com/Otoliths/SP2000" title="Visit tracker for Github.com/Otoliths/SP2000"><img src="//www.clustrmaps.com/map_v2.png?d=TP5cgHa9nJsMwX2GcvcT47FkNjFBVOzdyLKOjIMwuRE" /></a>
 
 ## SP2000 <img src="inst/figures/logo.png" align="right" width="140" />
 
@@ -554,3 +553,6 @@ How to cite taxon included in this work, for example:
 Aix galericulata: 
 LEI Fumin, et al, 2020. Aix galericulata in Catalogue of Life China: 2020 Annual Checklist, Beijing, China. http://sp2000.org.cn/species/show_species_details/f3bc32a7-50ec-41cc-91ee-a990b9196838
 ```
+
+
+<a href="http://www.clustrmaps.com/map/Github.com/Otoliths/SP2000" title="Visit tracker for Github.com/Otoliths/SP2000"><img src="//www.clustrmaps.com/map_v2.png?d=TP5cgHa9nJsMwX2GcvcT47FkNjFBVOzdyLKOjIMwuRE" /></a>
