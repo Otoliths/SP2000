@@ -552,5 +552,3 @@ How to cite taxon included in this work, for example:
 Aix galericulata: 
 LEI Fumin, et al, 2020. Aix galericulata in Catalogue of Life China: 2020 Annual Checklist, Beijing, China. http://sp2000.org.cn/species/show_species_details/f3bc32a7-50ec-41cc-91ee-a990b9196838
 ```
-
-<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=TP5cgHa9nJsMwX2GcvcT47FkNjFBVOzdyLKOjIMwuRE&cl=ffffff&w=a"></script>
