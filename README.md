@@ -22,6 +22,10 @@ This [**SP2000**](https://cran.r-project.org/package=SP2000) package programatic
 
 Liuyong Ding, Hao Li, Juan Tao, Jinlong Zhang, Minrui Huang, Ke Yang, Jun Wang, Chengzhi Ding, Daming He. SP2000: An open-sourced R package for querying the Catalogue of Life [J]. Biodiv Sci, 2021, 29(1): 118-122.
 
+## Visit tracker
+
+[![Visit tracker](https:////www.clustrmaps.com/map_v2.png?cl=bbcf90&w=a&t=tt&d=TP5cgHa9nJsMwX2GcvcT47FkNjFBVOzdyLKOjIMwuRE&co=ffffff&ct=e36868)](https://clustrmaps.com/site/1bgid) 
+
 ## Overview 
 
 [![](https://img.shields.io/badge/Contact%20us%20on-WeChat-blue.svg)](https://gitee.com/LiuyongDing/latest_literature/raw/master/bad.png)
@@ -555,4 +559,3 @@ LEI Fumin, et al, 2020. Aix galericulata in Catalogue of Life China: 2020 Annual
 ```
 
 
-[![Visit tracker](https:////www.clustrmaps.com/map_v2.png?d=TP5cgHa9nJsMwX2GcvcT47FkNjFBVOzdyLKOjIMwuRE&cl=ffffff)](https://clustrmaps.com/site/1bgid) 
