@@ -1,5 +1,7 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+<a href="http://www.clustrmaps.com/map/Github.com/Otoliths/SP2000" title="Visit tracker for Github.com/Otoliths/SP2000"><img src="//www.clustrmaps.com/map_v2.png?d=TP5cgHa9nJsMwX2GcvcT47FkNjFBVOzdyLKOjIMwuRE" /></a>
+
 ## SP2000 <img src="inst/figures/logo.png" align="right" width="140" />
 
 [![CRAN Version](http://www.r-pkg.org/badges/version/SP2000)](https://cran.r-project.org/package=SP2000)
