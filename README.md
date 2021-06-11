@@ -559,4 +559,4 @@ Aix galericulata:
 LEI Fumin, et al, 2020. Aix galericulata in Catalogue of Life China: 2020 Annual Checklist, Beijing, China. http://sp2000.org.cn/species/show_species_details/f3bc32a7-50ec-41cc-91ee-a990b9196838
 ```
 
-
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/7.js?i=5kdcv1wq85k&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;sx=0" async="async"></script>
