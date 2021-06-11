@@ -22,9 +22,8 @@ This [**SP2000**](https://cran.r-project.org/package=SP2000) package programatic
 
 Liuyong Ding, Hao Li, Juan Tao, Jinlong Zhang, Minrui Huang, Ke Yang, Jun Wang, Chengzhi Ding, Daming He. SP2000: An open-sourced R package for querying the Catalogue of Life [J]. Biodiv Sci, 2021, 29(1): 118-122.
 
-## Visit tracker
 
-[![Visit tracker](https://clustrmaps.com/map_v2.png?cl=ffffff&w=500&t=tt&d=TP5cgHa9nJsMwX2GcvcT47FkNjFBVOzdyLKOjIMwuRE)](https://clustrmaps.com/site/1bgid)
+<!-- [![Visit tracker](https://clustrmaps.com/map_v2.png?cl=ffffff&w=500&t=tt&d=TP5cgHa9nJsMwX2GcvcT47FkNjFBVOzdyLKOjIMwuRE)](https://clustrmaps.com/site/1bgid) -->
 
 
 ## Overview 
@@ -559,4 +558,6 @@ Aix galericulata:
 LEI Fumin, et al, 2020. Aix galericulata in Catalogue of Life China: 2020 Annual Checklist, Beijing, China. http://sp2000.org.cn/species/show_species_details/f3bc32a7-50ec-41cc-91ee-a990b9196838
 ```
 
-<script type="text/javascript" src="//rf.revolvermaps.com/0/0/7.js?i=5kdcv1wq85k&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;sx=0" async="async"></script>
+## Visit tracker
+
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5i1kwdclre4&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async"></script>
