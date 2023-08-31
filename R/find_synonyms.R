@@ -51,27 +51,27 @@ synonyms <- function(query) {
   species_name_no_spaces = gsub(" ","+",query, fixed=TRUE)
   url = paste0(webservice(),"name=",species_name_no_spaces, "&format=json&response=full")
   dbentry = jsonlite::fromJSON(url, flatten=TRUE)
-  if (length(dbentry$results) == 0) {
+  if (nrow(dbentry$result) == 0) {
     print(paste("Unfortunately, no results were found for ", query, ". Please check your spelling."), sep="")
   } else {
     #cat(sprintf("Find the results of synonyms for %s are as follows: ", query),sep = "\n")
-    for (i in 1:length(dbentry$results)) {
-      name = paste(dbentry$results[i,]$name)
+    for (i in 1:nrow(dbentry$result)) {
+      name = paste(dbentry$result$name[i])
       if (name == query) {
-        status = paste(dbentry$results[i,]$name_status)
+        status = paste(dbentry$result$name_status[i])
         if (status == "synonym") {
           #print(paste("Adding", dbentry$results[i,]$accepted_name.name))
-          synonyms = c(synonyms,c(paste(dbentry$results[i,]$accepted_name.name)))
+          synonyms = c(synonyms,c(paste(dbentry$result$accepted_name.name[i])))
         } else { #accepted name
-          for (j in 1:length(dbentry$results[i,]$synonyms[[1]]$name)) {
+          for (j in 1:length(dbentry[["result"]][["synonyms"]][[1]][["name"]])) {
             #print(paste("Adding", dbentry$results[i,]$synonyms[[1]]$name[j]))
-            synonyms = c(synonyms,c(paste(dbentry$results[i,]$synonyms[[1]]$name[j])))
+            synonyms = c(synonyms,c(paste(dbentry[["result"]][["synonyms"]][[1]][["name"]][j])))
           }
         }
       }
     }
   }
-  cat(sprintf("Find %s results of synonyms for %s are as follows: ",length(unique(rlist::list.rbind(synonyms)[,1])), query),sep = "\n")
+  #cat(sprintf("Find %s results of synonyms for %s are as follows: ",length(unique(rlist::list.rbind(synonyms)[,1])), query),sep = "\n")
   return(unique(rlist::list.rbind(synonyms)[,1]))
 }
 
