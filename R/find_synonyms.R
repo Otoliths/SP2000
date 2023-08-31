@@ -36,6 +36,7 @@ find_synonyms <- function(query, mc.cores = 2) {
   }
   if(length(query) == 1){
     x <- synonyms(query)
+    cat(sprintf("Find %s results of synonyms for %s are as follows: ",length(x), query),sep = "\n")
   }else{
     x <- pbmclapply(query,synonyms,mc.cores = mc.cores)
     names(x)<- query
