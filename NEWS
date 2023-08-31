@@ -2,6 +2,7 @@
  - Update DESCRIPTION
  - Added China animal scientific database
  - Fixed bugs of the download_col_china function
+ - Fixed bugs of the find_synonyms function
 
 0.1.0
  - Update DESCRIPTION
